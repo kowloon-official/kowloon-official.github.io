@@ -98,8 +98,21 @@ img { max-width: 100%; display: block; }
 }
 
 /* --- Hero --- */
+/* --- Tagline --- */
+.tagline-banner {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  margin: 28px 0 0;
+  background: linear-gradient(90deg, var(--blue), var(--cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 .hero {
-  padding: 48px 0 32px;
+  padding: 20px 0 32px;
 }
 
 .hero-photo {
@@ -198,12 +211,6 @@ img { max-width: 100%; display: block; }
 .intro-section h2 {
   font-size: 1.2rem;
   margin: 0 0 12px;
-}
-
-.tagline-sub {
-  font-weight: 700;
-  color: var(--blue);
-  margin: 0 0 10px;
 }
 
 .intro-text {
