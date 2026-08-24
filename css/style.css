@@ -100,15 +100,22 @@ img { max-width: 100%; display: block; }
 /* --- Hero --- */
 /* --- Tagline --- */
 .tagline-banner {
-  text-align: center;
-  font-size: 1.6rem;
+  display: inline-block;
+  width: fit-content;
+  text-align: left;
+  font-size: 2.2rem;
   font-weight: 900;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
   margin: 28px 0 0;
-  background: linear-gradient(90deg, var(--blue), var(--cyan));
+  background: linear-gradient(90deg, var(--blue) 0%, var(--cyan) 45%, var(--green) 85%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  filter: drop-shadow(0 0 14px rgba(0, 204, 255, 0.35));
+}
+
+@media (max-width: 640px) {
+  .tagline-banner { font-size: 1.5rem; }
 }
 
 .hero {
