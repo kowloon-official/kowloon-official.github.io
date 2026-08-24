@@ -143,6 +143,17 @@ img { max-width: 100%; display: block; }
   opacity: 0.85;
 }
 
+.hero-placeholder {
+  position: absolute;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  background: #f0f0f2;
+  font-size: 0.95rem;
+}
+
 .hero-cta {
   margin-top: 18px;
   display: flex;

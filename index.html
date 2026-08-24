@@ -12,6 +12,7 @@
 <main class="container">
   <section class="hero">
     <div class="hero-photo" id="hero-photo">
+      <div class="hero-placeholder" id="hero-placeholder" style="display:none;">写真準備中</div>
       <div class="hero-overlay">
         <div class="eyebrow">最新の大会</div>
         <h1 id="hero-title">読み込み中...</h1>
@@ -45,8 +46,7 @@
   renderFooter();
 
   const tournaments = await loadTournaments();
-  const withPhotos = tournaments.filter(t => t.cover);
-  const latest = withPhotos[0] || tournaments[0];
+  const latest = tournaments[0];
 
   if (latest) {
     const heroPhoto = document.getElementById("hero-photo");
@@ -55,6 +55,8 @@
       img.src = latest.cover;
       img.alt = latest.name;
       heroPhoto.prepend(img);
+    } else {
+      document.getElementById("hero-placeholder").style.display = "flex";
     }
     document.getElementById("hero-title").textContent = latest.name;
     document.getElementById("hero-meta").textContent =
