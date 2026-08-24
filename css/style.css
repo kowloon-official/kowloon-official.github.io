@@ -107,7 +107,7 @@ img { max-width: 100%; display: block; }
   font-weight: 900;
   letter-spacing: 0.01em;
   margin: 28px 0 0;
-  background: linear-gradient(90deg, var(--blue) 0%, var(--cyan) 45%, var(--green) 85%);
+  background: linear-gradient(90deg, #08306b 0%, var(--cyan) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -223,9 +223,15 @@ img { max-width: 100%; display: block; }
 .intro-text {
   color: var(--muted);
   line-height: 1.8;
-  max-width: 640px;
+  max-width: 100%;
   word-break: keep-all;
   overflow-wrap: break-word;
+}
+
+@media (min-width: 860px) {
+  .intro-line {
+    white-space: nowrap;
+  }
 }
 
 /* --- Next event --- */
