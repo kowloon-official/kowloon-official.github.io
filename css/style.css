@@ -97,9 +97,22 @@ img { max-width: 100%; display: block; }
   color: var(--text);
 }
 
+/* --- Tagline --- */
+.tagline-banner {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  margin: 28px 0 0;
+  background: linear-gradient(90deg, var(--blue), var(--cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 /* --- Hero --- */
 .hero {
-  padding: 48px 0 32px;
+  padding: 20px 0 32px;
 }
 
 .hero-photo {
@@ -204,6 +217,11 @@ img { max-width: 100%; display: block; }
   color: var(--muted);
   line-height: 1.8;
   max-width: 640px;
+  margin: 0 0 10px;
+}
+
+.intro-text:last-child {
+  margin-bottom: 0;
 }
 
 /* --- Next event --- */

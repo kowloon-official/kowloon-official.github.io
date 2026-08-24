@@ -7,7 +7,8 @@
     "attendees": 73,
     "startggUrl": "https://www.start.gg/tournament/kowloon-18-5",
     "cover": null,
-    "photoManifest": null
+    "photoManifest": null,
+    "mainSeries": true
   },
   {
     "id": 914057,
@@ -17,7 +18,8 @@
     "attendees": 107,
     "startggUrl": "https://www.start.gg/tournament/limit-break-3-2",
     "cover": null,
-    "photoManifest": null
+    "photoManifest": null,
+    "mainSeries": true
   },
   {
     "id": 910195,
@@ -27,7 +29,8 @@
     "attendees": 405,
     "startggUrl": "https://www.start.gg/tournament/kowloon-18",
     "cover": "assets/placeholder/sample-1.svg",
-    "photoManifest": "data/photos/kowloon-18.json"
+    "photoManifest": "data/photos/kowloon-18.json",
+    "mainSeries": true
   },
   {
     "id": 824661,
@@ -37,7 +40,8 @@
     "attendees": 248,
     "startggUrl": "https://www.start.gg/tournament/kowloon-17",
     "cover": null,
-    "photoManifest": null
+    "photoManifest": null,
+    "mainSeries": true
   },
   {
     "id": 797149,
@@ -47,7 +51,8 @@
     "attendees": 84,
     "startggUrl": "https://www.start.gg/tournament/limit-break-2-2",
     "cover": null,
-    "photoManifest": null
+    "photoManifest": null,
+    "mainSeries": true
   },
   {
     "id": 767620,
@@ -57,7 +62,8 @@
     "attendees": 393,
     "startggUrl": "https://www.start.gg/tournament/kowloon-16",
     "cover": null,
-    "photoManifest": null
+    "photoManifest": null,
+    "mainSeries": true
   },
   {
     "id": 788017,
@@ -67,7 +73,8 @@
     "attendees": 57,
     "startggUrl": "https://www.start.gg/tournament/16-oikomi",
     "cover": null,
-    "photoManifest": null
+    "photoManifest": null,
+    "mainSeries": false
   },
   {
     "id": 776333,
@@ -77,7 +84,8 @@
     "attendees": 64,
     "startggUrl": "https://www.start.gg/tournament/before-kowloon-1",
     "cover": null,
-    "photoManifest": null
+    "photoManifest": null,
+    "mainSeries": false
   },
   {
     "id": 767128,
@@ -87,7 +95,8 @@
     "attendees": 238,
     "startggUrl": "https://www.start.gg/tournament/15with-2",
     "cover": null,
-    "photoManifest": null
+    "photoManifest": null,
+    "mainSeries": false
   },
   {
     "id": 751119,
@@ -97,7 +106,8 @@
     "attendees": 643,
     "startggUrl": "https://www.start.gg/tournament/15with-15th-anniversary",
     "cover": null,
-    "photoManifest": null
+    "photoManifest": null,
+    "mainSeries": true
   },
   {
     "id": 763096,
@@ -107,7 +117,8 @@
     "attendees": 64,
     "startggUrl": "https://www.start.gg/tournament/pre-kowloon-15-with-sumabato",
     "cover": null,
-    "photoManifest": null
+    "photoManifest": null,
+    "mainSeries": false
   },
   {
     "id": 764461,
@@ -117,7 +128,8 @@
     "attendees": 31,
     "startggUrl": "https://www.start.gg/tournament/kowloon-15-with-sumabato-oikomi",
     "cover": null,
-    "photoManifest": null
+    "photoManifest": null,
+    "mainSeries": false
   },
   {
     "id": 746895,
@@ -127,7 +139,8 @@
     "attendees": 227,
     "startggUrl": "https://www.start.gg/tournament/kowloon-14",
     "cover": null,
-    "photoManifest": null
+    "photoManifest": null,
+    "mainSeries": true
   },
   {
     "id": 743289,
@@ -137,7 +150,8 @@
     "attendees": 68,
     "startggUrl": "https://www.start.gg/tournament/kowloon-13-5",
     "cover": null,
-    "photoManifest": null
+    "photoManifest": null,
+    "mainSeries": true
   },
   {
     "id": 732928,
@@ -147,7 +161,8 @@
     "attendees": 99,
     "startggUrl": "https://www.start.gg/tournament/limit-break-1-3",
     "cover": null,
-    "photoManifest": null
+    "photoManifest": null,
+    "mainSeries": true
   },
   {
     "id": 704865,
@@ -157,7 +172,8 @@
     "attendees": 309,
     "startggUrl": "https://www.start.gg/tournament/kowloon-13",
     "cover": null,
-    "photoManifest": null
+    "photoManifest": null,
+    "mainSeries": true
   },
   {
     "id": 669094,
@@ -167,7 +183,8 @@
     "attendees": 1463,
     "startggUrl": "https://www.start.gg/tournament/12-with-kowloon-12-with-kagaribi",
     "cover": null,
-    "photoManifest": null
+    "photoManifest": null,
+    "mainSeries": true
   },
   {
     "id": 656051,
@@ -177,7 +194,8 @@
     "attendees": 278,
     "startggUrl": "https://www.start.gg/tournament/kowloon-11",
     "cover": null,
-    "photoManifest": null
+    "photoManifest": null,
+    "mainSeries": true
   },
   {
     "id": 639288,
@@ -187,7 +205,8 @@
     "attendees": 339,
     "startggUrl": "https://www.start.gg/tournament/kowloon-10",
     "cover": null,
-    "photoManifest": null
+    "photoManifest": null,
+    "mainSeries": true
   },
   {
     "id": 605837,
@@ -197,7 +216,8 @@
     "attendees": 895,
     "startggUrl": "https://www.start.gg/tournament/9with",
     "cover": null,
-    "photoManifest": null
+    "photoManifest": null,
+    "mainSeries": true
   },
   {
     "id": 618707,
@@ -207,7 +227,8 @@
     "attendees": 27,
     "startggUrl": "https://www.start.gg/tournament/btr-5-kowloon-retro",
     "cover": null,
-    "photoManifest": null
+    "photoManifest": null,
+    "mainSeries": false
   },
   {
     "id": 596154,
@@ -217,7 +238,8 @@
     "attendees": 256,
     "startggUrl": "https://www.start.gg/tournament/kowloon-8",
     "cover": null,
-    "photoManifest": null
+    "photoManifest": null,
+    "mainSeries": true
   },
   {
     "id": 561293,
@@ -227,7 +249,8 @@
     "attendees": 298,
     "startggUrl": "https://www.start.gg/tournament/kowloon-7",
     "cover": null,
-    "photoManifest": null
+    "photoManifest": null,
+    "mainSeries": true
   },
   {
     "id": 542725,
@@ -237,7 +260,8 @@
     "attendees": 346,
     "startggUrl": "https://www.start.gg/tournament/kowloon-6",
     "cover": null,
-    "photoManifest": null
+    "photoManifest": null,
+    "mainSeries": true
   },
   {
     "id": 516201,
@@ -247,7 +271,8 @@
     "attendees": 535,
     "startggUrl": "https://www.start.gg/tournament/kowloon-5",
     "cover": null,
-    "photoManifest": null
+    "photoManifest": null,
+    "mainSeries": true
   },
   {
     "id": 496634,
@@ -257,7 +282,8 @@
     "attendees": 291,
     "startggUrl": "https://www.start.gg/tournament/kowloon-4",
     "cover": null,
-    "photoManifest": null
+    "photoManifest": null,
+    "mainSeries": true
   },
   {
     "id": 475743,
@@ -267,7 +293,8 @@
     "attendees": 387,
     "startggUrl": "https://www.start.gg/tournament/kowloon-3",
     "cover": null,
-    "photoManifest": null
+    "photoManifest": null,
+    "mainSeries": true
   },
   {
     "id": 463841,
@@ -277,7 +304,8 @@
     "attendees": 310,
     "startggUrl": "https://www.start.gg/tournament/kowloon-2",
     "cover": null,
-    "photoManifest": null
+    "photoManifest": null,
+    "mainSeries": true
   },
   {
     "id": 448395,
@@ -287,6 +315,7 @@
     "attendees": 287,
     "startggUrl": "https://www.start.gg/tournament/kowloon-1",
     "cover": null,
-    "photoManifest": null
+    "photoManifest": null,
+    "mainSeries": true
   }
 ]
