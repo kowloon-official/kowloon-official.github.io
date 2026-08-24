@@ -224,6 +224,8 @@ img { max-width: 100%; display: block; }
   color: var(--muted);
   line-height: 1.8;
   max-width: 640px;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 /* --- Next event --- */
