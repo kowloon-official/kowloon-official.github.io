@@ -111,7 +111,6 @@ img { max-width: 100%; display: block; }
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  filter: drop-shadow(0 0 14px rgba(0, 204, 255, 0.35));
 }
 
 @media (max-width: 640px) {
