@@ -109,6 +109,7 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0.04em;
   margin: 28px 0 0;
   color: var(--text);
+  -webkit-text-stroke: 0.6px var(--text);
 }
 
 @media (max-width: 640px) {
