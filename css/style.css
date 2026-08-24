@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
 
 :root {
-  --gold: #e6b800;
-  --blue: #00a8d6;
+  --blue: #0090c9;
+  --cyan: #00ccff;
   --green: #00b371;
   --bg: #fafafa;
   --surface: #ffffff;
@@ -56,7 +56,7 @@ img { max-width: 100%; display: block; }
   font-weight: 900;
   font-size: 1.25rem;
   letter-spacing: 0.04em;
-  background: linear-gradient(90deg, var(--gold), var(--blue));
+  background: linear-gradient(90deg, var(--blue), var(--cyan));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -128,7 +128,7 @@ img { max-width: 100%; display: block; }
 .hero-overlay .eyebrow {
   font-size: 0.8rem;
   font-weight: 700;
-  color: var(--gold);
+  color: var(--cyan);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -163,8 +163,8 @@ img { max-width: 100%; display: block; }
 }
 
 .btn-primary {
-  background: var(--gold);
-  color: #241d00;
+  background: var(--blue);
+  color: #ffffff;
 }
 
 .btn-secondary {
@@ -377,8 +377,8 @@ img { max-width: 100%; display: block; }
   gap: 8px;
   padding: 10px 18px;
   border-radius: 999px;
-  background: linear-gradient(90deg, var(--gold), var(--blue));
-  color: #17140a;
+  background: linear-gradient(90deg, var(--blue), var(--cyan));
+  color: #ffffff;
   font-weight: 700;
   margin-top: 4px;
 }
