@@ -17,7 +17,7 @@ function renderHeader(activePage) {
     <div class="container">
       <a href="index.html" class="brand">九龍-KOWLOON-</a>
       <nav class="nav-links">${links}</nav>
-      <a href="${window.KOWLOON_CONFIG.surveyUrl}" class="nav-cta" target="_blank" rel="noopener">アンケート</a>
+      <a href="${window.KOWLOON_CONFIG.contactUrl}" class="nav-cta" target="_blank" rel="noopener">お問い合わせ</a>
     </div>
   `;
 }
@@ -33,8 +33,8 @@ function renderFooter() {
         <a href="${x}" target="_blank" rel="noopener">X (Twitter)</a>
         <a href="${startgg}" target="_blank" rel="noopener">start.gg</a>
       </div>
-      <a href="${window.KOWLOON_CONFIG.surveyUrl}" class="footer-survey" target="_blank" rel="noopener">
-        アンケートに回答する
+      <a href="${window.KOWLOON_CONFIG.contactUrl}" class="footer-contact" target="_blank" rel="noopener">
+        お問い合わせ
       </a>
       <p style="margin-top:18px;">© 九龍-KOWLOON-</p>
     </div>

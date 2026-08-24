@@ -1,9 +1,9 @@
 // 名札裏面用のQRコード印刷シート(PDF)を生成するスクリプト。
-// アンケートURLとサイトURLの2つのQRコードを1枚のカードにまとめ、
+// お問い合わせURLとサイトURLの2つのQRコードを1枚のカードにまとめ、
 // A4用紙に敷き詰めた「キンコーズ印刷用」レイアウトを出力する。
 //
 // 使い方:
-//   node scripts/generate-qr.js --survey "https://forms.gle/xxxx" --site "https://xxxx.github.io/kowloon-site/" --out qr-print-sheet.pdf
+//   node scripts/generate-qr.js --contact "https://forms.gle/xxxx" --site "https://xxxx.github.io/kowloon-site/" --out qr-print-sheet.pdf
 //
 // カードサイズはデフォルトで90mm x 54mm(一般的な名札挿入サイズ)。
 // 実際の名札ケースのサイズに合わせて --card-w / --card-h (mm指定)で調整可能。
@@ -26,25 +26,25 @@ function parseArgs() {
 
 async function main() {
   const opts = parseArgs();
-  const surveyUrl = opts.survey;
+  const contactUrl = opts.contact;
   const siteUrl = opts.site;
   const outPath = opts.out || "qr-print-sheet.pdf";
   const cardW = mm(parseFloat(opts["card-w"] || "90"));
   const cardH = mm(parseFloat(opts["card-h"] || "54"));
 
-  if (!surveyUrl || !siteUrl) {
+  if (!contactUrl || !siteUrl) {
     console.error(
-      '使い方: node scripts/generate-qr.js --survey "<アンケートURL>" --site "<サイトURL>" [--out qr-print-sheet.pdf] [--card-w 90] [--card-h 54]'
+      '使い方: node scripts/generate-qr.js --contact "<お問い合わせURL>" --site "<サイトURL>" [--out qr-print-sheet.pdf] [--card-w 90] [--card-h 54]'
     );
     process.exit(1);
   }
 
-  const surveyQrPng = await QRCode.toBuffer(surveyUrl, { margin: 1, width: 500 });
+  const contactQrPng = await QRCode.toBuffer(contactUrl, { margin: 1, width: 500 });
   const siteQrPng = await QRCode.toBuffer(siteUrl, { margin: 1, width: 500 });
 
   const pdfDoc = await PDFDocument.create();
   const font = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
-  const surveyImg = await pdfDoc.embedPng(surveyQrPng);
+  const contactImg = await pdfDoc.embedPng(contactQrPng);
   const siteImg = await pdfDoc.embedPng(siteQrPng);
 
   const pageW = mm(210); // A4
@@ -78,14 +78,14 @@ async function main() {
     const padding = cardW * 0.04;
     const labelSize = 6;
 
-    // アンケートQR (左)
-    page.drawImage(surveyImg, {
+    // お問い合わせQR (左)
+    page.drawImage(contactImg, {
       x: x + padding,
       y: y + (cardH - qrSize) / 2,
       width: qrSize,
       height: qrSize
     });
-    page.drawText("SURVEY", {
+    page.drawText("CONTACT", {
       x: x + padding,
       y: y + (cardH - qrSize) / 2 - labelSize - 2,
       size: labelSize,

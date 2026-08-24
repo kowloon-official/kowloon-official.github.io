@@ -40,18 +40,34 @@ node scripts/upload-photos.js --event kowloon-19 --dir "C:\写真が入ったフ
 
 ※ `--event` に指定するslugは `data/tournaments.json` の該当大会の `slug` と一致させること。新しい大会がまだ一覧にない場合は、先に `data/tournaments.json` にエントリを追加する。
 
+## 次回大会予定を更新する
+
+次の大会が決まったら `data/next-event.json` を編集する。
+
+```json
+{
+  "scheduled": true,
+  "name": "九龍-KOWLOON-#19",
+  "date": "2026-10-10",
+  "registrationUrl": "https://www.start.gg/tournament/kowloon-19",
+  "note": "エントリー開始は9月上旬予定"
+}
+```
+
+未定の場合は `scheduled` を `false` に戻す（ホームに「近日発表予定」と表示される）。
+
 ## 名札用QRコードを作る
 
 ```
-node scripts/generate-qr.js --survey "<GoogleフォームのURL>" --site "<サイトのURL>" --out qr-print-sheet.pdf
+node scripts/generate-qr.js --contact "<GoogleフォームのURL>" --site "<サイトのURL>" --out qr-print-sheet.pdf
 ```
 
 - カードサイズは初期値90mm×54mm。名札ケースの実サイズが違う場合は `--card-w` `--card-h` (mm指定)で調整
 - キンコーズなどでA4用紙に印刷し、カットして名札裏に貼る想定
 
-## アンケートフォームを作る
+## お問い合わせフォームを作る
 
-`forms/survey-questions.md` に質問の叩き台があるので、Googleフォームに転記して作成する。作成後、URLを `js/config.js` の `surveyUrl` に反映する。
+`forms/contact-form.md` に質問の叩き台があるので、Googleフォームに転記して作成する。作成後、URLを `js/config.js` の `contactUrl` に反映する。
 
 ## GitHub Pagesで公開する
 

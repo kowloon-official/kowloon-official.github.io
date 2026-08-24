@@ -194,6 +194,115 @@ img { max-width: 100%; display: block; }
   padding: 32px 0;
 }
 
+/* --- Intro --- */
+.intro-section h2 {
+  font-size: 1.2rem;
+  margin: 0 0 12px;
+}
+
+.intro-text {
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 640px;
+}
+
+/* --- Next event --- */
+.next-event-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.next-event-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.next-event-date {
+  color: var(--blue);
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.next-event-note {
+  color: var(--muted);
+  margin: 8px 0 14px;
+  line-height: 1.7;
+}
+
+/* --- Stats --- */
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px 12px;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, var(--blue), var(--cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* --- Purpose cards --- */
+.purpose-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.purpose-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px 20px;
+  text-align: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.purpose-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.purpose-icon {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.purpose-title {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.purpose-desc {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .stats-strip { grid-template-columns: repeat(3, 1fr); padding: 18px 8px; }
+  .stat-number { font-size: 1.4rem; }
+}
+
 .section-head {
   display: flex;
   align-items: baseline;
@@ -382,7 +491,7 @@ img { max-width: 100%; display: block; }
   color: var(--text);
 }
 
-.footer-survey {
+.footer-contact {
   display: inline-flex;
   align-items: center;
   gap: 8px;
