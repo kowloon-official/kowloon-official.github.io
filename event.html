@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>大会ギャラリー ｜ 九龍-KOWLOON-</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header id="site-header" class="site-header"></header>
+
+<main class="container">
+  <section class="section">
+    <div class="section-head">
+      <h2 id="event-title">読み込み中...</h2>
+    </div>
+    <p class="meta" id="event-meta" style="color:var(--muted); margin-top:-10px;"></p>
+    <div class="photo-grid" id="photo-grid"></div>
+    <div class="empty-state" id="empty-state" style="display:none;">
+      <div class="big-emoji">📷</div>
+      <p>この大会の写真はまだ準備中です。</p>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightbox-close">&times;</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/favorites.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/data.js"></script>
+<script>
+(async function () {
+  renderHeader("archive");
+  renderFooter();
+
+  const params = new URLSearchParams(location.search);
+  const slug = params.get("slug");
+  const tournaments = await loadTournaments();
+  const event = tournaments.find(t => t.slug === slug);
+
+  if (!event) {
+    document.getElementById("event-title").textContent = "大会が見つかりませんでした";
+    return;
+  }
+
+  document.title = `${event.name} ｜ 九龍-KOWLOON-`;
+  document.getElementById("event-title").textContent = event.name;
+  document.getElementById("event-meta").textContent =
+    `${formatDate(event.date)} ・ 参加${event.attendees}人`;
+
+  const manifest = await loadPhotoManifest(event.photoManifest);
+  const grid = document.getElementById("photo-grid");
+  const empty = document.getElementById("empty-state");
+
+  if (!manifest.photos || manifest.photos.length === 0) {
+    empty.style.display = "block";
+    return;
+  }
+
+  grid.innerHTML = manifest.photos.map(p => `
+    <div class="photo-item" data-full="${p.full}" data-caption="${p.caption || ""}">
+      <img src="${p.thumb}" alt="${p.caption || event.name}" loading="lazy">
+      <button class="fav-btn ${isFavorite(p.id) ? "active" : ""}" data-photo-id="${p.id}">♥</button>
+    </div>
+  `).join("");
+
+  // お気に入りボタン
+  grid.querySelectorAll(".fav-btn").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const photoId = btn.dataset.photoId;
+      const photo = manifest.photos.find(p => p.id === photoId);
+      const nowActive = toggleFavorite(photoId, {
+        id: photoId,
+        thumb: photo.thumb,
+        full: photo.full,
+        eventName: event.name,
+        eventSlug: event.slug
+      });
+      btn.classList.toggle("active", nowActive);
+    });
+  });
+
+  // ライトボックス(拡大表示)
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  grid.querySelectorAll(".photo-item").forEach(item => {
+    item.addEventListener("click", () => {
+      lightboxImg.src = item.dataset.full;
+      lightboxImg.alt = item.dataset.caption;
+      lightbox.classList.add("open");
+    });
+  });
+  document.getElementById("lightbox-close").addEventListener("click", () => {
+    lightbox.classList.remove("open");
+  });
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) lightbox.classList.remove("open");
+  });
+})();
+</script>
+</body>
+</html>

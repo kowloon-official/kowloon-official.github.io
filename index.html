@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>九龍-KOWLOON- フォトアーカイブ</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header id="site-header" class="site-header"></header>
+
+<main class="container">
+  <section class="hero">
+    <div class="hero-photo" id="hero-photo">
+      <div class="hero-overlay">
+        <div class="eyebrow">最新の大会</div>
+        <h1 id="hero-title">読み込み中...</h1>
+        <div class="meta" id="hero-meta"></div>
+      </div>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-primary" id="hero-gallery-link" href="archive.html">写真を見る</a>
+      <a class="btn btn-secondary" href="favorites.html">お気に入り一覧</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>大会アーカイブ</h2>
+      <a class="see-all" href="archive.html">すべて見る →</a>
+    </div>
+    <div class="card-grid" id="recent-grid"></div>
+  </section>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script src="js/config.js"></script>
+<script src="js/favorites.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/data.js"></script>
+<script>
+(async function () {
+  renderHeader("home");
+  renderFooter();
+
+  const tournaments = await loadTournaments();
+  const withPhotos = tournaments.filter(t => t.cover);
+  const latest = withPhotos[0] || tournaments[0];
+
+  if (latest) {
+    const heroPhoto = document.getElementById("hero-photo");
+    if (latest.cover) {
+      const img = document.createElement("img");
+      img.src = latest.cover;
+      img.alt = latest.name;
+      heroPhoto.prepend(img);
+    }
+    document.getElementById("hero-title").textContent = latest.name;
+    document.getElementById("hero-meta").textContent =
+      `${formatDate(latest.date)} ・ 参加${latest.attendees}人`;
+    document.getElementById("hero-gallery-link").href =
+      `event.html?slug=${encodeURIComponent(latest.slug)}`;
+  }
+
+  const grid = document.getElementById("recent-grid");
+  grid.innerHTML = tournaments.slice(0, 6).map(eventCardHtml).join("");
+})();
+</script>
+</body>
+</html>

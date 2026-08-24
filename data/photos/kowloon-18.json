@@ -1,0 +1,11 @@
+{
+  "eventSlug": "kowloon-18",
+  "photos": [
+    { "id": "kowloon-18-001", "thumb": "assets/placeholder/sample-1.svg", "full": "assets/placeholder/sample-1.svg", "caption": "" },
+    { "id": "kowloon-18-002", "thumb": "assets/placeholder/sample-2.svg", "full": "assets/placeholder/sample-2.svg", "caption": "" },
+    { "id": "kowloon-18-003", "thumb": "assets/placeholder/sample-3.svg", "full": "assets/placeholder/sample-3.svg", "caption": "" },
+    { "id": "kowloon-18-004", "thumb": "assets/placeholder/sample-4.svg", "full": "assets/placeholder/sample-4.svg", "caption": "" },
+    { "id": "kowloon-18-005", "thumb": "assets/placeholder/sample-5.svg", "full": "assets/placeholder/sample-5.svg", "caption": "" },
+    { "id": "kowloon-18-006", "thumb": "assets/placeholder/sample-6.svg", "full": "assets/placeholder/sample-6.svg", "caption": "" }
+  ]
+}

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>大会アーカイブ ｜ 九龍-KOWLOON-</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header id="site-header" class="site-header"></header>
+
+<main class="container">
+  <section class="section">
+    <div class="section-head">
+      <h2>大会アーカイブ</h2>
+    </div>
+    <div class="card-grid" id="archive-grid"></div>
+  </section>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script src="js/config.js"></script>
+<script src="js/favorites.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/data.js"></script>
+<script>
+(async function () {
+  renderHeader("archive");
+  renderFooter();
+  const tournaments = await loadTournaments();
+  document.querySelector(".section-head h2").textContent = `大会アーカイブ（全${tournaments.length}件）`;
+  document.getElementById("archive-grid").innerHTML = tournaments.map(eventCardHtml).join("");
+})();
+</script>
+</body>
+</html>

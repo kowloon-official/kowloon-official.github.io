@@ -1,0 +1,292 @@
+[
+  {
+    "id": 936065,
+    "name": "九龍-KOWLOON-#18.5",
+    "slug": "kowloon-18-5",
+    "date": "2026-08-23",
+    "attendees": 73,
+    "startggUrl": "https://www.start.gg/tournament/kowloon-18-5",
+    "cover": null,
+    "photoManifest": null
+  },
+  {
+    "id": 914057,
+    "name": "九龍LIMIT BREAK#3",
+    "slug": "limit-break-3-2",
+    "date": "2026-07-19",
+    "attendees": 107,
+    "startggUrl": "https://www.start.gg/tournament/limit-break-3-2",
+    "cover": null,
+    "photoManifest": null
+  },
+  {
+    "id": 910195,
+    "name": "九龍-KOWLOON-#18",
+    "slug": "kowloon-18",
+    "date": "2026-07-18",
+    "attendees": 405,
+    "startggUrl": "https://www.start.gg/tournament/kowloon-18",
+    "cover": "assets/placeholder/sample-1.svg",
+    "photoManifest": "data/photos/kowloon-18.json"
+  },
+  {
+    "id": 824661,
+    "name": "九龍-KOWLOON-#17",
+    "slug": "kowloon-17",
+    "date": "2025-10-18",
+    "attendees": 248,
+    "startggUrl": "https://www.start.gg/tournament/kowloon-17",
+    "cover": null,
+    "photoManifest": null
+  },
+  {
+    "id": 797149,
+    "name": "九龍 LIMIT BREAK#2",
+    "slug": "limit-break-2-2",
+    "date": "2025-07-05",
+    "attendees": 84,
+    "startggUrl": "https://www.start.gg/tournament/limit-break-2-2",
+    "cover": null,
+    "photoManifest": null
+  },
+  {
+    "id": 767620,
+    "name": "九龍-KOWLOON-#16",
+    "slug": "kowloon-16",
+    "date": "2025-05-11",
+    "attendees": 393,
+    "startggUrl": "https://www.start.gg/tournament/kowloon-16",
+    "cover": null,
+    "photoManifest": null
+  },
+  {
+    "id": 788017,
+    "name": "九龍#16 OIKOMI",
+    "slug": "16-oikomi",
+    "date": "2025-05-10",
+    "attendees": 57,
+    "startggUrl": "https://www.start.gg/tournament/16-oikomi",
+    "cover": null,
+    "photoManifest": null
+  },
+  {
+    "id": 776333,
+    "name": "くすブラ Before KOWLOON",
+    "slug": "before-kowloon-1",
+    "date": "2025-05-10",
+    "attendees": 64,
+    "startggUrl": "https://www.start.gg/tournament/before-kowloon-1",
+    "cover": null,
+    "photoManifest": null
+  },
+  {
+    "id": 767128,
+    "name": "九龍#15withスマバト#2",
+    "slug": "15with-2",
+    "date": "2025-03-23",
+    "attendees": 238,
+    "startggUrl": "https://www.start.gg/tournament/15with-2",
+    "cover": null,
+    "photoManifest": null
+  },
+  {
+    "id": 751119,
+    "name": "九龍#15withスマバト15th anniversary",
+    "slug": "15with-15th-anniversary",
+    "date": "2025-03-22",
+    "attendees": 643,
+    "startggUrl": "https://www.start.gg/tournament/15with-15th-anniversary",
+    "cover": null,
+    "photoManifest": null
+  },
+  {
+    "id": 763096,
+    "name": "Pre-KOWLOON#15 with SUMABATO",
+    "slug": "pre-kowloon-15-with-sumabato",
+    "date": "2025-03-21",
+    "attendees": 64,
+    "startggUrl": "https://www.start.gg/tournament/pre-kowloon-15-with-sumabato",
+    "cover": null,
+    "photoManifest": null
+  },
+  {
+    "id": 764461,
+    "name": "KOWLOON#15 with SUMABATO OIKOMI",
+    "slug": "kowloon-15-with-sumabato-oikomi",
+    "date": "2025-03-16",
+    "attendees": 31,
+    "startggUrl": "https://www.start.gg/tournament/kowloon-15-with-sumabato-oikomi",
+    "cover": null,
+    "photoManifest": null
+  },
+  {
+    "id": 746895,
+    "name": "九龍-KOWLOON-#14",
+    "slug": "kowloon-14",
+    "date": "2025-02-08",
+    "attendees": 227,
+    "startggUrl": "https://www.start.gg/tournament/kowloon-14",
+    "cover": null,
+    "photoManifest": null
+  },
+  {
+    "id": 743289,
+    "name": "九龍-KOWLOON-#13.5",
+    "slug": "kowloon-13-5",
+    "date": "2025-01-13",
+    "attendees": 68,
+    "startggUrl": "https://www.start.gg/tournament/kowloon-13-5",
+    "cover": null,
+    "photoManifest": null
+  },
+  {
+    "id": 732928,
+    "name": "九龍 LIMIT BREAK#1",
+    "slug": "limit-break-1-3",
+    "date": "2024-12-15",
+    "attendees": 99,
+    "startggUrl": "https://www.start.gg/tournament/limit-break-1-3",
+    "cover": null,
+    "photoManifest": null
+  },
+  {
+    "id": 704865,
+    "name": "九龍-KOWLOON-#13",
+    "slug": "kowloon-13",
+    "date": "2024-10-05",
+    "attendees": 309,
+    "startggUrl": "https://www.start.gg/tournament/kowloon-13",
+    "cover": null,
+    "photoManifest": null
+  },
+  {
+    "id": 669094,
+    "name": "九龍#12 with篝火 【Kowloon#12 with Kagaribi】",
+    "slug": "12-with-kowloon-12-with-kagaribi",
+    "date": "2024-07-27",
+    "attendees": 1463,
+    "startggUrl": "https://www.start.gg/tournament/12-with-kowloon-12-with-kagaribi",
+    "cover": null,
+    "photoManifest": null
+  },
+  {
+    "id": 656051,
+    "name": "九龍-KOWLOON-#11",
+    "slug": "kowloon-11",
+    "date": "2024-05-11",
+    "attendees": 278,
+    "startggUrl": "https://www.start.gg/tournament/kowloon-11",
+    "cover": null,
+    "photoManifest": null
+  },
+  {
+    "id": 639288,
+    "name": "九龍-KOWLOON-＃10",
+    "slug": "kowloon-10",
+    "date": "2024-03-30",
+    "attendees": 339,
+    "startggUrl": "https://www.start.gg/tournament/kowloon-10",
+    "cover": null,
+    "photoManifest": null
+  },
+  {
+    "id": 605837,
+    "name": "九龍#9withスマバト",
+    "slug": "9with",
+    "date": "2024-01-13",
+    "attendees": 895,
+    "startggUrl": "https://www.start.gg/tournament/9with",
+    "cover": null,
+    "photoManifest": null
+  },
+  {
+    "id": 618707,
+    "name": "BTR #5: Kowloon Retro",
+    "slug": "btr-5-kowloon-retro",
+    "date": "2023-12-17",
+    "attendees": 27,
+    "startggUrl": "https://www.start.gg/tournament/btr-5-kowloon-retro",
+    "cover": null,
+    "photoManifest": null
+  },
+  {
+    "id": 596154,
+    "name": "九龍-KOWLOON-＃8",
+    "slug": "kowloon-8",
+    "date": "2023-11-11",
+    "attendees": 256,
+    "startggUrl": "https://www.start.gg/tournament/kowloon-8",
+    "cover": null,
+    "photoManifest": null
+  },
+  {
+    "id": 561293,
+    "name": "九龍-KOWLOON-＃7",
+    "slug": "kowloon-7",
+    "date": "2023-08-26",
+    "attendees": 298,
+    "startggUrl": "https://www.start.gg/tournament/kowloon-7",
+    "cover": null,
+    "photoManifest": null
+  },
+  {
+    "id": 542725,
+    "name": "九龍-KOWLOON-＃6",
+    "slug": "kowloon-6",
+    "date": "2023-06-17",
+    "attendees": 346,
+    "startggUrl": "https://www.start.gg/tournament/kowloon-6",
+    "cover": null,
+    "photoManifest": null
+  },
+  {
+    "id": 516201,
+    "name": "九龍-KOWLOON-＃5",
+    "slug": "kowloon-5",
+    "date": "2023-04-08",
+    "attendees": 535,
+    "startggUrl": "https://www.start.gg/tournament/kowloon-5",
+    "cover": null,
+    "photoManifest": null
+  },
+  {
+    "id": 496634,
+    "name": "九龍-KOWLOON-＃4",
+    "slug": "kowloon-4",
+    "date": "2023-01-21",
+    "attendees": 291,
+    "startggUrl": "https://www.start.gg/tournament/kowloon-4",
+    "cover": null,
+    "photoManifest": null
+  },
+  {
+    "id": 475743,
+    "name": "九龍-KOWLOON-＃3",
+    "slug": "kowloon-3",
+    "date": "2022-11-05",
+    "attendees": 387,
+    "startggUrl": "https://www.start.gg/tournament/kowloon-3",
+    "cover": null,
+    "photoManifest": null
+  },
+  {
+    "id": 463841,
+    "name": "九龍-KOWLOON-＃2",
+    "slug": "kowloon-2",
+    "date": "2022-08-20",
+    "attendees": 310,
+    "startggUrl": "https://www.start.gg/tournament/kowloon-2",
+    "cover": null,
+    "photoManifest": null
+  },
+  {
+    "id": 448395,
+    "name": "九龍-KOWLOON-",
+    "slug": "kowloon-1",
+    "date": "2022-06-25",
+    "attendees": 287,
+    "startggUrl": "https://www.start.gg/tournament/kowloon-1",
+    "cover": null,
+    "photoManifest": null
+  }
+]
