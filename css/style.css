@@ -107,10 +107,7 @@ img { max-width: 100%; display: block; }
   font-weight: 900;
   letter-spacing: 0.01em;
   margin: 28px 0 0;
-  background: linear-gradient(90deg, #4a90d9 0%, #29c5f2 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--text);
 }
 
 @media (max-width: 640px) {
