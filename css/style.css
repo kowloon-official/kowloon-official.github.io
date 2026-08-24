@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Shippori+Mincho+B1:wght@800;900&display=swap');
 
 :root {
   --blue: #0090c9;
@@ -103,9 +103,10 @@ img { max-width: 100%; display: block; }
   display: inline-block;
   width: fit-content;
   text-align: left;
+  font-family: 'Shippori Mincho B1', serif;
   font-size: 2.2rem;
   font-weight: 900;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.04em;
   margin: 28px 0 0;
   color: var(--text);
 }
