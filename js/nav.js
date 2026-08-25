@@ -25,13 +25,14 @@ function renderHeader(activePage) {
 function renderFooter() {
   const el = document.getElementById("site-footer");
   if (!el) return;
-  const { discord, x, startgg } = window.KOWLOON_CONFIG.links;
+  const { discord, x, youtube, email } = window.KOWLOON_CONFIG.links;
   el.innerHTML = `
     <div class="container">
       <div class="footer-links">
         <a href="${discord}" target="_blank" rel="noopener">Discord</a>
         <a href="${x}" target="_blank" rel="noopener">X (Twitter)</a>
-        <a href="${startgg}" target="_blank" rel="noopener">start.gg</a>
+        <a href="${youtube}" target="_blank" rel="noopener">YouTube</a>
+        <a href="${email}">メール</a>
       </div>
       <a href="${window.KOWLOON_CONFIG.contactUrl}" class="footer-contact" target="_blank" rel="noopener">
         お問い合わせ
