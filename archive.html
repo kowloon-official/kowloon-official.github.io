@@ -15,22 +15,40 @@
       <h2>大会アーカイブ</h2>
     </div>
     <div class="archive-filters">
-      <select id="filter-year"><option value="">年: すべて</option></select>
-      <select id="filter-series">
-        <option value="">シリーズ: すべて</option>
-        <option value="main">本編</option>
-        <option value="lb">LIMIT BREAK</option>
-      </select>
-      <select id="filter-min-attendees">
-        <option value="0">参加人数: 指定なし</option>
-        <option value="100">100人以上</option>
-        <option value="200">200人以上</option>
-        <option value="300">300人以上</option>
-        <option value="500">500人以上</option>
-      </select>
-      <select id="filter-event"><option value="">大会を選ぶ</option></select>
+      <div class="filter-group">
+        <label for="filter-year">年</label>
+        <select id="filter-year"><option value="">すべて</option></select>
+      </div>
+      <div class="filter-group">
+        <label for="filter-series">シリーズ</label>
+        <select id="filter-series">
+          <option value="">すべて</option>
+          <option value="main">本編</option>
+          <option value="lb">LIMIT BREAK</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="filter-min-attendees">参加人数</label>
+        <select id="filter-min-attendees">
+          <option value="0">指定なし</option>
+          <option value="100">100人以上</option>
+          <option value="200">200人以上</option>
+          <option value="300">300人以上</option>
+          <option value="500">500人以上</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>大会（複数選択可）</label>
+        <div class="multiselect" id="event-multiselect">
+          <button type="button" class="multiselect-toggle" id="event-toggle">
+            <span id="event-toggle-label">すべて</span>
+          </button>
+          <div class="multiselect-panel" id="event-panel"></div>
+        </div>
+      </div>
       <button id="filter-reset" class="filter-reset" type="button">条件をリセット</button>
     </div>
+    <div class="active-filters" id="active-filters"></div>
     <p class="archive-count" id="archive-count"></p>
     <div id="archive-groups"></div>
   </section>
@@ -50,6 +68,7 @@
   document.querySelector(".section-head h2").textContent = `大会アーカイブ（全${tournaments.length}件）`;
 
   const seriesOf = (t) => (t.name.includes("LIMIT BREAK") ? "lb" : "main");
+  const seriesLabel = { main: "本編", lb: "LIMIT BREAK" };
 
   // 年フィルターの選択肢
   const years = [...new Set(tournaments.map(t => new Date(t.date).getFullYear()))].sort((a, b) => b - a);
@@ -61,35 +80,98 @@
     yearSelect.appendChild(opt);
   });
 
-  // 大会を選ぶフィルターの選択肢(表示順=新しい順のまま)
-  const eventSelect = document.getElementById("filter-event");
+  // 大会(複数選択)チェックボックスの生成(表示順=新しい順のまま)
+  const eventPanel = document.getElementById("event-panel");
+  const selectedEvents = new Set();
   tournaments.forEach(t => {
-    const opt = document.createElement("option");
-    opt.value = t.slug;
-    opt.textContent = t.name;
-    eventSelect.appendChild(opt);
+    const label = document.createElement("label");
+    label.className = "multiselect-option";
+    label.innerHTML = `<input type="checkbox" value="${t.slug}"><span>${t.name}</span>`;
+    label.querySelector("input").addEventListener("change", (e) => {
+      if (e.target.checked) selectedEvents.add(t.slug);
+      else selectedEvents.delete(t.slug);
+      updateEventToggleLabel();
+      render();
+    });
+    eventPanel.appendChild(label);
+  });
+
+  const eventToggle = document.getElementById("event-toggle");
+  const eventToggleLabel = document.getElementById("event-toggle-label");
+  function updateEventToggleLabel() {
+    if (selectedEvents.size === 0) eventToggleLabel.textContent = "すべて";
+    else if (selectedEvents.size === 1) {
+      const t = tournaments.find(t => selectedEvents.has(t.slug));
+      eventToggleLabel.textContent = t.name;
+    } else {
+      eventToggleLabel.textContent = `${selectedEvents.size}件選択中`;
+    }
+  }
+  eventToggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    eventPanel.classList.toggle("open");
+  });
+  document.addEventListener("click", (e) => {
+    if (!document.getElementById("event-multiselect").contains(e.target)) {
+      eventPanel.classList.remove("open");
+    }
   });
 
   const groupsEl = document.getElementById("archive-groups");
   const countEl = document.getElementById("archive-count");
+  const activeFiltersEl = document.getElementById("active-filters");
   const yearFilter = document.getElementById("filter-year");
   const seriesFilter = document.getElementById("filter-series");
   const minAttendeesFilter = document.getElementById("filter-min-attendees");
+
+  function removeEventChip(slug) {
+    selectedEvents.delete(slug);
+    eventPanel.querySelector(`input[value="${slug}"]`).checked = false;
+    updateEventToggleLabel();
+    render();
+  }
+
+  function renderChips() {
+    const chips = [];
+    if (yearFilter.value) {
+      chips.push({ label: `${yearFilter.value}年`, onRemove: () => { yearFilter.value = ""; render(); } });
+    }
+    if (seriesFilter.value) {
+      chips.push({ label: seriesLabel[seriesFilter.value], onRemove: () => { seriesFilter.value = ""; render(); } });
+    }
+    if (Number(minAttendeesFilter.value) > 0) {
+      chips.push({ label: `${minAttendeesFilter.value}人以上`, onRemove: () => { minAttendeesFilter.value = "0"; render(); } });
+    }
+    tournaments.forEach(t => {
+      if (selectedEvents.has(t.slug)) {
+        chips.push({ label: t.name, onRemove: () => removeEventChip(t.slug) });
+      }
+    });
+
+    activeFiltersEl.innerHTML = "";
+    chips.forEach(chip => {
+      const el = document.createElement("span");
+      el.className = "filter-chip";
+      el.innerHTML = `${chip.label} <button type="button" aria-label="解除">&times;</button>`;
+      el.querySelector("button").addEventListener("click", chip.onRemove);
+      activeFiltersEl.appendChild(el);
+    });
+  }
 
   function render() {
     const year = yearFilter.value;
     const series = seriesFilter.value;
     const minAttendees = Number(minAttendeesFilter.value);
-    const eventSlug = eventSelect.value;
 
     const filtered = tournaments.filter(t => {
-      if (eventSlug && t.slug !== eventSlug) return false;
+      if (selectedEvents.size > 0 && !selectedEvents.has(t.slug)) return false;
       if (year && String(new Date(t.date).getFullYear()) !== year) return false;
       if (series && seriesOf(t) !== series) return false;
       if (t.attendees < minAttendees) return false;
       return true;
     });
 
+    renderChips();
     countEl.textContent = `${filtered.length}件表示中（全${tournaments.length}件）`;
 
     if (filtered.length === 0) {
@@ -112,14 +194,16 @@
     `).join("");
   }
 
-  [yearFilter, seriesFilter, minAttendeesFilter, eventSelect].forEach(el => {
+  [yearFilter, seriesFilter, minAttendeesFilter].forEach(el => {
     el.addEventListener("change", render);
   });
   document.getElementById("filter-reset").addEventListener("click", () => {
     yearFilter.value = "";
     seriesFilter.value = "";
     minAttendeesFilter.value = "0";
-    eventSelect.value = "";
+    selectedEvents.clear();
+    eventPanel.querySelectorAll("input").forEach(cb => cb.checked = false);
+    updateEventToggleLabel();
     render();
   });
 
