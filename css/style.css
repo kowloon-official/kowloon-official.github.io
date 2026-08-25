@@ -110,7 +110,7 @@ img { max-width: 100%; display: block; }
   width: fit-content;
   text-align: center;
   font-family: '筆ごしらえ', serif;
-  font-size: 4.6rem;
+  font-size: 5rem;
   font-weight: 900;
   letter-spacing: 0.04em;
   margin: 28px auto 0;
@@ -118,7 +118,7 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 640px) {
-  .tagline-banner { font-size: 1.9rem; }
+  .tagline-banner { font-size: 2.1rem; }
 }
 
 .hero {
