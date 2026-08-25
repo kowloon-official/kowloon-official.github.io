@@ -30,6 +30,15 @@
     </div>
   </section>
 
+  <section class="section prev-event-section" id="prev-event-section">
+    <div class="section-head">
+      <h2>前回大会</h2>
+    </div>
+    <div class="section-card next-event-card" id="prev-event-card">
+      <p>読み込み中...</p>
+    </div>
+  </section>
+
   <section class="section next-event-section" id="next-event-section">
     <div class="section-head">
       <h2>次回大会予定</h2>
@@ -125,6 +134,16 @@
     }
   } catch (e) {
     document.getElementById("hero-placeholder").style.display = "flex";
+  }
+
+  // 前回大会(データは新しい順に並んでいるため先頭が直近開催分)
+  const prev = tournaments[0];
+  if (prev) {
+    document.getElementById("prev-event-card").innerHTML = `
+      <div class="next-event-name">${prev.name}</div>
+      <div class="next-event-date">${formatDate(prev.date)} ・ 参加${prev.attendees}人</div>
+      <a class="btn btn-primary" href="event.html?slug=${encodeURIComponent(prev.slug)}" style="margin-top:14px;">写真を見る</a>
+    `;
   }
 
   // 開催実績の数字(本編+スマバト等のコラボ+LIMIT BREAKのみをカウント。OIKOMI/レトロ/Pre等は除く)
