@@ -23,7 +23,7 @@
         <label for="filter-series">シリーズ</label>
         <select id="filter-series">
           <option value="">すべて</option>
-          <option value="main">本編</option>
+          <option value="main">九龍-KOWLOON-</option>
           <option value="lb">LIMIT BREAK</option>
         </select>
       </div>
@@ -68,7 +68,7 @@
   document.querySelector(".section-head h2").textContent = `大会アーカイブ（全${tournaments.length}件）`;
 
   const seriesOf = (t) => (t.name.includes("LIMIT BREAK") ? "lb" : "main");
-  const seriesLabel = { main: "本編", lb: "LIMIT BREAK" };
+  const seriesLabel = { main: "九龍-KOWLOON-", lb: "LIMIT BREAK" };
 
   // 年フィルターの選択肢
   const years = [...new Set(tournaments.map(t => new Date(t.date).getFullYear()))].sort((a, b) => b - a);
