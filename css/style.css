@@ -119,7 +119,6 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 640px) {
   .tagline-banner { font-size: 1.5rem; }
-  .hero-photo { height: 160px; }
 }
 
 .hero {
@@ -131,7 +130,8 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  height: 260px;
+  height: 50vw;
+  max-height: 540px;
   background: var(--bg);
 }
 
