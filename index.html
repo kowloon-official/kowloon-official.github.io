@@ -69,14 +69,49 @@
     } else {
       const track = document.createElement("div");
       track.className = "hero-track";
-      track.style.animationDuration = `${photos.length * 6}s`;
-      photos.concat(photos).forEach((src) => {
+      photos.forEach((src) => {
         const img = document.createElement("img");
         img.src = src;
         img.alt = "";
         track.appendChild(img);
       });
       heroPhoto.appendChild(track);
+
+      // 各写真が中央で数秒静止してから次へ移る
+      const waitForLoad = (img) =>
+        img.complete ? Promise.resolve() : new Promise((r) => { img.onload = r; img.onerror = r; });
+      await Promise.all(Array.from(track.children).map(waitForLoad));
+
+      const imgs = Array.from(track.children);
+      const gap = 16; // .hero-track img の margin-right と合わせる
+      let cum = 0;
+      const offsets = imgs.map((img) => {
+        const w = img.getBoundingClientRect().width;
+        const center = cum + w / 2;
+        cum += w + gap;
+        return center;
+      });
+
+      const moveMs = 1100;
+      const pauseMs = 3000;
+      const centerX = () => heroPhoto.clientWidth / 2;
+      const goTo = (index, animate) => {
+        track.style.transition = animate ? `transform ${moveMs}ms ease` : "none";
+        track.style.transform = `translateX(${centerX() - offsets[index]}px)`;
+        if (!animate) void track.offsetWidth;
+      };
+
+      let i = 0;
+      goTo(i, false);
+      setInterval(() => {
+        i++;
+        if (i >= imgs.length) {
+          i = 0;
+          goTo(i, false);
+        } else {
+          goTo(i, true);
+        }
+      }, moveMs + pauseMs);
     }
   } catch (e) {
     document.getElementById("hero-placeholder").style.display = "flex";

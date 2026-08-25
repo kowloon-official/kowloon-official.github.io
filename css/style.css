@@ -145,9 +145,6 @@ img { max-width: 100%; display: block; }
   display: flex;
   height: 100%;
   width: max-content;
-  animation-name: hero-scroll;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
 }
 
 .hero-track img {
@@ -156,11 +153,6 @@ img { max-width: 100%; display: block; }
   object-fit: cover;
   flex-shrink: 0;
   margin-right: 16px;
-}
-
-@keyframes hero-scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
 }
 
 .hero-placeholder {
