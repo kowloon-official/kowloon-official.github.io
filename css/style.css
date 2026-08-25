@@ -106,14 +106,14 @@ img { max-width: 100%; display: block; }
 
 /* --- Tagline --- */
 .tagline-banner {
-  display: inline-block;
+  display: block;
   width: fit-content;
-  text-align: left;
+  text-align: center;
   font-family: '筆ごしらえ', serif;
   font-size: 3.6rem;
   font-weight: 900;
   letter-spacing: 0.04em;
-  margin: 28px 0 0;
+  margin: 28px auto 0;
   color: var(--text);
 }
 
