@@ -236,13 +236,14 @@ img { max-width: 100%; display: block; }
 /* --- Next event --- */
 .next-event-name {
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
 }
 
 .next-event-note {
   color: var(--muted);
-  margin: 8px 0 14px;
-  line-height: 1.7;
+  font-size: 0.85rem;
+  margin: 10px 0 14px;
+  line-height: 1.6;
 }
 
 .prev-event-thumb {
