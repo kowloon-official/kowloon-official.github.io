@@ -139,6 +139,7 @@ img { max-width: 100%; display: block; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 20px;
 }
 
 .hero-track {
@@ -153,6 +154,7 @@ img { max-width: 100%; display: block; }
   object-fit: cover;
   flex-shrink: 0;
   margin-right: 16px;
+  border-radius: 20px;
 }
 
 .hero-placeholder {
