@@ -14,6 +14,24 @@
     <div class="section-head">
       <h2>大会アーカイブ</h2>
     </div>
+    <div class="archive-filters">
+      <select id="filter-year"><option value="">年: すべて</option></select>
+      <select id="filter-series">
+        <option value="">シリーズ: すべて</option>
+        <option value="main">本編</option>
+        <option value="lb">LIMIT BREAK</option>
+      </select>
+      <select id="filter-min-attendees">
+        <option value="0">参加人数: 指定なし</option>
+        <option value="100">100人以上</option>
+        <option value="200">200人以上</option>
+        <option value="300">300人以上</option>
+        <option value="500">500人以上</option>
+      </select>
+      <select id="filter-event"><option value="">大会を選ぶ</option></select>
+      <button id="filter-reset" class="filter-reset" type="button">条件をリセット</button>
+    </div>
+    <p class="archive-count" id="archive-count"></p>
     <div id="archive-groups"></div>
   </section>
 </main>
@@ -31,19 +49,81 @@
   const tournaments = await loadTournaments();
   document.querySelector(".section-head h2").textContent = `大会アーカイブ（全${tournaments.length}件）`;
 
-  const groups = {};
-  tournaments.forEach(t => {
-    const year = new Date(t.date).getFullYear();
-    (groups[year] ||= []).push(t);
-  });
-  const years = Object.keys(groups).sort((a, b) => b - a);
+  const seriesOf = (t) => (t.name.includes("LIMIT BREAK") ? "lb" : "main");
 
-  document.getElementById("archive-groups").innerHTML = years.map(year => `
-    <div class="archive-year-group">
-      <h3 class="archive-year">${year}年（${groups[year].length}件）</h3>
-      <div class="card-grid">${groups[year].map(eventCardHtml).join("")}</div>
-    </div>
-  `).join("");
+  // 年フィルターの選択肢
+  const years = [...new Set(tournaments.map(t => new Date(t.date).getFullYear()))].sort((a, b) => b - a);
+  const yearSelect = document.getElementById("filter-year");
+  years.forEach(y => {
+    const opt = document.createElement("option");
+    opt.value = y;
+    opt.textContent = `${y}年`;
+    yearSelect.appendChild(opt);
+  });
+
+  // 大会を選ぶフィルターの選択肢(表示順=新しい順のまま)
+  const eventSelect = document.getElementById("filter-event");
+  tournaments.forEach(t => {
+    const opt = document.createElement("option");
+    opt.value = t.slug;
+    opt.textContent = t.name;
+    eventSelect.appendChild(opt);
+  });
+
+  const groupsEl = document.getElementById("archive-groups");
+  const countEl = document.getElementById("archive-count");
+  const yearFilter = document.getElementById("filter-year");
+  const seriesFilter = document.getElementById("filter-series");
+  const minAttendeesFilter = document.getElementById("filter-min-attendees");
+
+  function render() {
+    const year = yearFilter.value;
+    const series = seriesFilter.value;
+    const minAttendees = Number(minAttendeesFilter.value);
+    const eventSlug = eventSelect.value;
+
+    const filtered = tournaments.filter(t => {
+      if (eventSlug && t.slug !== eventSlug) return false;
+      if (year && String(new Date(t.date).getFullYear()) !== year) return false;
+      if (series && seriesOf(t) !== series) return false;
+      if (t.attendees < minAttendees) return false;
+      return true;
+    });
+
+    countEl.textContent = `${filtered.length}件表示中（全${tournaments.length}件）`;
+
+    if (filtered.length === 0) {
+      groupsEl.innerHTML = `<div class="empty-state"><p>条件に合う大会が見つかりませんでした。</p></div>`;
+      return;
+    }
+
+    const groups = {};
+    filtered.forEach(t => {
+      const y = new Date(t.date).getFullYear();
+      (groups[y] ||= []).push(t);
+    });
+    const groupYears = Object.keys(groups).sort((a, b) => b - a);
+
+    groupsEl.innerHTML = groupYears.map(y => `
+      <div class="archive-year-group">
+        <h3 class="archive-year">${y}年（${groups[y].length}件）</h3>
+        <div class="card-grid">${groups[y].map(eventCardHtml).join("")}</div>
+      </div>
+    `).join("");
+  }
+
+  [yearFilter, seriesFilter, minAttendeesFilter, eventSelect].forEach(el => {
+    el.addEventListener("change", render);
+  });
+  document.getElementById("filter-reset").addEventListener("click", () => {
+    yearFilter.value = "";
+    seriesFilter.value = "";
+    minAttendeesFilter.value = "0";
+    eventSelect.value = "";
+    render();
+  });
+
+  render();
 })();
 </script>
 </body>
