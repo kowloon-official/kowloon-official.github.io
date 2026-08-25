@@ -16,10 +16,29 @@ function renderHeader(activePage) {
   el.innerHTML = `
     <div class="container">
       <a href="index.html" class="brand">九龍-KOWLOON-</a>
-      <nav class="nav-links">${links}</nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="メニュー" aria-expanded="false">&#9776;</button>
+      <nav class="nav-links" id="nav-links">${links}</nav>
       <a href="${window.KOWLOON_CONFIG.contactUrl}" class="nav-cta" target="_blank" rel="noopener">お問い合わせ</a>
     </div>
   `;
+
+  const toggle = document.getElementById("nav-toggle");
+  const navLinks = document.getElementById("nav-links");
+  const closeMenu = () => {
+    navLinks.classList.remove("open");
+    toggle.setAttribute("aria-expanded", "false");
+  };
+  toggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const isOpen = navLinks.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", String(isOpen));
+  });
+  navLinks.querySelectorAll("a").forEach((a) => {
+    a.addEventListener("click", closeMenu);
+  });
+  document.addEventListener("click", (e) => {
+    if (!el.contains(e.target)) closeMenu();
+  });
 }
 
 function renderFooter() {
