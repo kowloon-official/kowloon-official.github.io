@@ -29,6 +29,7 @@ html, body {
   color: var(--text);
   font-family: 'Noto Sans JP', 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 a { color: inherit; text-decoration: none; }
@@ -118,6 +119,7 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 640px) {
   .tagline-banner { font-size: 1.5rem; }
+  .hero-photo { height: 160px; }
 }
 
 .hero {
@@ -126,17 +128,11 @@ img { max-width: 100%; display: block; }
 
 .hero-photo {
   position: relative;
-  border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: var(--shadow);
-  aspect-ratio: 16 / 8;
-  background: var(--surface);
-}
-
-.hero-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  height: 260px;
+  background: var(--bg);
 }
 
 .hero-static {
@@ -159,7 +155,7 @@ img { max-width: 100%; display: block; }
   width: auto;
   object-fit: cover;
   flex-shrink: 0;
-  margin-right: 10px;
+  margin-right: 16px;
 }
 
 @keyframes hero-scroll {
