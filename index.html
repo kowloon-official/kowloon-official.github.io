@@ -139,9 +139,16 @@
   // 前回大会(データは新しい順に並んでいるため先頭が直近開催分)
   const prev = tournaments[0];
   if (prev) {
+    const prevThumb = prev.cover
+      ? `<img src="${prev.cover}" alt="${prev.name}">`
+      : `写真準備中`;
     document.getElementById("prev-event-card").innerHTML = `
       <div class="next-event-name">${prev.name}</div>
-      <div class="next-event-date">${formatDate(prev.date)} ・ 参加${prev.attendees}人</div>
+      <div class="meta">
+        <span>${formatDate(prev.date)}</span>
+        <span>参加${prev.attendees}人</span>
+      </div>
+      <div class="prev-event-thumb">${prevThumb}</div>
       <a class="btn btn-primary" href="event.html?slug=${encodeURIComponent(prev.slug)}" style="margin-top:14px;">写真を見る</a>
     `;
   }
