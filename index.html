@@ -207,14 +207,20 @@
           ["会場", next.venue],
           ["規模", next.scale]
         ].filter(([, value]) => value);
+        const bannerInner = next.banner
+          ? `<img src="${next.banner}" alt="${next.name}">`
+          : `画像準備中`;
         return `
           <div class="section-card next-event-card">
-            <div class="next-event-name">${next.name}</div>
-            <p class="next-event-note">
-              ${rows.map(([label, value]) => `${label}：${value}`).join("<br>")}
-            </p>
-            ${next.note ? `<p class="next-event-note">${next.note}</p>` : ""}
-            ${next.registrationUrl ? `<a class="btn btn-primary" href="${next.registrationUrl}" target="_blank" rel="noopener">エントリー情報を見る</a>` : ""}
+            <div class="next-event-main">
+              <div class="next-event-name">${next.name}</div>
+              <p class="next-event-note">
+                ${rows.map(([label, value]) => `${label}：${value}`).join("<br>")}
+              </p>
+              ${next.note ? `<p class="next-event-note">${next.note}</p>` : ""}
+              ${next.registrationUrl ? `<a class="btn btn-primary" href="${next.registrationUrl}" target="_blank" rel="noopener">エントリー情報を見る</a>` : ""}
+            </div>
+            <div class="next-event-banner">${bannerInner}</div>
           </div>
         `;
       }).join("");
