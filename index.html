@@ -15,14 +15,9 @@
   <section class="hero">
     <div class="hero-photo" id="hero-photo">
       <div class="hero-placeholder" id="hero-placeholder" style="display:none;">写真準備中</div>
-      <div class="hero-overlay">
-        <div class="eyebrow">最新の大会</div>
-        <h1 id="hero-title">読み込み中...</h1>
-        <div class="meta" id="hero-meta"></div>
-      </div>
     </div>
     <div class="hero-cta">
-      <a class="btn btn-primary" id="hero-gallery-link" href="archive.html">写真を見る</a>
+      <a class="btn btn-primary" href="archive.html">写真を見る</a>
       <a class="btn btn-secondary" href="favorites.html">お気に入り一覧</a>
     </div>
   </section>
@@ -48,29 +43,6 @@
   <section class="section stats-section">
     <div class="stats-strip" id="stats-strip"></div>
   </section>
-
-  <section class="section">
-    <div class="section-head">
-      <h2>何をする？</h2>
-    </div>
-    <div class="purpose-cards">
-      <a class="purpose-card" href="archive.html">
-        <div class="purpose-icon">📷</div>
-        <div class="purpose-title">写真を探す</div>
-        <div class="purpose-desc">大会アーカイブから、回ごとの写真を見返す</div>
-      </a>
-      <a class="purpose-card" href="favorites.html">
-        <div class="purpose-icon">♡</div>
-        <div class="purpose-title">お気に入りを見る</div>
-        <div class="purpose-desc">これまで保存したお気に入り写真の一覧</div>
-      </a>
-      <a class="purpose-card" id="contact-card" href="#" target="_blank" rel="noopener">
-        <div class="purpose-icon">✉</div>
-        <div class="purpose-title">お問い合わせ</div>
-        <div class="purpose-desc">写真の削除依頼・運営へのご意見はこちら</div>
-      </a>
-    </div>
-  </section>
 </main>
 
 <footer id="site-footer" class="site-footer"></footer>
@@ -84,26 +56,35 @@
   renderHeader("home");
   renderFooter();
 
-  document.getElementById("contact-card").href = window.KOWLOON_CONFIG.contactUrl;
-
   const tournaments = await loadTournaments();
-  const latest = tournaments[0];
 
-  if (latest) {
+  // ヒーロー: 象徴的な写真を自動で切り替えるスライドショー
+  try {
     const heroPhoto = document.getElementById("hero-photo");
-    if (latest.cover) {
-      const img = document.createElement("img");
-      img.src = latest.cover;
-      img.alt = latest.name;
-      heroPhoto.prepend(img);
+    const res = await fetch("data/featured-photos.json");
+    const photos = await res.json();
+    if (photos.length) {
+      photos.forEach((src, i) => {
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = "";
+        img.className = "hero-slide" + (i === 0 ? " active" : "");
+        heroPhoto.appendChild(img);
+      });
+      if (photos.length > 1) {
+        let current = 0;
+        setInterval(() => {
+          const slides = heroPhoto.querySelectorAll(".hero-slide");
+          slides[current].classList.remove("active");
+          current = (current + 1) % slides.length;
+          slides[current].classList.add("active");
+        }, 4000);
+      }
     } else {
       document.getElementById("hero-placeholder").style.display = "flex";
     }
-    document.getElementById("hero-title").textContent = latest.name;
-    document.getElementById("hero-meta").textContent =
-      `${formatDate(latest.date)} ・ 参加${latest.attendees}人`;
-    document.getElementById("hero-gallery-link").href =
-      `event.html?slug=${encodeURIComponent(latest.slug)}`;
+  } catch (e) {
+    document.getElementById("hero-placeholder").style.display = "flex";
   }
 
   // 開催実績の数字(本編+スマバト等のコラボ+LIMIT BREAKのみをカウント。OIKOMI/レトロ/Pre等は除く)
