@@ -43,8 +43,8 @@
     <div class="section-head">
       <h2>次回大会予定</h2>
     </div>
-    <div class="section-card next-event-card" id="next-event-card">
-      <p>読み込み中...</p>
+    <div id="next-event-list">
+      <div class="section-card next-event-card"><p>読み込み中...</p></div>
     </div>
   </section>
 
@@ -186,32 +186,41 @@
     </div>
   `;
 
-  // 次回大会予定
+  // 次回大会予定(複数登録した場合は開催日が近い順に並べる)
+  const nextEventList = document.getElementById("next-event-list");
+  const emptyNextEventHtml =
+    `<div class="section-card next-event-card"><p class="next-event-note">次回の開催は近日発表予定です。DiscordやXでお知らせします。</p></div>`;
   try {
     const res = await fetch("data/next-event.json");
-    const next = await res.json();
-    const card = document.getElementById("next-event-card");
-    if (next.scheduled && next.name) {
-      const dateText = next.dateLabel || (next.date ? formatDate(next.date) : "");
-      const rows = [
-        ["日程", dateText],
-        ["会場", next.venue],
-        ["規模", next.scale]
-      ].filter(([, value]) => value);
-      card.innerHTML = `
-        <div class="next-event-name">${next.name}</div>
-        <p class="next-event-note">
-          ${rows.map(([label, value]) => `${label}：${value}`).join("<br>")}
-        </p>
-        ${next.note ? `<p class="next-event-note">${next.note}</p>` : ""}
-        ${next.registrationUrl ? `<a class="btn btn-primary" href="${next.registrationUrl}" target="_blank" rel="noopener">エントリー情報を見る</a>` : ""}
-      `;
+    const data = await res.json();
+    const events = (Array.isArray(data) ? data : [data])
+      .filter((e) => e.scheduled && e.name)
+      .sort((a, b) => new Date(a.date) - new Date(b.date));
+
+    if (events.length === 0) {
+      nextEventList.innerHTML = emptyNextEventHtml;
     } else {
-      card.innerHTML = `<p class="next-event-note">次回の開催は近日発表予定です。DiscordやXでお知らせします。</p>`;
+      nextEventList.innerHTML = events.map((next) => {
+        const dateText = next.dateLabel || (next.date ? formatDate(next.date) : "");
+        const rows = [
+          ["日程", dateText],
+          ["会場", next.venue],
+          ["規模", next.scale]
+        ].filter(([, value]) => value);
+        return `
+          <div class="section-card next-event-card">
+            <div class="next-event-name">${next.name}</div>
+            <p class="next-event-note">
+              ${rows.map(([label, value]) => `${label}：${value}`).join("<br>")}
+            </p>
+            ${next.note ? `<p class="next-event-note">${next.note}</p>` : ""}
+            ${next.registrationUrl ? `<a class="btn btn-primary" href="${next.registrationUrl}" target="_blank" rel="noopener">エントリー情報を見る</a>` : ""}
+          </div>
+        `;
+      }).join("");
     }
   } catch (e) {
-    document.getElementById("next-event-card").innerHTML =
-      `<p class="next-event-note">次回の開催は近日発表予定です。</p>`;
+    nextEventList.innerHTML = emptyNextEventHtml;
   }
 })();
 </script>

@@ -234,6 +234,10 @@ img { max-width: 100%; display: block; }
 }
 
 /* --- Next event --- */
+#next-event-list .next-event-card + .next-event-card {
+  margin-top: 16px;
+}
+
 .next-event-name {
   font-weight: 700;
   font-size: 1.5rem;

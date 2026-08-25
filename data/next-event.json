@@ -1,10 +1,12 @@
-{
-  "scheduled": true,
-  "name": "九龍 vs GRAND SLUM",
-  "date": "2026-04-24",
-  "dateLabel": "2026年4月24日〜25日",
-  "venue": "岡谷鋼機名古屋公会堂",
-  "scale": "1024人",
-  "registrationUrl": "",
-  "note": ""
-}
+[
+  {
+    "scheduled": true,
+    "name": "九龍 vs GRAND SLUM",
+    "date": "2026-04-24",
+    "dateLabel": "2026年4月24日〜25日",
+    "venue": "岡谷鋼機名古屋公会堂",
+    "scale": "1024人",
+    "registrationUrl": "",
+    "note": ""
+  }
+]
