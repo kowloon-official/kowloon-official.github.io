@@ -192,9 +192,17 @@
     const next = await res.json();
     const card = document.getElementById("next-event-card");
     if (next.scheduled && next.name) {
+      const dateText = next.dateLabel || (next.date ? formatDate(next.date) : "");
+      const rows = [
+        ["日程", dateText],
+        ["会場", next.venue],
+        ["規模", next.scale]
+      ].filter(([, value]) => value);
       card.innerHTML = `
         <div class="next-event-name">${next.name}</div>
-        <div class="next-event-date">${next.dateLabel || (next.date ? formatDate(next.date) : "")}</div>
+        <p class="next-event-note">
+          ${rows.map(([label, value]) => `${label}：${value}`).join("<br>")}
+        </p>
         ${next.note ? `<p class="next-event-note">${next.note}</p>` : ""}
         ${next.registrationUrl ? `<a class="btn btn-primary" href="${next.registrationUrl}" target="_blank" rel="noopener">エントリー情報を見る</a>` : ""}
       `;
