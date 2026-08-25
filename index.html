@@ -194,7 +194,7 @@
     if (next.scheduled && next.name) {
       card.innerHTML = `
         <div class="next-event-name">${next.name}</div>
-        <div class="next-event-date">${next.date ? formatDate(next.date) : ""}</div>
+        <div class="next-event-date">${next.dateLabel || (next.date ? formatDate(next.date) : "")}</div>
         ${next.note ? `<p class="next-event-note">${next.note}</p>` : ""}
         ${next.registrationUrl ? `<a class="btn btn-primary" href="${next.registrationUrl}" target="_blank" rel="noopener">エントリー情報を見る</a>` : ""}
       `;
