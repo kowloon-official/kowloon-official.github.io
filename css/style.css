@@ -685,11 +685,11 @@ img { max-width: 100%; display: block; }
   gap: 16px;
   flex-wrap: wrap;
   margin-bottom: 14px;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .footer-links a {
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text);
 }
 
