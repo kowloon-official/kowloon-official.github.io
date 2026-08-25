@@ -67,9 +67,11 @@
       img.className = "hero-static";
       heroPhoto.appendChild(img);
     } else {
+      const n = photos.length;
       const track = document.createElement("div");
       track.className = "hero-track";
-      photos.forEach((src) => {
+      // 前後に必ず隣の写真が見えるよう3セット並べ、常に中央のセットを使う
+      photos.concat(photos, photos).forEach((src) => {
         const img = document.createElement("img");
         img.src = src;
         img.alt = "";
@@ -77,7 +79,6 @@
       });
       heroPhoto.appendChild(track);
 
-      // 各写真が中央で数秒静止してから次へ移る
       const waitForLoad = (img) =>
         img.complete ? Promise.resolve() : new Promise((r) => { img.onload = r; img.onerror = r; });
       await Promise.all(Array.from(track.children).map(waitForLoad));
@@ -96,20 +97,22 @@
       const pauseMs = 3000;
       const centerX = () => heroPhoto.clientWidth / 2;
       const goTo = (index, animate) => {
-        track.style.transition = animate ? `transform ${moveMs}ms ease` : "none";
+        track.style.transition = animate ? `transform ${moveMs}ms ease-in-out` : "none";
         track.style.transform = `translateX(${centerX() - offsets[index]}px)`;
         if (!animate) void track.offsetWidth;
       };
 
-      let i = 0;
+      let i = n;
       goTo(i, false);
       setInterval(() => {
         i++;
-        if (i >= imgs.length) {
-          i = 0;
-          goTo(i, false);
-        } else {
-          goTo(i, true);
+        goTo(i, true);
+        if (i === 2 * n) {
+          // 見た目が同じ2セット目先頭に到達したら、静止中に瞬時かつ無音でセット目印を巻き戻す
+          setTimeout(() => {
+            i = n;
+            goTo(i, false);
+          }, moveMs);
         }
       }, moveMs + pauseMs);
     }
