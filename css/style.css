@@ -274,7 +274,7 @@ img { max-width: 100%; display: block; }
 }
 
 .stat-number--small {
-  transform: translateY(-0.02em);
+  font-size: 1.5rem;
 }
 
 .stat-label {
