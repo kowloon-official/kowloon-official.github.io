@@ -329,6 +329,23 @@ img { max-width: 100%; display: block; }
 }
 
 /* --- Cards grid (archive) --- */
+.archive-year-group {
+  margin-bottom: 36px;
+}
+
+.archive-year-group:last-child {
+  margin-bottom: 0;
+}
+
+.archive-year {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--blue);
+  margin: 0 0 14px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));

@@ -14,7 +14,7 @@
     <div class="section-head">
       <h2>大会アーカイブ</h2>
     </div>
-    <div class="card-grid" id="archive-grid"></div>
+    <div id="archive-groups"></div>
   </section>
 </main>
 
@@ -30,7 +30,20 @@
   renderFooter();
   const tournaments = await loadTournaments();
   document.querySelector(".section-head h2").textContent = `大会アーカイブ（全${tournaments.length}件）`;
-  document.getElementById("archive-grid").innerHTML = tournaments.map(eventCardHtml).join("");
+
+  const groups = {};
+  tournaments.forEach(t => {
+    const year = new Date(t.date).getFullYear();
+    (groups[year] ||= []).push(t);
+  });
+  const years = Object.keys(groups).sort((a, b) => b - a);
+
+  document.getElementById("archive-groups").innerHTML = years.map(year => `
+    <div class="archive-year-group">
+      <h3 class="archive-year">${year}年（${groups[year].length}件）</h3>
+      <div class="card-grid">${groups[year].map(eventCardHtml).join("")}</div>
+    </div>
+  `).join("");
 })();
 </script>
 </body>

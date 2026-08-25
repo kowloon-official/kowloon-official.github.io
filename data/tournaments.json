@@ -66,39 +66,6 @@
     "mainSeries": true
   },
   {
-    "id": 788017,
-    "name": "九龍#16 OIKOMI",
-    "slug": "16-oikomi",
-    "date": "2025-05-10",
-    "attendees": 57,
-    "startggUrl": "https://www.start.gg/tournament/16-oikomi",
-    "cover": null,
-    "photoManifest": null,
-    "mainSeries": false
-  },
-  {
-    "id": 776333,
-    "name": "くすブラ Before KOWLOON",
-    "slug": "before-kowloon-1",
-    "date": "2025-05-10",
-    "attendees": 64,
-    "startggUrl": "https://www.start.gg/tournament/before-kowloon-1",
-    "cover": null,
-    "photoManifest": null,
-    "mainSeries": false
-  },
-  {
-    "id": 767128,
-    "name": "九龍#15withスマバト#2",
-    "slug": "15with-2",
-    "date": "2025-03-23",
-    "attendees": 238,
-    "startggUrl": "https://www.start.gg/tournament/15with-2",
-    "cover": null,
-    "photoManifest": null,
-    "mainSeries": false
-  },
-  {
     "id": 751119,
     "name": "九龍#15withスマバト15th anniversary",
     "slug": "15with-15th-anniversary",
@@ -108,28 +75,6 @@
     "cover": null,
     "photoManifest": null,
     "mainSeries": true
-  },
-  {
-    "id": 763096,
-    "name": "Pre-KOWLOON#15 with SUMABATO",
-    "slug": "pre-kowloon-15-with-sumabato",
-    "date": "2025-03-21",
-    "attendees": 64,
-    "startggUrl": "https://www.start.gg/tournament/pre-kowloon-15-with-sumabato",
-    "cover": null,
-    "photoManifest": null,
-    "mainSeries": false
-  },
-  {
-    "id": 764461,
-    "name": "KOWLOON#15 with SUMABATO OIKOMI",
-    "slug": "kowloon-15-with-sumabato-oikomi",
-    "date": "2025-03-16",
-    "attendees": 31,
-    "startggUrl": "https://www.start.gg/tournament/kowloon-15-with-sumabato-oikomi",
-    "cover": null,
-    "photoManifest": null,
-    "mainSeries": false
   },
   {
     "id": 746895,
@@ -218,17 +163,6 @@
     "cover": null,
     "photoManifest": null,
     "mainSeries": true
-  },
-  {
-    "id": 618707,
-    "name": "BTR #5: Kowloon Retro",
-    "slug": "btr-5-kowloon-retro",
-    "date": "2023-12-17",
-    "attendees": 27,
-    "startggUrl": "https://www.start.gg/tournament/btr-5-kowloon-retro",
-    "cover": null,
-    "photoManifest": null,
-    "mainSeries": false
   },
   {
     "id": 596154,
