@@ -207,11 +207,6 @@ img { max-width: 100%; display: block; }
 }
 
 /* --- Intro --- */
-.intro-section h2 {
-  font-size: 1.2rem;
-  margin: 0 0 12px;
-}
-
 .intro-text {
   color: var(--muted);
   line-height: 1.8;
@@ -320,8 +315,11 @@ img { max-width: 100%; display: block; }
 }
 
 .section-head h2 {
+  display: inline-block;
   font-size: 1.2rem;
   margin: 0;
+  padding-bottom: 6px;
+  border-bottom: 3px solid var(--cyan);
 }
 
 .section-head .see-all {
