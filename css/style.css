@@ -266,6 +266,7 @@ img { max-width: 100%; display: block; }
   font-size: 1.8rem;
   font-weight: 900;
   line-height: 1;
+  white-space: nowrap;
   background: linear-gradient(90deg, var(--blue), var(--cyan));
   -webkit-background-clip: text;
   background-clip: text;
@@ -273,7 +274,6 @@ img { max-width: 100%; display: block; }
 }
 
 .stat-number--small {
-  font-size: 1.2rem;
   transform: translateY(-0.02em);
 }
 
