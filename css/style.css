@@ -9,7 +9,6 @@
 :root {
   --blue: #0090c9;
   --cyan: #00ccff;
-  --green: #00b371;
   --bg: #fafafa;
   --surface: #ffffff;
   --border: #e6e6ea;
@@ -227,8 +226,11 @@ img { max-width: 100%; display: block; }
   }
 }
 
-/* --- Next event --- */
-.next-event-card {
+/* --- セクション共通カード ---
+   トップページの各セクション(九龍とは/次回大会予定/大会実績など)は
+   すべてこの見た目(白背景+枠線+角丸+影)で統一する。今後セクションを
+   追加する場合もこのクラスをベースにすること。 */
+.section-card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -236,6 +238,7 @@ img { max-width: 100%; display: block; }
   box-shadow: var(--shadow);
 }
 
+/* --- Next event --- */
 .next-event-name {
   font-weight: 700;
   font-size: 1.1rem;
@@ -258,10 +261,6 @@ img { max-width: 100%; display: block; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
   padding: 24px 12px;
   text-align: center;
 }
