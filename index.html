@@ -10,16 +10,11 @@
 <header id="site-header" class="site-header"></header>
 
 <main class="container">
-  <p class="tagline-banner">最新の九龍が最高の九龍を</p>
-
   <section class="hero">
     <div class="hero-photo" id="hero-photo">
       <div class="hero-placeholder" id="hero-placeholder" style="display:none;">写真準備中</div>
     </div>
-    <div class="hero-cta">
-      <a class="btn btn-primary" href="archive.html">写真を見る</a>
-      <a class="btn btn-secondary" href="favorites.html">お気に入り一覧</a>
-    </div>
+    <p class="tagline-banner">最新の九龍が最高の九龍を</p>
   </section>
 
   <section class="section intro-section">
@@ -58,30 +53,30 @@
 
   const tournaments = await loadTournaments();
 
-  // ヒーロー: 象徴的な写真を自動で切り替えるスライドショー
+  // ヒーロー: 象徴的な写真が右から左へ流れ続けるフィルムストリップ
   try {
     const heroPhoto = document.getElementById("hero-photo");
     const res = await fetch("data/featured-photos.json");
     const photos = await res.json();
-    if (photos.length) {
-      photos.forEach((src, i) => {
+    if (photos.length === 0) {
+      document.getElementById("hero-placeholder").style.display = "flex";
+    } else if (photos.length === 1) {
+      const img = document.createElement("img");
+      img.src = photos[0];
+      img.alt = "";
+      img.className = "hero-static";
+      heroPhoto.appendChild(img);
+    } else {
+      const track = document.createElement("div");
+      track.className = "hero-track";
+      track.style.animationDuration = `${photos.length * 6}s`;
+      photos.concat(photos).forEach((src) => {
         const img = document.createElement("img");
         img.src = src;
         img.alt = "";
-        img.className = "hero-slide" + (i === 0 ? " active" : "");
-        heroPhoto.appendChild(img);
+        track.appendChild(img);
       });
-      if (photos.length > 1) {
-        let current = 0;
-        setInterval(() => {
-          const slides = heroPhoto.querySelectorAll(".hero-slide");
-          slides[current].classList.remove("active");
-          current = (current + 1) % slides.length;
-          slides[current].classList.add("active");
-        }, 4000);
-      }
-    } else {
-      document.getElementById("hero-placeholder").style.display = "flex";
+      heroPhoto.appendChild(track);
     }
   } catch (e) {
     document.getElementById("hero-placeholder").style.display = "flex";
