@@ -75,8 +75,12 @@ img { max-width: 100%; display: block; }
 .nav-links {
   display: flex;
   gap: 24px;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 500;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .nav-links a {
