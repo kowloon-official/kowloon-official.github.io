@@ -718,12 +718,12 @@ img { max-width: 100%; display: block; }
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 48px;
-  height: 48px;
+  width: 120px;
+  height: 120px;
   border: none;
   background: none;
   color: #fff;
-  font-size: 2rem;
+  font-size: 6.4rem;
   line-height: 1;
   display: flex;
   align-items: center;
@@ -743,9 +743,9 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 640px) {
   .lightbox-nav {
-    width: 40px;
-    height: 40px;
-    font-size: 1.6rem;
+    width: 88px;
+    height: 88px;
+    font-size: 4.4rem;
   }
 }
 
