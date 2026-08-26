@@ -28,7 +28,7 @@
     "date": "2026-07-18",
     "attendees": 405,
     "startggUrl": "https://www.start.gg/tournament/kowloon-18",
-    "cover": "assets/placeholder/sample-1.svg",
+    "cover": "https://pub-622122f8d42b413d8a0d9f36582c9bd4.r2.dev/events/kowloon-18/%E5%90%84%E5%8B%99%E5%8E%9F/thumb/1-260718_kowloon18-009.jpg",
     "photoManifest": "data/photos/kowloon-18.json",
     "mainSeries": true
   },
