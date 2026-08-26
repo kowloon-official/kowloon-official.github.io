@@ -61,8 +61,8 @@
     "date": "2025-05-11",
     "attendees": 393,
     "startggUrl": "https://www.start.gg/tournament/kowloon-16",
-    "cover": null,
-    "photoManifest": null,
+    "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-16/%E3%81%95%E3%81%8D%E3%82%87%E3%81%86/full/1-DSC06925.jpg",
+    "photoManifest": "data/photos/kowloon-16.json",
     "mainSeries": true
   },
   {
