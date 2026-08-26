@@ -39,6 +39,8 @@ body {
 
 main {
   flex: 1 0 auto;
+  width: 100%;
+  min-width: 0;
 }
 
 a { color: inherit; text-decoration: none; }
