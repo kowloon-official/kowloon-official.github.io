@@ -17,7 +17,10 @@ function renderHeader(activePage) {
     <div class="container">
       <a href="index.html" class="brand">九龍-KOWLOON-</a>
       <button class="nav-toggle" id="nav-toggle" aria-label="メニュー" aria-expanded="false">&#9776;</button>
-      <nav class="nav-links" id="nav-links">${links}</nav>
+      <nav class="nav-links" id="nav-links">
+        ${links}
+        <a href="${window.KOWLOON_CONFIG.contactUrl}" class="nav-mobile-contact" target="_blank" rel="noopener">お問い合わせ</a>
+      </nav>
       <a href="${window.KOWLOON_CONFIG.contactUrl}" class="nav-cta" target="_blank" rel="noopener">お問い合わせ</a>
     </div>
   `;

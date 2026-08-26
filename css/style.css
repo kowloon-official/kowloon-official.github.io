@@ -136,7 +136,7 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 640px) {
-  .tagline-banner { font-size: 2.1rem; }
+  .tagline-banner { font-size: 1.4rem; white-space: nowrap; }
 }
 
 .hero {
@@ -786,9 +786,14 @@ img { max-width: 100%; display: block; }
   margin-top: 4px;
 }
 
+.nav-mobile-contact {
+  display: none;
+}
+
 @media (max-width: 640px) {
   .nav-links { display: none; }
   .nav-toggle { display: block; }
+  .nav-cta { display: none; }
 
   .nav-links.open {
     display: flex;
@@ -812,5 +817,11 @@ img { max-width: 100%; display: block; }
 
   .nav-links.open a:last-child {
     border-bottom: none;
+  }
+
+  .nav-links.open .nav-mobile-contact {
+    display: block;
+    color: var(--blue);
+    font-weight: 700;
   }
 }
