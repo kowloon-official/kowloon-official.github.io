@@ -195,7 +195,13 @@
     const data = await res.json();
     const events = (Array.isArray(data) ? data : [data])
       .filter((e) => e.scheduled && e.name)
-      .sort((a, b) => new Date(a.date) - new Date(b.date));
+      .sort((a, b) => {
+        // 日程未定のものは常に末尾へ
+        if (!a.date && !b.date) return 0;
+        if (!a.date) return 1;
+        if (!b.date) return -1;
+        return new Date(a.date) - new Date(b.date);
+      });
 
     if (events.length === 0) {
       nextEventList.innerHTML = emptyNextEventHtml;
