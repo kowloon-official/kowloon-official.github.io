@@ -215,8 +215,8 @@
     "date": "2023-01-21",
     "attendees": 291,
     "startggUrl": "https://www.start.gg/tournament/kowloon-4",
-    "cover": null,
-    "photoManifest": null,
+    "cover": "https://pub-622122f8d42b413d8a0d9f36582c9bd4.r2.dev/events/kowloon-4/%E3%83%8B%E3%83%A3%E3%83%84/thumb/0001_xlarge.jpg",
+    "photoManifest": "data/photos/kowloon-4.json",
     "mainSeries": true
   },
   {
@@ -226,8 +226,8 @@
     "date": "2022-11-05",
     "attendees": 387,
     "startggUrl": "https://www.start.gg/tournament/kowloon-3",
-    "cover": null,
-    "photoManifest": null,
+    "cover": "https://pub-622122f8d42b413d8a0d9f36582c9bd4.r2.dev/events/kowloon-3/%E3%83%8B%E3%83%A3%E3%83%84/thumb/0001_xlarge.jpg",
+    "photoManifest": "data/photos/kowloon-3.json",
     "mainSeries": true
   },
   {
