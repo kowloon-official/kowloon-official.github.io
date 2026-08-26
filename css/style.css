@@ -687,7 +687,7 @@ img { max-width: 100%; display: block; }
 .lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(10, 10, 15, 0.9);
+  background: rgba(4, 4, 7, 0.97);
   display: none;
   align-items: center;
   justify-content: center;
