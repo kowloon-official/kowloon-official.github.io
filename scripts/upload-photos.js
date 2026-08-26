@@ -120,6 +120,11 @@ async function main() {
     console.log(`uploaded: ${file}`);
   }
 
+  // カメラマン名の五十音順(日本語ロケール)で並び替え。同じカメラマン内の順番は維持する
+  manifest.photos.sort((a, b) =>
+    (a.photographer || "").localeCompare(b.photographer || "", "ja")
+  );
+
   fs.mkdirSync(path.dirname(manifestPath), { recursive: true });
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2), "utf-8");
   console.log(`マニフェストを更新しました: ${manifestPath}`);

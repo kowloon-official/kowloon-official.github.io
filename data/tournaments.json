@@ -72,8 +72,8 @@
     "date": "2025-03-22",
     "attendees": 643,
     "startggUrl": "https://www.start.gg/tournament/15with-15th-anniversary",
-    "cover": null,
-    "photoManifest": null,
+    "cover": "https://pub-622122f8d42b413d8a0d9f36582c9bd4.r2.dev/events/15with-15th-anniversary/%E3%81%95%E3%81%8D%E3%82%87%E3%81%86/thumb/1-ハイライト用7.jpg",
+    "photoManifest": "data/photos/15with-15th-anniversary.json",
     "mainSeries": true
   },
   {
