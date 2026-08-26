@@ -41,6 +41,27 @@ function renderHeader(activePage) {
   });
 }
 
+// 上に戻るボタン(全ページ共通で自動表示)
+function renderScrollTop() {
+  const btn = document.createElement("button");
+  btn.id = "scroll-top-btn";
+  btn.className = "scroll-top-btn";
+  btn.setAttribute("aria-label", "ページ上部へ戻る");
+  btn.innerHTML = "&#8593;";
+  document.body.appendChild(btn);
+
+  const toggle = () => {
+    btn.classList.toggle("visible", window.scrollY > 400);
+  };
+  window.addEventListener("scroll", toggle, { passive: true });
+  toggle();
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+renderScrollTop();
+
 function renderFooter() {
   const el = document.getElementById("site-footer");
   if (!el) return;
