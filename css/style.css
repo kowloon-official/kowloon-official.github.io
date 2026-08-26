@@ -722,7 +722,7 @@ img { max-width: 100%; display: block; }
   height: 120px;
   border: none;
   background: none;
-  color: rgba(0, 204, 255, 0.5);
+  color: rgba(135, 206, 250, 0.75);
   font-size: 6.4rem;
   line-height: 1;
   display: flex;
@@ -736,7 +736,7 @@ img { max-width: 100%; display: block; }
 .lightbox-next { right: 8px; }
 
 .lightbox-nav:hover {
-  color: rgba(0, 204, 255, 0.8);
+  color: rgba(135, 206, 250, 1);
   transform: translateY(-50%) scale(1.1);
 }
 
