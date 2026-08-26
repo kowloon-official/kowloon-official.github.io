@@ -723,9 +723,18 @@ img { max-width: 100%; display: block; }
   flex: 1 0 auto;
   display: flex;
   align-items: center;
-  justify-content: center;
   cursor: pointer;
   transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.lightbox-prev {
+  justify-content: flex-start;
+  padding-left: 6%;
+}
+
+.lightbox-next {
+  justify-content: flex-end;
+  padding-right: 6%;
 }
 
 .lightbox-nav svg {
