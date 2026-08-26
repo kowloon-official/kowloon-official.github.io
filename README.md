@@ -80,8 +80,6 @@ node scripts/generate-qr.js --contact "<GoogleフォームのURL>" --site "<サ�
 
 ## GitHub Pagesで公開する
 
-```
-gh repo create kowloon-site --public --source=. --remote=origin --push
-```
+サイトは `kowloon-official` アカウントの `kowloon-official/kowloon-official.github.io` リポジトリで公開している（`https://kowloon-official.github.io/`）。ユーザー名と同じ名前のリポジトリのため、パスなしのルートURLで公開される。
 
-その後、GitHubリポジトリの Settings → Pages で公開ブランチを設定する。
+Settings → Pages で公開ブランチ（`master` / root）を設定する。
