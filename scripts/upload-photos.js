@@ -48,7 +48,9 @@ async function main() {
     console.error("使い方: node scripts/upload-photos.js --event <slug> --photographer <名前> --dir <folder>");
     process.exit(1);
   }
-  const photographerSlug = encodeURIComponent(photographer);
+  // R2キー自体には生のカメラマン名を使う(キーにURLエンコード済み文字列を含めると
+  // 公開URL化する際に二重エンコードされて404になるため)。URLへの変換は都度行う。
+  const toUrl = (key) => `${publicBase}/${key.split("/").map(encodeURIComponent).join("/")}`;
 
   const accountId = requireEnv("R2_ACCOUNT_ID");
   const accessKeyId = requireEnv("R2_ACCESS_KEY_ID");
@@ -99,8 +101,8 @@ async function main() {
       .jpeg({ quality: JPEG_QUALITY })
       .toBuffer();
 
-    const thumbKey = `events/${event}/${photographerSlug}/thumb/${baseName}.jpg`;
-    const fullKey = `events/${event}/${photographerSlug}/full/${baseName}.jpg`;
+    const thumbKey = `events/${event}/${photographer}/thumb/${baseName}.jpg`;
+    const fullKey = `events/${event}/${photographer}/full/${baseName}.jpg`;
 
     await s3.send(new PutObjectCommand({
       Bucket: bucket, Key: thumbKey, Body: thumbBuf, ContentType: "image/jpeg"
@@ -111,8 +113,8 @@ async function main() {
 
     manifest.photos.push({
       id: photoId,
-      thumb: `${publicBase}/${thumbKey}`,
-      full: `${publicBase}/${fullKey}`,
+      thumb: toUrl(thumbKey),
+      full: toUrl(fullKey),
       caption: "",
       photographer
     });

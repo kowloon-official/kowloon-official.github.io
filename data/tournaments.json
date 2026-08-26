@@ -6,7 +6,7 @@
     "date": "2026-08-23",
     "attendees": 111,
     "startggUrl": "https://www.start.gg/tournament/kowloon-18-5",
-    "cover": "https://pub-622122f8d42b413d8a0d9f36582c9bd4.r2.dev/events/kowloon-18-5/%E3%81%BB%E3%82%8D/thumb/1-20260823_KOWLOON18.jpg",
+    "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-18-5/%E3%81%BB%E3%82%8D/thumb/1-20260823_KOWLOON18.jpg",
     "photoManifest": "data/photos/kowloon-18-5.json",
     "mainSeries": true
   },
@@ -17,7 +17,7 @@
     "date": "2026-07-19",
     "attendees": 107,
     "startggUrl": "https://www.start.gg/tournament/limit-break-3-2",
-    "cover": "https://pub-622122f8d42b413d8a0d9f36582c9bd4.r2.dev/events/limit-break-3-2/thumb/1-260719_lowltd-020.jpg",
+    "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/limit-break-3-2/thumb/1-260719_lowltd-020.jpg",
     "photoManifest": "data/photos/limit-break-3-2.json",
     "mainSeries": true
   },
@@ -28,7 +28,7 @@
     "date": "2026-07-18",
     "attendees": 405,
     "startggUrl": "https://www.start.gg/tournament/kowloon-18",
-    "cover": "https://pub-622122f8d42b413d8a0d9f36582c9bd4.r2.dev/events/kowloon-18/%E5%90%84%E5%8B%99%E5%8E%9F/thumb/1-260718_kowloon18-009.jpg",
+    "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-18/%E5%90%84%E5%8B%99%E5%8E%9F/thumb/1-260718_kowloon18-009.jpg",
     "photoManifest": "data/photos/kowloon-18.json",
     "mainSeries": true
   },
@@ -39,7 +39,7 @@
     "date": "2025-10-18",
     "attendees": 248,
     "startggUrl": "https://www.start.gg/tournament/kowloon-17",
-    "cover": "https://pub-622122f8d42b413d8a0d9f36582c9bd4.r2.dev/events/kowloon-17/%E3%81%BB%E3%82%8D/thumb/1-20251018_KOWLOON17_horo_00034.jpg",
+    "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-17/%E3%81%BB%E3%82%8D/thumb/1-20251018_KOWLOON17_horo_00034.jpg",
     "photoManifest": "data/photos/kowloon-17.json",
     "mainSeries": true
   },
@@ -72,7 +72,7 @@
     "date": "2025-03-22",
     "attendees": 643,
     "startggUrl": "https://www.start.gg/tournament/15with-15th-anniversary",
-    "cover": "https://pub-622122f8d42b413d8a0d9f36582c9bd4.r2.dev/events/15with-15th-anniversary/%E3%81%95%E3%81%8D%E3%82%87%E3%81%86/thumb/1-ハイライト用7.jpg",
+    "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/15with-15th-anniversary/%E3%81%95%E3%81%8D%E3%82%87%E3%81%86/thumb/1-ハイライト用7.jpg",
     "photoManifest": "data/photos/15with-15th-anniversary.json",
     "mainSeries": true
   },
@@ -215,7 +215,7 @@
     "date": "2023-01-21",
     "attendees": 291,
     "startggUrl": "https://www.start.gg/tournament/kowloon-4",
-    "cover": "https://pub-622122f8d42b413d8a0d9f36582c9bd4.r2.dev/events/kowloon-4/%E3%83%8B%E3%83%A3%E3%83%84/thumb/0001_xlarge.jpg",
+    "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-4/%E3%83%8B%E3%83%A3%E3%83%84/thumb/0001_xlarge.jpg",
     "photoManifest": "data/photos/kowloon-4.json",
     "mainSeries": true
   },
@@ -226,7 +226,7 @@
     "date": "2022-11-05",
     "attendees": 387,
     "startggUrl": "https://www.start.gg/tournament/kowloon-3",
-    "cover": "https://pub-622122f8d42b413d8a0d9f36582c9bd4.r2.dev/events/kowloon-3/%E3%83%8B%E3%83%A3%E3%83%84/thumb/0001_xlarge.jpg",
+    "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-3/%E3%83%8B%E3%83%A3%E3%83%84/thumb/0001_xlarge.jpg",
     "photoManifest": "data/photos/kowloon-3.json",
     "mainSeries": true
   },
@@ -237,7 +237,7 @@
     "date": "2022-08-20",
     "attendees": 310,
     "startggUrl": "https://www.start.gg/tournament/kowloon-2",
-    "cover": "https://pub-622122f8d42b413d8a0d9f36582c9bd4.r2.dev/events/kowloon-2/%E3%83%8B%E3%83%A3%E3%83%84/thumb/0001_xlarge.jpg",
+    "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-2/%E3%83%8B%E3%83%A3%E3%83%84/thumb/0001_xlarge.jpg",
     "photoManifest": "data/photos/kowloon-2.json",
     "mainSeries": true
   },
@@ -248,7 +248,7 @@
     "date": "2022-06-25",
     "attendees": 287,
     "startggUrl": "https://www.start.gg/tournament/kowloon-1",
-    "cover": "https://pub-622122f8d42b413d8a0d9f36582c9bd4.r2.dev/events/kowloon-1/%E3%83%8B%E3%83%A3%E3%83%84/thumb/0001_xlarge.jpg",
+    "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-1/%E3%83%8B%E3%83%A3%E3%83%84/thumb/0001_xlarge.jpg",
     "photoManifest": "data/photos/kowloon-1.json",
     "mainSeries": true
   }
