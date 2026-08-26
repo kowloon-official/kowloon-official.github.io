@@ -196,11 +196,9 @@
     const events = (Array.isArray(data) ? data : [data])
       .filter((e) => e.scheduled && e.name)
       .sort((a, b) => {
-        // 日程未定のものは常に末尾へ
-        if (!a.date && !b.date) return 0;
-        if (!a.date) return 1;
-        if (!b.date) return -1;
-        return new Date(a.date) - new Date(b.date);
+        // 両方に日程がある場合のみ日付順に並べ、片方でも未定ならdata/next-event.json内の並び順を維持する
+        if (a.date && b.date) return new Date(a.date) - new Date(b.date);
+        return 0;
       });
 
     if (events.length === 0) {
