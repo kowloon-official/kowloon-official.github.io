@@ -718,43 +718,33 @@ img { max-width: 100%; display: block; }
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 40px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
   border: none;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background 0.15s ease;
+  background: radial-gradient(circle at 35% 30%, rgba(0, 204, 255, 0.55), rgba(0, 144, 201, 0.25) 75%);
+  transition: background 0.15s ease, transform 0.15s ease;
 }
 
-.lightbox-prev {
-  left: 0;
-  border-radius: 0 10px 10px 0;
-  background: linear-gradient(90deg, rgba(0, 204, 255, 0.4) 0%, rgba(0, 204, 255, 0) 100%);
-}
+.lightbox-prev { left: 16px; }
+.lightbox-next { right: 16px; }
 
-.lightbox-next {
-  right: 0;
-  border-radius: 10px 0 0 10px;
-  background: linear-gradient(90deg, rgba(0, 204, 255, 0) 0%, rgba(0, 204, 255, 0.4) 100%);
-}
-
-.lightbox-prev:hover {
-  background: linear-gradient(90deg, rgba(0, 204, 255, 0.6) 0%, rgba(0, 204, 255, 0) 100%);
-}
-
-.lightbox-next:hover {
-  background: linear-gradient(90deg, rgba(0, 204, 255, 0) 0%, rgba(0, 204, 255, 0.6) 100%);
+.lightbox-nav:hover {
+  background: radial-gradient(circle at 35% 30%, rgba(0, 204, 255, 0.8), rgba(0, 144, 201, 0.4) 75%);
+  transform: translateY(-50%) scale(1.06);
 }
 
 @media (max-width: 640px) {
   .lightbox-nav {
-    width: 32px;
-    height: 52px;
+    width: 40px;
+    height: 40px;
     font-size: 1.2rem;
   }
 }
