@@ -254,7 +254,7 @@ img { max-width: 100%; display: block; }
 
 .next-event-banner {
   width: 220px;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
   flex-shrink: 0;
   border-radius: 10px;
   overflow: hidden;
@@ -279,7 +279,6 @@ img { max-width: 100%; display: block; }
 
   .next-event-banner {
     width: 100%;
-    aspect-ratio: 16 / 9;
   }
 }
 
