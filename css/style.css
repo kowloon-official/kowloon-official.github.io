@@ -729,12 +729,12 @@ img { max-width: 100%; display: block; }
 
 .lightbox-prev {
   justify-content: flex-start;
-  padding-left: 6%;
+  padding-left: 2%;
 }
 
 .lightbox-next {
   justify-content: flex-end;
-  padding-right: 6%;
+  padding-right: 2%;
 }
 
 .lightbox-nav svg {
