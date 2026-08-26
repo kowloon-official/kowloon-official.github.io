@@ -729,15 +729,26 @@ img { max-width: 100%; display: block; }
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  background: radial-gradient(circle at 35% 30%, rgba(0, 204, 255, 0.55), rgba(0, 144, 201, 0.25) 75%);
   transition: background 0.15s ease, transform 0.15s ease;
 }
 
-.lightbox-prev { left: 16px; }
-.lightbox-next { right: 16px; }
+.lightbox-prev {
+  left: 16px;
+  background: radial-gradient(circle at 100% 50%, rgba(0, 204, 255, 0.65), rgba(0, 144, 201, 0.15) 70%);
+}
 
-.lightbox-nav:hover {
-  background: radial-gradient(circle at 35% 30%, rgba(0, 204, 255, 0.8), rgba(0, 144, 201, 0.4) 75%);
+.lightbox-next {
+  right: 16px;
+  background: radial-gradient(circle at 0% 50%, rgba(0, 204, 255, 0.65), rgba(0, 144, 201, 0.15) 70%);
+}
+
+.lightbox-prev:hover {
+  background: radial-gradient(circle at 100% 50%, rgba(0, 204, 255, 0.9), rgba(0, 144, 201, 0.25) 70%);
+  transform: translateY(-50%) scale(1.06);
+}
+
+.lightbox-next:hover {
+  background: radial-gradient(circle at 0% 50%, rgba(0, 204, 255, 0.9), rgba(0, 144, 201, 0.25) 70%);
   transform: translateY(-50%) scale(1.06);
 }
 
