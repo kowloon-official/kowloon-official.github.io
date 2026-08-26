@@ -722,22 +722,21 @@ img { max-width: 100%; display: block; }
   height: 120px;
   border: none;
   background: none;
-  color: #fff;
+  color: rgba(0, 204, 255, 0.5);
   font-size: 6.4rem;
   line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  opacity: 0.75;
-  transition: opacity 0.15s ease, transform 0.15s ease;
+  transition: color 0.15s ease, transform 0.15s ease;
 }
 
 .lightbox-prev { left: 8px; }
 .lightbox-next { right: 8px; }
 
 .lightbox-nav:hover {
-  opacity: 1;
+  color: rgba(0, 204, 255, 0.8);
   transform: translateY(-50%) scale(1.1);
 }
 
