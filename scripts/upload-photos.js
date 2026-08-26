@@ -2,7 +2,11 @@
 // data/photos/<event>.json のマニフェストを更新するスクリプト。
 //
 // 使い方:
-//   node scripts/upload-photos.js --event kowloon-19 --dir ./tmp/kowloon19-photos
+//   node scripts/upload-photos.js --event kowloon-19 --photographer 各務原 --dir ./tmp/kowloon19-photos
+//
+// --photographer は必須。1つの大会に複数カメラマンがいる場合、カメラマンごとに
+// フォルダを分けてこのスクリプトを複数回実行する(写真ID・保存先パスにカメラマン名を
+// 含めることで、ファイル名が偶然かぶっても上書き事故が起きないようにしている)。
 //
 // 事前準備 (.env に設定):
 //   R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY, R2_BUCKET, R2_PUBLIC_BASE_URL
@@ -39,11 +43,12 @@ function requireEnv(name) {
 }
 
 async function main() {
-  const { event, dir } = parseArgs();
-  if (!event || !dir) {
-    console.error("使い方: node scripts/upload-photos.js --event <slug> --dir <folder>");
+  const { event, dir, photographer } = parseArgs();
+  if (!event || !dir || !photographer) {
+    console.error("使い方: node scripts/upload-photos.js --event <slug> --photographer <名前> --dir <folder>");
     process.exit(1);
   }
+  const photographerSlug = encodeURIComponent(photographer);
 
   const accountId = requireEnv("R2_ACCOUNT_ID");
   const accessKeyId = requireEnv("R2_ACCESS_KEY_ID");
@@ -67,7 +72,7 @@ async function main() {
     process.exit(1);
   }
 
-  console.log(`${files.length}枚の写真を処理します (event: ${event})`);
+  console.log(`${files.length}枚の写真を処理します (event: ${event}, photographer: ${photographer})`);
 
   const manifestPath = path.join(__dirname, "..", "data", "photos", `${event}.json`);
   let manifest = { eventSlug: event, photos: [] };
@@ -78,7 +83,7 @@ async function main() {
 
   for (const file of files) {
     const baseName = path.basename(file, path.extname(file));
-    const photoId = `${event}-${baseName}`;
+    const photoId = `${event}-${photographer}-${baseName}`;
     if (existingIds.has(photoId)) {
       console.log(`skip (既にマニフェストにあり): ${file}`);
       continue;
@@ -94,8 +99,8 @@ async function main() {
       .jpeg({ quality: JPEG_QUALITY })
       .toBuffer();
 
-    const thumbKey = `events/${event}/thumb/${baseName}.jpg`;
-    const fullKey = `events/${event}/full/${baseName}.jpg`;
+    const thumbKey = `events/${event}/${photographerSlug}/thumb/${baseName}.jpg`;
+    const fullKey = `events/${event}/${photographerSlug}/full/${baseName}.jpg`;
 
     await s3.send(new PutObjectCommand({
       Bucket: bucket, Key: thumbKey, Body: thumbBuf, ContentType: "image/jpeg"
@@ -108,7 +113,8 @@ async function main() {
       id: photoId,
       thumb: `${publicBase}/${thumbKey}`,
       full: `${publicBase}/${fullKey}`,
-      caption: ""
+      caption: "",
+      photographer
     });
 
     console.log(`uploaded: ${file}`);

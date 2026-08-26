@@ -28,17 +28,19 @@ cp .env.example .env
 
 ## 写真を追加する（大会が終わったら）
 
-1. 公開してよい写真を1つのフォルダにまとめる（jpg/png/webp対応）
+1. 公開してよい写真をカメラマンごとにフォルダへまとめる（jpg/png/webp対応）
 2. 以下を実行（フォルダ内の写真を自動で圧縮してアップロードし、サイトのデータも更新される）
 
 ```
-node scripts/upload-photos.js --event kowloon-19 --dir "C:\写真が入ったフォルダ"
+node scripts/upload-photos.js --event kowloon-19 --photographer 各務原 --dir "C:\写真が入ったフォルダ"
 ```
 
-3. アップロードが終わったら、元フォルダの写真は削除してOK（PCに残しておく必要はない）
-4. `git add . && git commit -m "add kowloon-19 photos" && git push` でサイトに反映
+3. カメラマンが複数いる場合は、フォルダとカメラマン名を変えてもう一度実行する
+4. アップロードが終わったら、元フォルダの写真は削除してOK（PCに残しておく必要はない）
+5. `git add . && git commit -m "add kowloon-19 photos" && git push` でサイトに反映
 
 ※ `--event` に指定するslugは `data/tournaments.json` の該当大会の `slug` と一致させること。新しい大会がまだ一覧にない場合は、先に `data/tournaments.json` にエントリを追加する。
+※ `--photographer` は写真ID・保存先パスにも使われる。同じ大会で複数カメラマンがいても、ファイル名が偶然かぶって上書きされないようにするための仕組み。
 
 ## 次回大会予定を更新する
 

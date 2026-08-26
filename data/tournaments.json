@@ -17,8 +17,8 @@
     "date": "2026-07-19",
     "attendees": 107,
     "startggUrl": "https://www.start.gg/tournament/limit-break-3-2",
-    "cover": null,
-    "photoManifest": null,
+    "cover": "https://pub-622122f8d42b413d8a0d9f36582c9bd4.r2.dev/events/limit-break-3-2/thumb/1-260719_lowltd-020.jpg",
+    "photoManifest": "data/photos/limit-break-3-2.json",
     "mainSeries": true
   },
   {
