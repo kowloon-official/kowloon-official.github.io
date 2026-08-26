@@ -42,19 +42,28 @@ node scripts/upload-photos.js --event kowloon-19 --dir "C:\写真が入ったフ
 
 ## 次回大会予定を更新する
 
-次の大会が決まったら `data/next-event.json` を編集する。
+次の大会が決まったら `data/next-event.json` を編集する。複数登録した場合、日程が両方わかっているもの同士は開催日が近い順に自動で並び、片方でも日程未定ならこの配列に書いた順番がそのまま表示される（未定の大会を上に出したい場合は配列の先頭に置く）。
 
 ```json
-{
-  "scheduled": true,
-  "name": "九龍-KOWLOON-#19",
-  "date": "2026-10-10",
-  "registrationUrl": "https://www.start.gg/tournament/kowloon-19",
-  "note": "エントリー開始は9月上旬予定"
-}
+[
+  {
+    "scheduled": true,
+    "name": "九龍-KOWLOON-#19",
+    "date": "2026-10-10",
+    "dateLabel": "2026年10月10日",
+    "venue": "会場名",
+    "scale": "300人",
+    "registrationUrl": "https://www.start.gg/tournament/kowloon-19",
+    "note": "エントリー開始は9月上旬予定",
+    "banner": "assets/next-event/kowloon-19.jpg"
+  }
+]
 ```
 
-未定の場合は `scheduled` を `false` に戻す（ホームに「近日発表予定」と表示される）。
+- `date`/`venue`/`scale` が未定の場合は値を `"未定"` にする（`date` を空にすると自動ソートの対象外になり、配列内の順番がそのまま使われる）
+- `dateLabel` を指定すると `date` の代わりに日程欄の表示に使われる（「〜25日」のような範囲表記や「未定」を出したいときに使う）
+- `banner` は任意。カード右側に表示する画像（省略時は「画像準備中」と表示）
+- 予定が何もない場合は配列を `[]` にする（ホームに「近日発表予定です」と表示される）
 
 ## 名札用QRコードを作る
 
