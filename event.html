@@ -11,6 +11,7 @@
 
 <main class="container">
   <section class="section">
+    <a href="archive.html" class="back-link" id="back-link">&laquo; 大会アーカイブに戻る</a>
     <div class="section-head">
       <h2 id="event-title">読み込み中...</h2>
     </div>
@@ -44,6 +45,14 @@
 (async function () {
   renderHeader("archive");
   renderFooter();
+
+  // アーカイブ一覧からの遷移ならブラウザの「戻る」で絞り込み状態を維持する
+  if (document.referrer && document.referrer.includes("archive.html")) {
+    document.getElementById("back-link").addEventListener("click", (e) => {
+      e.preventDefault();
+      history.back();
+    });
+  }
 
   const params = new URLSearchParams(location.search);
   const slug = params.get("slug");
