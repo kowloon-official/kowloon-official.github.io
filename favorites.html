@@ -27,7 +27,9 @@
 
 <div class="lightbox" id="lightbox">
   <button class="lightbox-close" id="lightbox-close">&times;</button>
+  <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="前の写真">&#10094;</button>
   <img id="lightbox-img" src="" alt="">
+  <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="次の写真">&#10095;</button>
 </div>
 
 <script src="js/config.js"></script>
@@ -68,18 +70,40 @@
 
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
-  grid.querySelectorAll(".photo-item").forEach(item => {
+  let currentIndex = -1;
+
+  function showLightbox(index) {
+    currentIndex = (index + favs.length) % favs.length;
+    const p = favs[currentIndex];
+    lightboxImg.src = p.full;
+    lightboxImg.alt = p.eventName || "";
+  }
+
+  grid.querySelectorAll(".photo-item").forEach((item, index) => {
     item.addEventListener("click", () => {
-      lightboxImg.src = item.dataset.full;
-      lightboxImg.alt = item.dataset.caption;
+      showLightbox(index);
       lightbox.classList.add("open");
     });
+  });
+  document.getElementById("lightbox-prev").addEventListener("click", (e) => {
+    e.stopPropagation();
+    showLightbox(currentIndex - 1);
+  });
+  document.getElementById("lightbox-next").addEventListener("click", (e) => {
+    e.stopPropagation();
+    showLightbox(currentIndex + 1);
   });
   document.getElementById("lightbox-close").addEventListener("click", () => {
     lightbox.classList.remove("open");
   });
   lightbox.addEventListener("click", (e) => {
     if (e.target === lightbox) lightbox.classList.remove("open");
+  });
+  document.addEventListener("keydown", (e) => {
+    if (!lightbox.classList.contains("open")) return;
+    if (e.key === "ArrowLeft") showLightbox(currentIndex - 1);
+    if (e.key === "ArrowRight") showLightbox(currentIndex + 1);
+    if (e.key === "Escape") lightbox.classList.remove("open");
   });
 })();
 </script>
