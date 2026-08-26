@@ -821,7 +821,5 @@ img { max-width: 100%; display: block; }
 
   .nav-links.open .nav-mobile-contact {
     display: block;
-    color: var(--blue);
-    font-weight: 700;
   }
 }
