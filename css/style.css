@@ -719,7 +719,7 @@ img { max-width: 100%; display: block; }
   background: none;
   color: rgba(135, 206, 250, 0.75);
   padding: 0;
-  margin: 0 10px;
+  margin: 0 32px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -740,7 +740,7 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 640px) {
-  .lightbox-nav { margin: 0 4px; }
+  .lightbox-nav { margin: 0 12px; }
   .lightbox-nav svg {
     width: 40px;
     height: 40px;
