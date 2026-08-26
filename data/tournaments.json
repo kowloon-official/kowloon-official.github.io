@@ -6,8 +6,8 @@
     "date": "2026-08-23",
     "attendees": 111,
     "startggUrl": "https://www.start.gg/tournament/kowloon-18-5",
-    "cover": null,
-    "photoManifest": null,
+    "cover": "https://pub-622122f8d42b413d8a0d9f36582c9bd4.r2.dev/events/kowloon-18-5/%E3%81%BB%E3%82%8D/thumb/1-20260823_KOWLOON18.jpg",
+    "photoManifest": "data/photos/kowloon-18-5.json",
     "mainSeries": true
   },
   {
