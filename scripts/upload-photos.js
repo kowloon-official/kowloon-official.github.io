@@ -138,7 +138,7 @@ async function main() {
   if (target) {
     target.photoManifest = `data/photos/${event}.json`;
     if (!target.cover && manifest.photos.length > 0) {
-      target.cover = manifest.photos[0].thumb;
+      target.cover = manifest.photos[0].full;
     }
     fs.writeFileSync(tournamentsPath, JSON.stringify(tournaments, null, 2), "utf-8");
     console.log(`tournaments.json の "${event}" エントリを更新しました。`);
