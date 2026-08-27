@@ -549,6 +549,47 @@ img { max-width: 100%; display: block; }
   font-weight: 700;
 }
 
+/* --- カメラマン絞り込み(大会ギャラリーページ) --- */
+.photographer-filter {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  margin-bottom: 16px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.photographer-filter:empty {
+  display: none;
+  margin-bottom: 0;
+}
+
+.photographer-pill {
+  flex: 0 0 auto;
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.photographer-pill:hover {
+  border-color: var(--blue);
+  color: var(--text);
+}
+
+.photographer-pill.active {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #fff;
+}
+
 @media (max-width: 640px) {
   .archive-filters {
     display: grid;

@@ -16,6 +16,7 @@
       <h2 id="event-title">読み込み中...</h2>
     </div>
     <p class="meta" id="event-meta" style="color:var(--muted); margin-top:-10px;"></p>
+    <div class="photographer-filter" id="photographer-filter"></div>
     <div class="photo-grid" id="photo-grid"></div>
     <div class="empty-state" id="empty-state" style="display:none;">
       <div class="big-emoji" id="empty-state-emoji">📷</div>
@@ -72,6 +73,7 @@
   const manifest = await loadPhotoManifest(event.photoManifest);
   const grid = document.getElementById("photo-grid");
   const empty = document.getElementById("empty-state");
+  const photographerFilterEl = document.getElementById("photographer-filter");
 
   if (!manifest.photos || manifest.photos.length === 0) {
     if (event.noPhotographer) {
@@ -82,48 +84,81 @@
     return;
   }
 
-  grid.innerHTML = manifest.photos.map(p => `
-    <div class="photo-item" data-full="${p.full}" data-caption="${p.caption || ""}">
-      <img src="${p.thumb}" alt="${p.caption || event.name}" loading="lazy">
-      <button class="fav-btn ${isFavorite(p.id) ? "active" : ""}" data-photo-id="${p.id}">♥</button>
-    </div>
-  `).join("");
+  // カメラマン絞り込み(2人以上いる大会のみ表示。1人だけの場合は撮影者名をメタ情報に添える)
+  const photographers = [...new Set(manifest.photos.map(p => p.photographer).filter(Boolean))];
+  let activePhotographer = null;
+  let currentPhotos = manifest.photos;
 
-  // お気に入りボタン
-  grid.querySelectorAll(".fav-btn").forEach(btn => {
-    btn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const photoId = btn.dataset.photoId;
-      const photo = manifest.photos.find(p => p.id === photoId);
-      const nowActive = toggleFavorite(photoId, {
-        id: photoId,
-        thumb: photo.thumb,
-        full: photo.full,
-        eventName: event.name,
-        eventSlug: event.slug
+  if (photographers.length === 1) {
+    document.getElementById("event-meta").textContent += ` ・ 撮影: ${photographers[0]}`;
+  } else if (photographers.length >= 2) {
+    const counts = {};
+    manifest.photos.forEach(p => { counts[p.photographer] = (counts[p.photographer] || 0) + 1; });
+    const pills = [{ name: "", label: `すべて (${manifest.photos.length})` }]
+      .concat(photographers.map(name => ({ name, label: `${name} (${counts[name]})` })));
+    photographerFilterEl.innerHTML = pills.map(p => `
+      <button type="button" class="photographer-pill${p.name === "" ? " active" : ""}" data-name="${p.name}">${p.label}</button>
+    `).join("");
+    photographerFilterEl.querySelectorAll(".photographer-pill").forEach(btn => {
+      btn.addEventListener("click", () => {
+        activePhotographer = btn.dataset.name || null;
+        photographerFilterEl.querySelectorAll(".photographer-pill").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        renderGrid();
       });
-      btn.classList.toggle("active", nowActive);
     });
-  });
+  }
 
-  // ライトボックス(拡大表示・矢印で前後の写真に移動)
+  // ライトボックス(拡大表示・矢印/スワイプで前後の写真に移動)
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
   let currentIndex = -1;
 
   function showLightbox(index) {
-    currentIndex = (index + manifest.photos.length) % manifest.photos.length;
-    const p = manifest.photos[currentIndex];
+    currentIndex = (index + currentPhotos.length) % currentPhotos.length;
+    const p = currentPhotos[currentIndex];
     lightboxImg.src = p.full;
     lightboxImg.alt = p.caption || event.name;
   }
 
-  grid.querySelectorAll(".photo-item").forEach((item, index) => {
-    item.addEventListener("click", () => {
-      showLightbox(index);
-      lightbox.classList.add("open");
+  function renderGrid() {
+    currentPhotos = activePhotographer
+      ? manifest.photos.filter(p => p.photographer === activePhotographer)
+      : manifest.photos;
+
+    grid.innerHTML = currentPhotos.map(p => `
+      <div class="photo-item" data-full="${p.full}" data-caption="${p.caption || ""}">
+        <img src="${p.thumb}" alt="${p.caption || event.name}" loading="lazy">
+        <button class="fav-btn ${isFavorite(p.id) ? "active" : ""}" data-photo-id="${p.id}">♥</button>
+      </div>
+    `).join("");
+
+    // お気に入りボタン
+    grid.querySelectorAll(".fav-btn").forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const photoId = btn.dataset.photoId;
+        const photo = currentPhotos.find(p => p.id === photoId);
+        const nowActive = toggleFavorite(photoId, {
+          id: photoId,
+          thumb: photo.thumb,
+          full: photo.full,
+          eventName: event.name,
+          eventSlug: event.slug
+        });
+        btn.classList.toggle("active", nowActive);
+      });
     });
-  });
+
+    grid.querySelectorAll(".photo-item").forEach((item, index) => {
+      item.addEventListener("click", () => {
+        showLightbox(index);
+        lightbox.classList.add("open");
+      });
+    });
+  }
+
+  renderGrid();
   document.getElementById("lightbox-prev").addEventListener("click", (e) => {
     e.stopPropagation();
     showLightbox(currentIndex - 1);
