@@ -376,8 +376,8 @@ img { max-width: 100%; display: block; }
 
 .back-link {
   display: inline-block;
-  margin-bottom: 14px;
-  font-size: 0.85rem;
+  margin-bottom: 16px;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--blue);
   text-decoration: none;
