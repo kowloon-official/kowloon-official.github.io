@@ -213,8 +213,13 @@ img { max-width: 100%; display: block; }
   color: var(--muted);
   line-height: 1.8;
   max-width: 100%;
+}
+
+/* カタカナ語(固有名詞)だけは単語の途中で改行されないようにする。
+   段落全体をkeep-allにすると日本語の文がスペースなしの1単語扱いになり
+   折り返せなくなるため、保護したい語だけをこのクラスで囲むこと。 */
+.no-break {
   word-break: keep-all;
-  overflow-wrap: normal;
 }
 
 @media (min-width: 860px) {
