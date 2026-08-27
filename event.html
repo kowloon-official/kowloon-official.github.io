@@ -18,8 +18,8 @@
     <p class="meta" id="event-meta" style="color:var(--muted); margin-top:-10px;"></p>
     <div class="photo-grid" id="photo-grid"></div>
     <div class="empty-state" id="empty-state" style="display:none;">
-      <div class="big-emoji">📷</div>
-      <p>この大会の写真はまだ準備中です。</p>
+      <div class="big-emoji" id="empty-state-emoji">📷</div>
+      <p id="empty-state-text">この大会の写真はまだ準備中です。</p>
     </div>
   </section>
 </main>
@@ -74,6 +74,10 @@
   const empty = document.getElementById("empty-state");
 
   if (!manifest.photos || manifest.photos.length === 0) {
+    if (event.noPhotographer) {
+      document.getElementById("empty-state-emoji").textContent = "🚫";
+      document.getElementById("empty-state-text").textContent = "この大会はカメラマンが不在だったため、写真はありません。";
+    }
     empty.style.display = "block";
     return;
   }

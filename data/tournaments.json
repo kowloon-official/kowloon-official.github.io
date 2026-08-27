@@ -52,7 +52,8 @@
     "startggUrl": "https://www.start.gg/tournament/limit-break-2-2",
     "cover": null,
     "photoManifest": null,
-    "mainSeries": true
+    "mainSeries": true,
+    "noPhotographer": true
   },
   {
     "id": 767620,
@@ -96,7 +97,8 @@
     "startggUrl": "https://www.start.gg/tournament/kowloon-13-5",
     "cover": null,
     "photoManifest": null,
-    "mainSeries": true
+    "mainSeries": true,
+    "noPhotographer": true
   },
   {
     "id": 732928,
@@ -127,8 +129,8 @@
     "date": "2024-07-27",
     "attendees": 1463,
     "startggUrl": "https://www.start.gg/tournament/12-with-kowloon-12-with-kagaribi",
-    "cover": null,
-    "photoManifest": null,
+    "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/12-with-kowloon-12-with-kagaribi/%E3%81%B5%E3%81%8F/full/1-DSC_9799.jpg",
+    "photoManifest": "data/photos/12-with-kowloon-12-with-kagaribi.json",
     "mainSeries": true
   },
   {

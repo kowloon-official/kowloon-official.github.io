@@ -19,7 +19,9 @@ function formatDate(dateStr) {
 function eventCardHtml(t) {
   const thumb = t.cover
     ? `<img src="${t.cover}" alt="${t.name}" loading="lazy">`
-    : `写真準備中`;
+    : t.noPhotographer
+      ? `写真なし`
+      : `写真準備中`;
   return `
     <a class="event-card" href="event.html?slug=${encodeURIComponent(t.slug)}">
       <div class="thumb">${thumb}</div>
