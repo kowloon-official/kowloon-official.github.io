@@ -19,7 +19,7 @@ const path = require("path");
 const sharp = require("sharp");
 const { S3Client, PutObjectCommand } = require("@aws-sdk/client-s3");
 
-const THUMB_WIDTH = 500;
+const THUMB_WIDTH = 1000;
 const FULL_WIDTH = 2000;
 const JPEG_QUALITY = 80;
 const IMAGE_EXTS = [".jpg", ".jpeg", ".png", ".webp"];
