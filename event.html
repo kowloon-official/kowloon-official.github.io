@@ -144,6 +144,22 @@
     if (e.key === "ArrowRight") showLightbox(currentIndex + 1);
     if (e.key === "Escape") lightbox.classList.remove("open");
   });
+
+  // スマホ用: 左右スワイプで前後の写真に移動
+  let touchStartX = 0;
+  let touchStartY = 0;
+  lightbox.addEventListener("touchstart", (e) => {
+    const t = e.changedTouches[0];
+    touchStartX = t.clientX;
+    touchStartY = t.clientY;
+  }, { passive: true });
+  lightbox.addEventListener("touchend", (e) => {
+    const t = e.changedTouches[0];
+    const dx = t.clientX - touchStartX;
+    const dy = t.clientY - touchStartY;
+    if (Math.abs(dx) < 40 || Math.abs(dx) < Math.abs(dy) * 1.5) return;
+    showLightbox(dx < 0 ? currentIndex + 1 : currentIndex - 1);
+  }, { passive: true });
 })();
 </script>
 </body>
