@@ -141,8 +141,8 @@
     "date": "2024-05-11",
     "attendees": 278,
     "startggUrl": "https://www.start.gg/tournament/kowloon-11",
-    "cover": null,
-    "photoManifest": null,
+    "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-11/%E5%90%84%E5%8B%99%E5%8E%9F/full/1-_DSC2377.jpg",
+    "photoManifest": "data/photos/kowloon-11.json",
     "mainSeries": true
   },
   {
@@ -152,8 +152,8 @@
     "date": "2024-03-30",
     "attendees": 339,
     "startggUrl": "https://www.start.gg/tournament/kowloon-10",
-    "cover": null,
-    "photoManifest": null,
+    "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-10/%E5%90%84%E5%8B%99%E5%8E%9F/full/1-_DSC0564.jpg",
+    "photoManifest": "data/photos/kowloon-10.json",
     "mainSeries": true
   },
   {
