@@ -109,7 +109,8 @@
     "startggUrl": "https://www.start.gg/tournament/limit-break-1-3",
     "cover": null,
     "photoManifest": null,
-    "mainSeries": true
+    "mainSeries": true,
+    "noPhotographer": true
   },
   {
     "id": 704865,
