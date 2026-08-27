@@ -174,8 +174,8 @@
     "date": "2023-11-11",
     "attendees": 256,
     "startggUrl": "https://www.start.gg/tournament/kowloon-8",
-    "cover": null,
-    "photoManifest": null,
+    "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-8/%E5%90%84%E5%8B%99%E5%8E%9F/full/1-_DSC4738.jpg",
+    "photoManifest": "data/photos/kowloon-8.json",
     "mainSeries": true
   },
   {
@@ -185,8 +185,8 @@
     "date": "2023-08-26",
     "attendees": 298,
     "startggUrl": "https://www.start.gg/tournament/kowloon-7",
-    "cover": null,
-    "photoManifest": null,
+    "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-7/%E3%82%B5%E3%82%B5%E3%82%AB%E3%82%A8/full/1-IMG_8949.jpg",
+    "photoManifest": "data/photos/kowloon-7.json",
     "mainSeries": true
   },
   {
@@ -196,8 +196,8 @@
     "date": "2023-06-17",
     "attendees": 346,
     "startggUrl": "https://www.start.gg/tournament/kowloon-6",
-    "cover": null,
-    "photoManifest": null,
+    "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-6/%E3%82%B5%E3%82%B5%E3%82%AB%E3%82%A8/full/1-IMG_1693.jpg",
+    "photoManifest": "data/photos/kowloon-6.json",
     "mainSeries": true
   },
   {
