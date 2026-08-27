@@ -83,8 +83,8 @@
     "date": "2025-02-08",
     "attendees": 227,
     "startggUrl": "https://www.start.gg/tournament/kowloon-14",
-    "cover": null,
-    "photoManifest": null,
+    "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-14/%E5%90%84%E5%8B%99%E5%8E%9F/full/1-250208_kowloon%2314_s-253.jpg",
+    "photoManifest": "data/photos/kowloon-14.json",
     "mainSeries": true
   },
   {
