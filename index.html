@@ -60,7 +60,7 @@
       <h2>Thanks to</h2>
     </div>
     <div class="section-card">
-      <p class="thanks-note">このサイトの写真は、以下のカメラマンの皆さんにご提供いただきました。</p>
+      <p class="thanks-note">このサイトの写真は、この方たちが撮ってくれました。</p>
       <div class="thanks-list" id="thanks-list"></div>
     </div>
   </section>
@@ -248,7 +248,7 @@
     const res = await fetch("data/photographers.json");
     const names = await res.json();
     document.getElementById("thanks-list").innerHTML =
-      names.map((name) => `<span class="thanks-chip">${name}</span>`).join("");
+      names.map((name) => `<span class="thanks-name">${name}</span>`).join(`<span class="thanks-sep">・</span>`);
   } catch (e) {
     document.querySelector(".thanks-section").style.display = "none";
   }
