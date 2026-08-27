@@ -45,7 +45,7 @@
   renderHeader("favorites");
   renderFooter();
 
-  const favs = listFavorites();
+  let favs = listFavorites();
   const grid = document.getElementById("fav-grid");
   const empty = document.getElementById("empty-state");
 
@@ -53,24 +53,6 @@
     empty.style.display = "block";
     return;
   }
-
-  grid.innerHTML = favs.map(p => `
-    <div class="photo-item" data-full="${p.full}" data-caption="${p.eventName || ""}">
-      <img src="${p.thumb}" alt="${p.eventName || ""}" loading="lazy">
-      <button class="fav-btn active" data-photo-id="${p.id}">♥</button>
-    </div>
-  `).join("");
-
-  grid.querySelectorAll(".fav-btn").forEach(btn => {
-    btn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      toggleFavorite(btn.dataset.photoId);
-      btn.closest(".photo-item").remove();
-      if (!grid.querySelector(".photo-item")) {
-        empty.style.display = "block";
-      }
-    });
-  });
 
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
@@ -83,12 +65,35 @@
     lightboxImg.alt = p.eventName || "";
   }
 
-  grid.querySelectorAll(".photo-item").forEach((item, index) => {
-    item.addEventListener("click", () => {
-      showLightbox(index);
-      lightbox.classList.add("open");
+  function renderGrid() {
+    grid.innerHTML = favs.map(p => `
+      <div class="photo-item" data-full="${p.full}" data-caption="${p.eventName || ""}">
+        <img src="${p.thumb}" alt="${p.eventName || ""}" loading="lazy">
+        <button class="fav-btn active" data-photo-id="${p.id}">♥</button>
+      </div>
+    `).join("");
+
+    grid.querySelectorAll(".fav-btn").forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        toggleFavorite(btn.dataset.photoId);
+        favs = favs.filter(p => p.id !== btn.dataset.photoId);
+        if (favs.length === 0) {
+          empty.style.display = "block";
+        }
+        renderGrid();
+      });
     });
-  });
+
+    grid.querySelectorAll(".photo-item").forEach((item, index) => {
+      item.addEventListener("click", () => {
+        showLightbox(index);
+        lightbox.classList.add("open");
+      });
+    });
+  }
+
+  renderGrid();
   document.getElementById("lightbox-prev").addEventListener("click", (e) => {
     e.stopPropagation();
     showLightbox(currentIndex - 1);

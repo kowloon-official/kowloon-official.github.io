@@ -42,6 +42,17 @@ node scripts/upload-photos.js --event kowloon-19 --photographer 各務原 --dir 
 ※ `--event` に指定するslugは `data/tournaments.json` の該当大会の `slug` と一致させること。新しい大会がまだ一覧にない場合は、先に `data/tournaments.json` にエントリを追加する。
 ※ `--photographer` は写真ID・保存先パスにも使われる。同じ大会で複数カメラマンがいても、ファイル名が偶然かぶって上書きされないようにするための仕組み。
 
+## カメラマンの表示名・Xリンクを設定する
+
+`data/photographers.json` は、全大会の写真マニフェストから自動集計されるカメラマン名の一覧で、`upload-photos.js` を実行するたびに自動更新される（手動編集不要）。ここに載る名前は、写真ID・R2の保存パスにも使われている**内部名**（`--photographer` に指定した文字列そのもの）。
+
+新しいカメラマンの写真を初めてアップロードしたら、以下の2つのファイルを手動で編集し、サイト上の表示名・Xリンクを設定する（この2つは自動更新されない）。
+
+- `data/photographer-display-names.json` — 内部名 → 表示名（絵文字なども含めた実際の名義）の対応表。ここに無い名前は内部名がそのまま表示される
+- `data/photographer-links.json` — 内部名 → X（Twitter）プロフィールURLの対応表。ここに無い名前はリンク無しの通常テキストで表示される
+
+どちらも「Thanks to」一覧・大会ページのカメラマン絞り込み・「撮影: ○○」表示すべてに反映される。
+
 ## トップページのサンプル写真を差し替える
 
 `data/featured-photos.json` にトップページ上部を流れる写真のURL（配列、上から順に表示）を書く。
