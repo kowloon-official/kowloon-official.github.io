@@ -945,6 +945,14 @@ a.thanks-name:hover {
   margin-top: 4px;
 }
 
+.footer-note {
+  margin-top: 18px;
+  font-size: 0.78rem;
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 640px;
+}
+
 .nav-mobile-contact {
   display: none;
 }
