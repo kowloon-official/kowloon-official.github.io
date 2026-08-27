@@ -86,16 +86,18 @@
 
   // カメラマン絞り込み(2人以上いる大会のみ表示。1人だけの場合は撮影者名をメタ情報に添える)
   const photographers = [...new Set(manifest.photos.map(p => p.photographer).filter(Boolean))];
+  const photographerDisplayNames = await loadPhotographerDisplayNames();
+  const displayName = (name) => photographerDisplayNames[name] || name;
   let activePhotographer = null;
   let currentPhotos = manifest.photos;
 
   if (photographers.length === 1) {
-    document.getElementById("event-meta").textContent += ` ・ 撮影: ${photographers[0]}`;
+    document.getElementById("event-meta").textContent += ` ・ 撮影: ${displayName(photographers[0])}`;
   } else if (photographers.length >= 2) {
     const counts = {};
     manifest.photos.forEach(p => { counts[p.photographer] = (counts[p.photographer] || 0) + 1; });
     const pills = [{ name: "", label: `すべて (${manifest.photos.length})` }]
-      .concat(photographers.map(name => ({ name, label: `${name} (${counts[name]})` })));
+      .concat(photographers.map(name => ({ name, label: `${displayName(name)} (${counts[name]})` })));
     photographerFilterEl.innerHTML = pills.map(p => `
       <button type="button" class="photographer-pill${p.name === "" ? " active" : ""}" data-name="${p.name}">${p.label}</button>
     `).join("");

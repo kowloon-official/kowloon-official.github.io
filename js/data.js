@@ -11,6 +11,18 @@ async function loadPhotoManifest(path) {
   return res.json();
 }
 
+// カメラマンの内部名(ID・R2パスに使う名前)→表示名の対応表。
+// 対応表に無い名前はそのまま内部名を表示に使う。
+async function loadPhotographerDisplayNames() {
+  try {
+    const res = await fetch("data/photographer-display-names.json");
+    if (!res.ok) return {};
+    return res.json();
+  } catch (e) {
+    return {};
+  }
+}
+
 function formatDate(dateStr) {
   const d = new Date(dateStr);
   return `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日`;
