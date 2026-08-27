@@ -116,8 +116,8 @@
     "date": "2024-10-05",
     "attendees": 309,
     "startggUrl": "https://www.start.gg/tournament/kowloon-13",
-    "cover": null,
-    "photoManifest": null,
+    "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-13/%E5%90%84%E5%8B%99%E5%8E%9F/full/1-241005_%2313a-003.jpg",
+    "photoManifest": "data/photos/kowloon-13.json",
     "mainSeries": true
   },
   {
