@@ -163,8 +163,8 @@
     "date": "2024-01-13",
     "attendees": 895,
     "startggUrl": "https://www.start.gg/tournament/9with",
-    "cover": null,
-    "photoManifest": null,
+    "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/9with/%E3%81%B5%E3%81%8F/full/1-DSC_1828.jpg",
+    "photoManifest": "data/photos/9with.json",
     "mainSeries": true
   },
   {
