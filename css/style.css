@@ -360,7 +360,7 @@ img { max-width: 100%; display: block; }
 }
 
 .stat-number--small {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .stat-label {
@@ -372,6 +372,7 @@ img { max-width: 100%; display: block; }
 @media (max-width: 640px) {
   .stats-strip { grid-template-columns: repeat(3, 1fr); padding: 18px 8px; }
   .stat-number { font-size: 1.4rem; }
+  .stat-number--small { font-size: 1.05rem; }
 }
 
 .back-link {
