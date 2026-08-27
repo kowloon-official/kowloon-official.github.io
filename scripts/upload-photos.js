@@ -147,6 +147,20 @@ async function main() {
       `警告: tournaments.json に slug "${event}" が見つかりません。大会一覧に手動で追加してください。`
     );
   }
+
+  // data/photographers.json を再生成(トップページの「Thanks to」に使用)
+  const photosDir = path.join(__dirname, "..", "data", "photos");
+  const names = new Set();
+  fs.readdirSync(photosDir)
+    .filter((f) => f.endsWith(".json"))
+    .forEach((f) => {
+      const m = JSON.parse(fs.readFileSync(path.join(photosDir, f), "utf-8"));
+      (m.photos || []).forEach((p) => { if (p.photographer) names.add(p.photographer); });
+    });
+  const sortedNames = [...names].sort((a, b) => a.localeCompare(b, "ja"));
+  const photographersPath = path.join(__dirname, "..", "data", "photographers.json");
+  fs.writeFileSync(photographersPath, JSON.stringify(sortedNames, null, 2) + "\n", "utf-8");
+  console.log(`photographers.json を更新しました (${sortedNames.length}人)`);
 }
 
 main().catch((err) => {

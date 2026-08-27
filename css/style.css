@@ -375,6 +375,28 @@ img { max-width: 100%; display: block; }
   .stat-number--small { font-size: 1.05rem; }
 }
 
+/* --- Thanks to --- */
+.thanks-note {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-bottom: 14px;
+}
+
+.thanks-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.thanks-chip {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(0, 144, 201, 0.1);
+  color: var(--blue);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
 .back-link {
   display: inline-block;
   margin-bottom: 16px;

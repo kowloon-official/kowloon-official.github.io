@@ -54,6 +54,16 @@
     </div>
     <div class="section-card stats-strip" id="stats-strip"></div>
   </section>
+
+  <section class="section thanks-section">
+    <div class="section-head">
+      <h2>Thanks to</h2>
+    </div>
+    <div class="section-card">
+      <p class="thanks-note">このサイトの写真は、以下のカメラマンの皆さんにご提供いただきました。</p>
+      <div class="thanks-list" id="thanks-list"></div>
+    </div>
+  </section>
 </main>
 
 <footer id="site-footer" class="site-footer"></footer>
@@ -231,6 +241,16 @@
     }
   } catch (e) {
     nextEventList.innerHTML = emptyNextEventHtml;
+  }
+
+  // Thanks to: 写真をご提供いただいたカメラマンの一覧
+  try {
+    const res = await fetch("data/photographers.json");
+    const names = await res.json();
+    document.getElementById("thanks-list").innerHTML =
+      names.map((name) => `<span class="thanks-chip">${name}</span>`).join("");
+  } catch (e) {
+    document.querySelector(".thanks-section").style.display = "none";
   }
 })();
 </script>
