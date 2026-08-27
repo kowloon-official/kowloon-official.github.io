@@ -548,6 +548,32 @@ img { max-width: 100%; display: block; }
   font-weight: 700;
 }
 
+@media (max-width: 640px) {
+  .archive-filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 12px;
+    padding: 14px;
+  }
+  .filter-group {
+    gap: 4px;
+  }
+  .filter-group label {
+    font-size: 0.7rem;
+  }
+  .archive-filters select,
+  .multiselect-toggle {
+    min-width: 0;
+    width: 100%;
+    padding: 7px 10px;
+    font-size: 0.82rem;
+  }
+  .filter-reset {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+}
+
 .filter-chip button {
   background: none;
   border: none;
