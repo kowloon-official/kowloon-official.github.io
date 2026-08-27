@@ -80,7 +80,7 @@ function renderFooter() {
       <a href="${window.KOWLOON_CONFIG.contactUrl}" class="footer-contact" target="_blank" rel="noopener">
         お問い合わせ
       </a>
-      <p class="footer-note">掲載写真は、九龍および写っている方の品位を傷つける内容を除き、再掲載・二次利用いただけます。写真の削除・修正をご希望の方はお問い合わせよりご連絡ください。</p>
+      <p class="footer-note">掲載写真は、九龍および写っている方の品位を傷つける内容を除き、再掲載・二次利用いただけます。<br>写真の削除・修正をご希望の方はお問い合わせよりご連絡ください。</p>
       <p style="margin-top:10px;">© 九龍-KOWLOON-</p>
     </div>
   `;
