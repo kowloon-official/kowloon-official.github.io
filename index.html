@@ -243,12 +243,18 @@
     nextEventList.innerHTML = emptyNextEventHtml;
   }
 
-  // Thanks to: 写真をご提供いただいたカメラマンの一覧
+  // Thanks to: 写真をご提供いただいたカメラマンの一覧(X/Twitterへのリンク付き)
   try {
-    const res = await fetch("data/photographers.json");
-    const names = await res.json();
-    document.getElementById("thanks-list").innerHTML =
-      names.map((name) => `<span class="thanks-name">${name}</span>`).join(`<span class="thanks-sep">・</span>`);
+    const [names, links] = await Promise.all([
+      fetch("data/photographers.json").then(r => r.json()),
+      fetch("data/photographer-links.json").then(r => r.json()).catch(() => ({}))
+    ]);
+    document.getElementById("thanks-list").innerHTML = names.map((name) => {
+      const url = links[name];
+      return url
+        ? `<a class="thanks-name" href="${url}" target="_blank" rel="noopener">${name}</a>`
+        : `<span class="thanks-name">${name}</span>`;
+    }).join(`<span class="thanks-sep">・</span>`);
   } catch (e) {
     document.querySelector(".thanks-section").style.display = "none";
   }

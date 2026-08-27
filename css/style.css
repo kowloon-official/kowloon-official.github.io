@@ -394,6 +394,11 @@ img { max-width: 100%; display: block; }
   padding-bottom: 2px;
   font-weight: 700;
   color: var(--text);
+  text-decoration: none;
+}
+
+a.thanks-name:hover {
+  border-bottom-color: var(--cyan);
 }
 
 .thanks-sep {
