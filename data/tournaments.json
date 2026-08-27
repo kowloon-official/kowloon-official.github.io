@@ -207,8 +207,8 @@
     "date": "2023-04-08",
     "attendees": 535,
     "startggUrl": "https://www.start.gg/tournament/kowloon-5",
-    "cover": null,
-    "photoManifest": null,
+    "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-5/%E3%83%8B%E3%83%A3%E3%83%84/full/1-DSC06091.jpg",
+    "photoManifest": "data/photos/kowloon-5.json",
     "mainSeries": true
   },
   {
