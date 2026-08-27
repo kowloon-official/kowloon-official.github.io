@@ -214,7 +214,7 @@ img { max-width: 100%; display: block; }
   line-height: 1.8;
   max-width: 100%;
   word-break: keep-all;
-  overflow-wrap: break-word;
+  overflow-wrap: normal;
 }
 
 @media (min-width: 860px) {
