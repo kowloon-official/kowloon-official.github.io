@@ -256,7 +256,7 @@
       return url
         ? `<a class="thanks-name" href="${url}" target="_blank" rel="noopener">${label}</a>`
         : `<span class="thanks-name">${label}</span>`;
-    }).join(`<span class="thanks-sep">・</span>`);
+    }).join("");
   } catch (e) {
     document.querySelector(".thanks-section").style.display = "none";
   }
