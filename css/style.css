@@ -434,11 +434,27 @@ img { max-width: 100%; display: block; }
 
 .champion-row-winner {
   flex: 0 0 240px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   text-align: left;
   font-weight: 700;
   color: var(--blue);
   font-size: 0.9rem;
   white-space: nowrap;
+}
+
+.champion-photo {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #f0f0f2;
+}
+
+.champion-trophy {
+  flex: 0 0 auto;
 }
 
 .champion-detail {
