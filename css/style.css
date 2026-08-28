@@ -385,12 +385,13 @@ img { max-width: 100%; display: block; }
 }
 
 .champion-row-header {
+  position: relative;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding: 14px 18px;
+  padding: 14px 40px 14px 18px;
   border: none;
   background: none;
   font-family: inherit;
@@ -401,15 +402,17 @@ img { max-width: 100%; display: block; }
 
 .champion-row-header::after {
   content: "\25be";
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
   color: var(--muted);
   font-size: 0.8rem;
-  margin-left: 8px;
-  flex: 0 0 auto;
   transition: transform 0.15s ease;
 }
 
 .champion-row-header.open::after {
-  transform: rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
 }
 
 .champion-row-main {
