@@ -430,7 +430,8 @@ img { max-width: 100%; display: block; }
 }
 
 .champion-row-winner {
-  flex: 0 0 auto;
+  flex: 0 0 240px;
+  text-align: left;
   font-weight: 700;
   color: var(--blue);
   font-size: 0.9rem;
