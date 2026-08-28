@@ -66,26 +66,26 @@
           <span class="champion-row-name">${t.name}</span>
           <span class="champion-row-meta">${formatDate(t.date)} ・ 参加${t.attendees}人</span>
         </div>
-        <div class="champion-row-winner">
-          ${c.photo
-            ? `<img class="champion-photo" src="${c.photo}" alt="${c.champion}" loading="lazy">`
-            : `<span class="champion-trophy">🏆</span>`}
-          <span>${c.champion}</span>
-        </div>
+        <div class="champion-row-winner">🏆 ${c.champion}</div>
       </button>
       <div class="champion-detail" id="champion-detail-${i}">
-        ${c.matches && c.matches.length > 0 ? `
-          <div class="champion-matches">
-            ${[...c.matches].reverse().map(m => `
-              <div class="champion-match">
-                <span class="champion-match-round">${m.label}</span>
-                <span class="champion-match-score ${m.won ? "win" : "lose"}">${m.champScore}-${m.oppScore}</span>
-                <span class="champion-match-opponent">${m.opponent}</span>
+        <div class="champion-detail-body">
+          <div class="champion-detail-left">
+            ${c.matches && c.matches.length > 0 ? `
+              <div class="champion-matches">
+                ${[...c.matches].reverse().map(m => `
+                  <div class="champion-match">
+                    <span class="champion-match-round">${m.label}</span>
+                    <span class="champion-match-score ${m.won ? "win" : "lose"}">${m.champScore}-${m.oppScore}</span>
+                    <span class="champion-match-opponent">${m.opponent}</span>
+                  </div>
+                `).join("")}
               </div>
-            `).join("")}
+            ` : `<p class="champion-row-meta">対戦結果は準備中です。</p>`}
+            ${t.photoManifest ? `<a class="btn btn-primary" href="event.html?slug=${encodeURIComponent(t.slug)}">この大会の写真を見る</a>` : ""}
           </div>
-        ` : `<p class="champion-row-meta">対戦結果は準備中です。</p>`}
-        ${t.photoManifest ? `<a class="btn btn-primary" href="event.html?slug=${encodeURIComponent(t.slug)}">この大会の写真を見る</a>` : ""}
+          ${c.photo ? `<img class="champion-detail-photo" src="${c.photo}" alt="${c.champion}" loading="lazy">` : ""}
+        </div>
       </div>
     </div>
   `).join("");

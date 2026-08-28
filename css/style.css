@@ -434,27 +434,11 @@ img { max-width: 100%; display: block; }
 
 .champion-row-winner {
   flex: 0 0 240px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
   text-align: left;
   font-weight: 700;
   color: var(--blue);
   font-size: 0.9rem;
   white-space: nowrap;
-}
-
-.champion-photo {
-  flex: 0 0 auto;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-  background: #f0f0f2;
-}
-
-.champion-trophy {
-  flex: 0 0 auto;
 }
 
 .champion-detail {
@@ -466,6 +450,37 @@ img { max-width: 100%; display: block; }
 .champion-detail.open {
   display: block;
   padding-top: 14px;
+}
+
+.champion-detail-body {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.champion-detail-left {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.champion-detail-photo {
+  flex: 0 0 auto;
+  width: 140px;
+  height: 140px;
+  border-radius: var(--radius);
+  object-fit: cover;
+  background: #f0f0f2;
+}
+
+@media (max-width: 640px) {
+  .champion-detail-body {
+    flex-direction: column;
+  }
+  .champion-detail-photo {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
 }
 
 .champion-matches {
