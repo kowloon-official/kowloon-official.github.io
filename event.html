@@ -55,9 +55,18 @@
   renderHeader("archive");
   renderFooter();
 
-  // アーカイブ一覧からの遷移ならブラウザの「戻る」で絞り込み状態を維持する
-  if (document.referrer && document.referrer.includes("archive.html")) {
-    document.getElementById("back-link").addEventListener("click", (e) => {
+  // 遷移元によって「戻る」リンクの行き先・文言を変える。
+  // アーカイブ/歴代優勝者からの遷移ならブラウザの「戻る」で状態(絞り込み・開いていた項目)を維持する
+  const backLink = document.getElementById("back-link");
+  if (document.referrer && document.referrer.includes("champions.html")) {
+    backLink.textContent = "« 歴代優勝者に戻る";
+    backLink.href = "champions.html";
+    backLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      history.back();
+    });
+  } else if (document.referrer && document.referrer.includes("archive.html")) {
+    backLink.addEventListener("click", (e) => {
       e.preventDefault();
       history.back();
     });
