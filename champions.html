@@ -84,7 +84,7 @@
             ` : `<p class="champion-row-meta">対戦結果は準備中です。</p>`}
             ${t.photoManifest ? `<a class="btn btn-primary" href="event.html?slug=${encodeURIComponent(t.slug)}">この大会の写真を見る</a>` : ""}
           </div>
-          ${c.photo ? `<img class="champion-detail-photo" src="${c.photo}" alt="${c.champion}" loading="lazy">` : ""}
+          ${c.photo ? `<img class="champion-detail-photo" src="${c.photo}" alt="${c.champion}" loading="lazy" style="object-position: ${c.photoPosition || "center"};">` : ""}
         </div>
       </div>
     </div>

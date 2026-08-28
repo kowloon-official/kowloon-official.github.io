@@ -578,7 +578,8 @@
         "won": true
       }
     ],
-    "photo": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-8/%E5%90%84%E5%8B%99%E5%8E%9F/full/115-_DSC6445.jpg"
+    "photo": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-8/%E5%90%84%E5%8B%99%E5%8E%9F/full/115-_DSC6445.jpg",
+    "photoPosition": "90% center"
   },
   "kowloon-7": {
     "champion": "FENNEL | ミーヤー",
@@ -775,7 +776,8 @@
         "won": true
       }
     ],
-    "photo": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-3/%E3%83%8B%E3%83%A3%E3%83%84/full/0081_xlarge.jpg"
+    "photo": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-3/%E3%83%8B%E3%83%A3%E3%83%84/full/0081_xlarge.jpg",
+    "photoPosition": "25% center"
   },
   "kowloon-2": {
     "champion": "8LX | HIKARU",
@@ -816,7 +818,8 @@
         "won": true
       }
     ],
-    "photo": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-2/%E3%83%8B%E3%83%A3%E3%83%84/full/0069_xlarge.jpg"
+    "photo": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-2/%E3%83%8B%E3%83%A3%E3%83%84/full/0069_xlarge.jpg",
+    "photoPosition": "75% center"
   },
   "kowloon-1": {
     "champion": "百万 | シッショー",
