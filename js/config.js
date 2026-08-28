@@ -1,6 +1,6 @@
 // サイト全体の設定。外部リンクやフォームURLは決まり次第ここを書き換えてください。
 window.KOWLOON_CONFIG = {
-  siteName: "九龍-KOWLOON- フォトアーカイブ",
+  siteName: "九龍-KOWLOON- 公式サイト",
   contactUrl: "https://forms.gle/pUmzchSgfZZrLg7s8",
   links: {
     discord: "https://discord.gg/bgvg6NApXv",
