@@ -465,8 +465,8 @@ img { max-width: 100%; display: block; }
 
 .champion-detail-photo {
   flex: 0 0 auto;
-  width: 140px;
-  height: 140px;
+  width: 220px;
+  height: 280px;
   border-radius: var(--radius);
   object-fit: cover;
   background: #f0f0f2;
