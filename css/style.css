@@ -455,18 +455,25 @@ img { max-width: 100%; display: block; }
 .champion-detail-body {
   display: flex;
   gap: 24px;
-  align-items: flex-start;
+  align-items: stretch;
 }
 
 .champion-detail-left {
   flex: 1 1 auto;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.champion-detail-left .btn-primary {
+  margin-top: auto;
+  align-self: flex-start;
 }
 
 .champion-detail-photo {
   flex: 0 0 auto;
-  width: 220px;
-  height: 280px;
+  width: 240px;
+  height: 240px;
   border-radius: var(--radius);
   object-fit: cover;
   background: #f0f0f2;
@@ -529,6 +536,9 @@ img { max-width: 100%; display: block; }
     flex-direction: column;
     align-items: flex-start;
     gap: 6px;
+  }
+  .champion-row-winner {
+    flex-basis: auto;
   }
 }
 
