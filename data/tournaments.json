@@ -8,7 +8,8 @@
     "startggUrl": "https://www.start.gg/tournament/kowloon-18-5",
     "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-18-5/%E3%81%BB%E3%82%8D/full/1-20260823_KOWLOON18.jpg",
     "photoManifest": "data/photos/kowloon-18-5.json",
-    "mainSeries": true
+    "mainSeries": true,
+    "champion": "ロッキー"
   },
   {
     "id": 914057,
@@ -19,7 +20,8 @@
     "startggUrl": "https://www.start.gg/tournament/limit-break-3-2",
     "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/limit-break-3-2/full/1-260719_lowltd-020.jpg",
     "photoManifest": "data/photos/limit-break-3-2.json",
-    "mainSeries": true
+    "mainSeries": true,
+    "champion": "いかろす"
   },
   {
     "id": 910195,
@@ -30,7 +32,8 @@
     "startggUrl": "https://www.start.gg/tournament/kowloon-18",
     "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-18/%E5%90%84%E5%8B%99%E5%8E%9F/full/1-260718_kowloon18-009.jpg",
     "photoManifest": "data/photos/kowloon-18.json",
-    "mainSeries": true
+    "mainSeries": true,
+    "champion": "FENNEL | Miya"
   },
   {
     "id": 824661,
@@ -41,7 +44,8 @@
     "startggUrl": "https://www.start.gg/tournament/kowloon-17",
     "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-17/%E3%81%BB%E3%82%8D/full/1-20251018_KOWLOON17_horo_00034.jpg",
     "photoManifest": "data/photos/kowloon-17.json",
-    "mainSeries": true
+    "mainSeries": true,
+    "champion": "E36 | Hurt"
   },
   {
     "id": 797149,
@@ -53,7 +57,8 @@
     "cover": null,
     "photoManifest": null,
     "mainSeries": true,
-    "noPhotographer": true
+    "noPhotographer": true,
+    "champion": "むきむきがいこつ"
   },
   {
     "id": 767620,
@@ -64,7 +69,8 @@
     "startggUrl": "https://www.start.gg/tournament/kowloon-16",
     "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-16/%E3%81%95%E3%81%8D%E3%82%87%E3%81%86/full/1-DSC06925.jpg",
     "photoManifest": "data/photos/kowloon-16.json",
-    "mainSeries": true
+    "mainSeries": true,
+    "champion": "Onin"
   },
   {
     "id": 751119,
@@ -75,7 +81,8 @@
     "startggUrl": "https://www.start.gg/tournament/15with-15th-anniversary",
     "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/15with-15th-anniversary/%E3%81%95%E3%81%8D%E3%82%87%E3%81%86/full/1-%E3%83%8F%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88%E7%94%A87.jpg",
     "photoManifest": "data/photos/15with-15th-anniversary.json",
-    "mainSeries": true
+    "mainSeries": true,
+    "champion": "SZ | Asimo"
   },
   {
     "id": 746895,
@@ -86,7 +93,8 @@
     "startggUrl": "https://www.start.gg/tournament/kowloon-14",
     "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-14/%E5%90%84%E5%8B%99%E5%8E%9F/full/1-250208_kowloon%2314_s-253.jpg",
     "photoManifest": "data/photos/kowloon-14.json",
-    "mainSeries": true
+    "mainSeries": true,
+    "champion": "E36 | Hurt"
   },
   {
     "id": 743289,
@@ -98,7 +106,8 @@
     "cover": null,
     "photoManifest": null,
     "mainSeries": true,
-    "noPhotographer": true
+    "noPhotographer": true,
+    "champion": "ロッキー"
   },
   {
     "id": 732928,
@@ -110,7 +119,8 @@
     "cover": null,
     "photoManifest": null,
     "mainSeries": true,
-    "noPhotographer": true
+    "noPhotographer": true,
+    "champion": "くたま"
   },
   {
     "id": 704865,
@@ -121,7 +131,8 @@
     "startggUrl": "https://www.start.gg/tournament/kowloon-13",
     "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-13/%E5%90%84%E5%8B%99%E5%8E%9F/full/1-241005_%2313a-003.jpg",
     "photoManifest": "data/photos/kowloon-13.json",
-    "mainSeries": true
+    "mainSeries": true,
+    "champion": "E36 | Hurt"
   },
   {
     "id": 669094,
@@ -132,7 +143,8 @@
     "startggUrl": "https://www.start.gg/tournament/12-with-kowloon-12-with-kagaribi",
     "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/12-with-kowloon-12-with-kagaribi/%E3%81%B5%E3%81%8F/full/1-DSC_9799.jpg",
     "photoManifest": "data/photos/12-with-kowloon-12-with-kagaribi.json",
-    "mainSeries": true
+    "mainSeries": true,
+    "champion": "FENNEL | ミーヤー"
   },
   {
     "id": 656051,
@@ -143,7 +155,8 @@
     "startggUrl": "https://www.start.gg/tournament/kowloon-11",
     "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-11/%E5%90%84%E5%8B%99%E5%8E%9F/full/1-_DSC2377.jpg",
     "photoManifest": "data/photos/kowloon-11.json",
-    "mainSeries": true
+    "mainSeries": true,
+    "champion": "E36 | Hurt"
   },
   {
     "id": 639288,
@@ -154,7 +167,8 @@
     "startggUrl": "https://www.start.gg/tournament/kowloon-10",
     "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-10/%E5%90%84%E5%8B%99%E5%8E%9F/full/1-_DSC0564.jpg",
     "photoManifest": "data/photos/kowloon-10.json",
-    "mainSeries": true
+    "mainSeries": true,
+    "champion": "ZETA | あcola"
   },
   {
     "id": 605837,
@@ -165,7 +179,8 @@
     "startggUrl": "https://www.start.gg/tournament/9with",
     "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/9with/%E3%81%B5%E3%81%8F/full/1-DSC_1828.jpg",
     "photoManifest": "data/photos/9with.json",
-    "mainSeries": true
+    "mainSeries": true,
+    "champion": "FENNEL | ミーヤー"
   },
   {
     "id": 596154,
@@ -176,7 +191,8 @@
     "startggUrl": "https://www.start.gg/tournament/kowloon-8",
     "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-8/%E5%90%84%E5%8B%99%E5%8E%9F/full/1-_DSC4738.jpg",
     "photoManifest": "data/photos/kowloon-8.json",
-    "mainSeries": true
+    "mainSeries": true,
+    "champion": "ロッキー"
   },
   {
     "id": 561293,
@@ -187,7 +203,8 @@
     "startggUrl": "https://www.start.gg/tournament/kowloon-7",
     "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-7/%E3%82%B5%E3%82%B5%E3%82%AB%E3%82%A8/full/1-IMG_8949.jpg",
     "photoManifest": "data/photos/kowloon-7.json",
-    "mainSeries": true
+    "mainSeries": true,
+    "champion": "FENNEL | ミーヤー"
   },
   {
     "id": 542725,
@@ -198,7 +215,8 @@
     "startggUrl": "https://www.start.gg/tournament/kowloon-6",
     "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-6/%E3%82%B5%E3%82%B5%E3%82%AB%E3%82%A8/full/1-IMG_1693.jpg",
     "photoManifest": "data/photos/kowloon-6.json",
-    "mainSeries": true
+    "mainSeries": true,
+    "champion": "Hurt"
   },
   {
     "id": 516201,
@@ -209,7 +227,8 @@
     "startggUrl": "https://www.start.gg/tournament/kowloon-5",
     "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-5/%E3%83%8B%E3%83%A3%E3%83%84/full/1-DSC06091.jpg",
     "photoManifest": "data/photos/kowloon-5.json",
-    "mainSeries": true
+    "mainSeries": true,
+    "champion": "SST | Shuton"
   },
   {
     "id": 496634,
@@ -220,7 +239,8 @@
     "startggUrl": "https://www.start.gg/tournament/kowloon-4",
     "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-4/%E3%83%8B%E3%83%A3%E3%83%84/full/0001_xlarge.jpg",
     "photoManifest": "data/photos/kowloon-4.json",
-    "mainSeries": true
+    "mainSeries": true,
+    "champion": "FTG | ミーヤー"
   },
   {
     "id": 475743,
@@ -231,7 +251,8 @@
     "startggUrl": "https://www.start.gg/tournament/kowloon-3",
     "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-3/%E3%83%8B%E3%83%A3%E3%83%84/full/0001_xlarge.jpg",
     "photoManifest": "data/photos/kowloon-3.json",
-    "mainSeries": true
+    "mainSeries": true,
+    "champion": "FTG | ミーヤー"
   },
   {
     "id": 463841,
@@ -242,7 +263,8 @@
     "startggUrl": "https://www.start.gg/tournament/kowloon-2",
     "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-2/%E3%83%8B%E3%83%A3%E3%83%84/full/0001_xlarge.jpg",
     "photoManifest": "data/photos/kowloon-2.json",
-    "mainSeries": true
+    "mainSeries": true,
+    "champion": "8LX | HIKARU"
   },
   {
     "id": 448395,
@@ -253,6 +275,7 @@
     "startggUrl": "https://www.start.gg/tournament/kowloon-1",
     "cover": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-1/%E3%83%8B%E3%83%A3%E3%83%84/full/0001_xlarge.jpg",
     "photoManifest": "data/photos/kowloon-1.json",
-    "mainSeries": true
+    "mainSeries": true,
+    "champion": "百万 | シッショー"
   }
 ]
