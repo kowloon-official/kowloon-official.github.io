@@ -5,6 +5,7 @@ function renderHeader(activePage) {
   const items = [
     { href: "index.html", label: "ホーム", key: "home" },
     { href: "archive.html", label: "大会アーカイブ", key: "archive" },
+    { href: "champions.html", label: "歴代優勝者", key: "champions" },
     { href: "favorites.html", label: "お気に入り", key: "favorites" }
   ];
   const links = items

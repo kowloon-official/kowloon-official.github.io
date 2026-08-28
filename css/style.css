@@ -375,6 +375,113 @@ img { max-width: 100%; display: block; }
   .stat-number--small { font-size: 1.05rem; }
 }
 
+/* --- 歴代優勝者 --- */
+.champion-row {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 12px;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.champion-row-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 18px;
+  border: none;
+  background: none;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.champion-row-header::after {
+  content: "\25be";
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-left: 8px;
+  flex: 0 0 auto;
+  transition: transform 0.15s ease;
+}
+
+.champion-row-header.open::after {
+  transform: rotate(180deg);
+}
+
+.champion-row-main {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.champion-row-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.champion-row-meta {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.champion-row-winner {
+  flex: 0 0 auto;
+  font-weight: 700;
+  color: var(--blue);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.champion-detail {
+  display: none;
+  padding: 0 18px 18px;
+  border-top: 1px solid var(--border);
+}
+
+.champion-detail.open {
+  display: block;
+  padding-top: 14px;
+}
+
+.champion-matches {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.champion-match {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+}
+
+.champion-match-round {
+  flex: 0 0 auto;
+  min-width: 60px;
+  font-weight: 700;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.champion-match-score {
+  color: var(--text);
+}
+
+@media (max-width: 640px) {
+  .champion-row-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}
+
 /* --- Thanks to --- */
 .thanks-note {
   color: var(--muted);

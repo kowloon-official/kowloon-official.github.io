@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>歴代優勝者 ｜ 九龍-KOWLOON-</title>
+<meta name="description" content="九龍-KOWLOON-の歴代優勝者一覧。各大会の決勝の対戦結果も見られます。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="歴代優勝者 ｜ 九龍-KOWLOON-">
+<meta property="og:description" content="九龍-KOWLOON-の歴代優勝者一覧。各大会の決勝の対戦結果も見られます。">
+<meta property="og:image" content="https://kowloon-official.github.io/assets/og-image.png">
+<meta property="og:url" content="https://kowloon-official.github.io/champions.html">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header id="site-header" class="site-header"></header>
+
+<main class="container">
+  <section class="section">
+    <div class="section-head">
+      <h2>歴代優勝者</h2>
+    </div>
+    <p class="thanks-note">大会名をタップすると、決勝ラウンドの対戦結果を見られます。</p>
+    <div id="champions-list"></div>
+  </section>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script src="js/config.js"></script>
+<script src="js/favorites.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/data.js"></script>
+<script>
+(async function () {
+  renderHeader("champions");
+  renderFooter();
+
+  const listEl = document.getElementById("champions-list");
+  const tournaments = await loadTournaments();
+
+  let champions = {};
+  try {
+    const res = await fetch("data/champions.json");
+    champions = await res.json();
+  } catch (e) {
+    listEl.innerHTML = `<div class="empty-state"><p>優勝者データを読み込めませんでした。</p></div>`;
+    return;
+  }
+
+  const roundLabel = {
+    "Winners Final": "WF",
+    "Losers Final": "LF",
+    "Grand Final": "GF",
+    "Grand Final Reset": "GF(リセット)"
+  };
+
+  const rows = tournaments
+    .map(t => ({ t, c: champions[t.slug] }))
+    .filter(({ c }) => c && c.champion);
+
+  if (rows.length === 0) {
+    listEl.innerHTML = `<div class="empty-state"><p>優勝者データがまだありません。</p></div>`;
+    return;
+  }
+
+  listEl.innerHTML = rows.map(({ t, c }, i) => `
+    <div class="champion-row">
+      <button type="button" class="champion-row-header" data-index="${i}">
+        <div class="champion-row-main">
+          <span class="champion-row-name">${t.name}</span>
+          <span class="champion-row-meta">${formatDate(t.date)} ・ 参加${t.attendees}人</span>
+        </div>
+        <div class="champion-row-winner">🏆 ${c.champion}</div>
+      </button>
+      <div class="champion-detail" id="champion-detail-${i}">
+        ${c.topMatches && c.topMatches.length > 0 ? `
+          <div class="champion-matches">
+            ${c.topMatches.map(m => `
+              <div class="champion-match">
+                <span class="champion-match-round">${roundLabel[m.round] || m.round}</span>
+                <span class="champion-match-score">${m.score}</span>
+              </div>
+            `).join("")}
+          </div>
+        ` : `<p class="champion-row-meta">対戦結果は準備中です。</p>`}
+        ${t.photoManifest ? `<a class="btn btn-primary" href="event.html?slug=${encodeURIComponent(t.slug)}">この大会の写真を見る</a>` : ""}
+      </div>
+    </div>
+  `).join("");
+
+  listEl.querySelectorAll(".champion-row-header").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const detail = document.getElementById(`champion-detail-${btn.dataset.index}`);
+      detail.classList.toggle("open");
+      btn.classList.toggle("open");
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,502 @@
+{
+  "kowloon-18-5": {
+    "champion": "ロッキー",
+    "runnerUp": "DPS | SHOOさん",
+    "eventName": "KOWLOON_SP",
+    "numEntrants": 107,
+    "topMatches": [
+      {
+        "round": "Winners Final",
+        "score": "DPS | SHOOさん 3 - トミトミ 0"
+      },
+      {
+        "round": "Losers Final",
+        "score": "トミトミ 0 - ロッキー 3"
+      },
+      {
+        "round": "Grand Final",
+        "score": "DPS | SHOOさん 2 - ロッキー 3"
+      },
+      {
+        "round": "Grand Final Reset",
+        "score": "ロッキー 3 - DPS | SHOOさん 0"
+      }
+    ]
+  },
+  "limit-break-3-2": {
+    "champion": "いかろす",
+    "runnerUp": "UOG | マロロン",
+    "eventName": "LIMIT BREAK",
+    "numEntrants": 91,
+    "topMatches": [
+      {
+        "round": "Winners Final",
+        "score": "KG | kanochina 0 - イチまる 2"
+      },
+      {
+        "round": "Losers Final",
+        "score": "KG | kanochina 2 - BeryL 0"
+      },
+      {
+        "round": "Grand Final",
+        "score": "イチまる 2 - KG | kanochina 0"
+      }
+    ]
+  },
+  "kowloon-18": {
+    "champion": "FENNEL | Miya",
+    "runnerUp": "E36 | Hurt",
+    "eventName": "KOWLOON_SP",
+    "numEntrants": 388,
+    "topMatches": [
+      {
+        "round": "Winners Final",
+        "score": "AREA310 | ドラ右 1 - FENNEL | Miya 3"
+      },
+      {
+        "round": "Losers Final",
+        "score": "AREA310 | ドラ右 2 - E36 | Hurt 3"
+      },
+      {
+        "round": "Grand Final",
+        "score": "FENNEL | Miya 3 - E36 | Hurt 1"
+      }
+    ]
+  },
+  "kowloon-17": {
+    "champion": "E36 | Hurt",
+    "runnerUp": "PYL | マイルドなH.O/Mild na H.O",
+    "eventName": "KOWLOON_SP",
+    "numEntrants": 248,
+    "topMatches": [
+      {
+        "round": "Winners Final",
+        "score": "PYL | マイルドなH.O/Mild na H.O 3 - 黒船 1"
+      },
+      {
+        "round": "Losers Final",
+        "score": "黒船 0 - E36 | Hurt 3"
+      },
+      {
+        "round": "Grand Final",
+        "score": "PYL | マイルドなH.O/Mild na H.O 1 - E36 | Hurt 3"
+      },
+      {
+        "round": "Grand Final Reset",
+        "score": "E36 | Hurt 3 - PYL | マイルドなH.O/Mild na H.O 2"
+      }
+    ]
+  },
+  "limit-break-2-2": {
+    "champion": "むきむきがいこつ",
+    "runnerUp": "ざわ",
+    "eventName": "LIMIT BREAK",
+    "numEntrants": 84,
+    "topMatches": [
+      {
+        "round": "Winners Final",
+        "score": "DPS | NIKAtto 0 - かるの 2"
+      },
+      {
+        "round": "Losers Final",
+        "score": "DPS | NIKAtto 2 - やぎ 1"
+      },
+      {
+        "round": "Grand Final",
+        "score": "かるの 2 - DPS | NIKAtto 0"
+      }
+    ]
+  },
+  "kowloon-16": {
+    "champion": "Onin",
+    "runnerUp": "LG | Sonix",
+    "eventName": "KOWLOON_SP",
+    "numEntrants": 393,
+    "topMatches": [
+      {
+        "round": "Winners Final",
+        "score": "Onin 3 - Solary | Glutonny 0"
+      },
+      {
+        "round": "Losers Final",
+        "score": "Solary | Glutonny 1 - LG | Sonix 3"
+      },
+      {
+        "round": "Grand Final",
+        "score": "Onin 3 - LG | Sonix 0"
+      }
+    ]
+  },
+  "15with-15th-anniversary": {
+    "champion": "SZ | Asimo",
+    "runnerUp": "SOL | らる",
+    "eventName": "1on1トーナメント",
+    "numEntrants": 617,
+    "topMatches": [
+      {
+        "round": "Winners Final",
+        "score": "カルメロ 1 - SZ | Asimo 3"
+      },
+      {
+        "round": "Losers Final",
+        "score": "カルメロ 0 - SOL | らる 3"
+      },
+      {
+        "round": "Grand Final",
+        "score": "SZ | Asimo 0 - SOL | らる 3"
+      },
+      {
+        "round": "Grand Final Reset",
+        "score": "SOL | らる 1 - SZ | Asimo 3"
+      }
+    ]
+  },
+  "kowloon-14": {
+    "champion": "E36 | Hurt",
+    "runnerUp": "シオン",
+    "eventName": "KOWLOON_SP",
+    "numEntrants": 227,
+    "topMatches": [
+      {
+        "round": "Winners Final",
+        "score": "E36 | Hurt 3 - SOL | らる 0"
+      },
+      {
+        "round": "Losers Final",
+        "score": "SOL | らる 1 - シオン 3"
+      },
+      {
+        "round": "Grand Final",
+        "score": "E36 | Hurt 2 - シオン 3"
+      },
+      {
+        "round": "Grand Final Reset",
+        "score": "シオン 0 - E36 | Hurt 3"
+      }
+    ]
+  },
+  "kowloon-13-5": {
+    "champion": "ロッキー",
+    "runnerUp": "なかぞの",
+    "eventName": "KOWLOON_SP",
+    "numEntrants": 67,
+    "topMatches": [
+      {
+        "round": "Winners Final",
+        "score": "ロッキー 3 - ほーきー 0"
+      },
+      {
+        "round": "Losers Final",
+        "score": "ほーきー 2 - なかぞの 3"
+      },
+      {
+        "round": "Grand Final",
+        "score": "ロッキー 3 - なかぞの 1"
+      }
+    ]
+  },
+  "limit-break-1-3": {
+    "champion": "くたま",
+    "runnerUp": "へんぷく",
+    "eventName": "LIMIT BREAK",
+    "numEntrants": 96,
+    "topMatches": [
+      {
+        "round": "Winners Final",
+        "score": "へんぷく 2 - くたま 3"
+      },
+      {
+        "round": "Losers Final",
+        "score": "へんぷく 3 - ふつうくん 0"
+      },
+      {
+        "round": "Grand Final",
+        "score": "くたま 3 - へんぷく 1"
+      }
+    ]
+  },
+  "kowloon-13": {
+    "champion": "E36 | Hurt",
+    "runnerUp": "にょのknb",
+    "eventName": "KOWLOON_SP",
+    "numEntrants": 309,
+    "topMatches": [
+      {
+        "round": "Winners Final",
+        "score": "E36 | Hurt 3 - にょのknb 0"
+      },
+      {
+        "round": "Losers Final",
+        "score": "にょのknb 3 - RAPPIT | ラリックス　　 0"
+      },
+      {
+        "round": "Grand Final",
+        "score": "E36 | Hurt 3 - にょのknb 2"
+      }
+    ]
+  },
+  "12-with-kowloon-12-with-kagaribi": {
+    "champion": "FENNEL | ミーヤー",
+    "runnerUp": "ZETA | あcola",
+    "eventName": "【スマブラSP】シングルス / Ultimate Singles",
+    "numEntrants": 1428,
+    "topMatches": [
+      {
+        "round": "Winners Final",
+        "score": "ZETA | あcola 1 - FENNEL | ミーヤー 3"
+      },
+      {
+        "round": "Losers Final",
+        "score": "ZETA | あcola 3 - FaZe | Sparg0 1"
+      },
+      {
+        "round": "Grand Final",
+        "score": "FENNEL | ミーヤー 0 - ZETA | あcola 3"
+      },
+      {
+        "round": "Grand Final Reset",
+        "score": "ZETA | あcola 2 - FENNEL | ミーヤー 3"
+      }
+    ]
+  },
+  "kowloon-11": {
+    "champion": "E36 | Hurt",
+    "runnerUp": "Solary | Glutonny",
+    "eventName": "KOWLOON_SP",
+    "numEntrants": 278,
+    "topMatches": [
+      {
+        "round": "Winners Final",
+        "score": "E36 | Hurt 3 - Solary | Glutonny 1"
+      },
+      {
+        "round": "Losers Final",
+        "score": "Solary | Glutonny 3 - りゅーおー/Ryuoh 1"
+      },
+      {
+        "round": "Grand Final",
+        "score": "E36 | Hurt 3 - Solary | Glutonny 2"
+      }
+    ]
+  },
+  "kowloon-10": {
+    "champion": "ZETA | あcola",
+    "runnerUp": "SZ | Asimo",
+    "eventName": "KOWLOON_SP",
+    "numEntrants": 312,
+    "topMatches": [
+      {
+        "round": "Winners Final",
+        "score": "ZETA | あcola 3 - SZ | Asimo 2"
+      },
+      {
+        "round": "Losers Final",
+        "score": "SZ | Asimo 3 - MRG VGBC | Umeki 0"
+      },
+      {
+        "round": "Grand Final",
+        "score": "ZETA | あcola 3 - SZ | Asimo 1"
+      }
+    ]
+  },
+  "9with": {
+    "champion": "FENNEL | ミーヤー",
+    "runnerUp": "らるくん",
+    "eventName": "KOWLOON",
+    "numEntrants": 895,
+    "topMatches": [
+      {
+        "round": "Winners Final",
+        "score": "FENNEL | ミーヤー 3 - らるくん 0"
+      },
+      {
+        "round": "Losers Final",
+        "score": "らるくん 3 - SZ | Asimo 1"
+      },
+      {
+        "round": "Grand Final",
+        "score": "FENNEL | ミーヤー 3 - らるくん 2"
+      }
+    ]
+  },
+  "kowloon-8": {
+    "champion": "ロッキー",
+    "runnerUp": "ちょんれん",
+    "eventName": "KOWLOON",
+    "numEntrants": 256,
+    "topMatches": [
+      {
+        "round": "Winners Final",
+        "score": "ロッキー 3 - ちょんれん 1"
+      },
+      {
+        "round": "Losers Final",
+        "score": "ちょんれん 3 - APS | sssr 2"
+      },
+      {
+        "round": "Grand Final",
+        "score": "ロッキー 3 - ちょんれん 1"
+      }
+    ]
+  },
+  "kowloon-7": {
+    "champion": "FENNEL | ミーヤー",
+    "runnerUp": "R2G | Kameme",
+    "eventName": "KOWLOON",
+    "numEntrants": 298,
+    "topMatches": [
+      {
+        "round": "Winners Final",
+        "score": "FENNEL | ミーヤー 3 - R2G | Kameme 0"
+      },
+      {
+        "round": "Losers Final",
+        "score": "R2G | Kameme 3 - SZ | Asimo 2"
+      },
+      {
+        "round": "Grand Final",
+        "score": "FENNEL | ミーヤー 2 - R2G | Kameme 3"
+      },
+      {
+        "round": "Grand Final Reset",
+        "score": "R2G | Kameme 1 - FENNEL | ミーヤー 3"
+      }
+    ]
+  },
+  "kowloon-6": {
+    "champion": "Hurt",
+    "runnerUp": "iXA | Yaura",
+    "eventName": "KOWLOON",
+    "numEntrants": 309,
+    "topMatches": [
+      {
+        "round": "Winners Final",
+        "score": "iXA | Yaura 2 - Hurt 3"
+      },
+      {
+        "round": "Losers Final",
+        "score": "iXA | Yaura 3 - Revo | Kome 0"
+      },
+      {
+        "round": "Grand Final",
+        "score": "Hurt 0 - iXA | Yaura 3"
+      },
+      {
+        "round": "Grand Final Reset",
+        "score": "iXA | Yaura 1 - Hurt 3"
+      }
+    ]
+  },
+  "kowloon-5": {
+    "champion": "SST | Shuton",
+    "runnerUp": "FTG | ミーヤー",
+    "eventName": "KOWLOON SP",
+    "numEntrants": 471,
+    "topMatches": [
+      {
+        "round": "Winners Final",
+        "score": "FTG | ミーヤー 3 - SZ | Asimo 1"
+      },
+      {
+        "round": "Losers Final",
+        "score": "SZ | Asimo 0 - SST | Shuton 3"
+      },
+      {
+        "round": "Grand Final",
+        "score": "FTG | ミーヤー 1 - SST | Shuton 3"
+      },
+      {
+        "round": "Grand Final Reset",
+        "score": "SST | Shuton 3 - FTG | ミーヤー 2"
+      }
+    ]
+  },
+  "kowloon-4": {
+    "champion": "FTG | ミーヤー",
+    "runnerUp": "せんら",
+    "eventName": "KOWLOON SP",
+    "numEntrants": 244,
+    "topMatches": [
+      {
+        "round": "Winners Final",
+        "score": "FTG | ミーヤー 3 - せんら 2"
+      },
+      {
+        "round": "Losers Final",
+        "score": "せんら 3 - SNB | takera 2"
+      },
+      {
+        "round": "Grand Final",
+        "score": "FTG | ミーヤー 3 - せんら 0"
+      }
+    ]
+  },
+  "kowloon-3": {
+    "champion": "FTG | ミーヤー",
+    "runnerUp": "R2G | Kameme",
+    "eventName": "KOWLOON",
+    "numEntrants": 362,
+    "topMatches": [
+      {
+        "round": "Winners Final",
+        "score": "FTG | ミーヤー 0 - R2G | Kameme 3"
+      },
+      {
+        "round": "Losers Final",
+        "score": "FTG | ミーヤー 3 - Revo | Kome 1"
+      },
+      {
+        "round": "Grand Final",
+        "score": "R2G | Kameme 2 - FTG | ミーヤー 3"
+      },
+      {
+        "round": "Grand Final Reset",
+        "score": "FTG | ミーヤー 3 - R2G | Kameme 2"
+      }
+    ]
+  },
+  "kowloon-2": {
+    "champion": "8LX | HIKARU",
+    "runnerUp": "百万 | シッショー",
+    "eventName": "KOWLOON",
+    "numEntrants": 292,
+    "topMatches": [
+      {
+        "round": "Winners Final",
+        "score": "R2G | 満足 2 - 百万 | シッショー 3"
+      },
+      {
+        "round": "Losers Final",
+        "score": "R2G | 満足 1 - 8LX | HIKARU 3"
+      },
+      {
+        "round": "Grand Final",
+        "score": "百万 | シッショー 1 - 8LX | HIKARU 3"
+      },
+      {
+        "round": "Grand Final Reset",
+        "score": "8LX | HIKARU 3 - 百万 | シッショー 0"
+      }
+    ]
+  },
+  "kowloon-1": {
+    "champion": "百万 | シッショー",
+    "runnerUp": "Munekin",
+    "eventName": "KOWLOON",
+    "numEntrants": 256,
+    "topMatches": [
+      {
+        "round": "Winners Final",
+        "score": "Paseriman 2 - 百万 | シッショー 3"
+      },
+      {
+        "round": "Losers Final",
+        "score": "Paseriman 2 - Munekin 3"
+      },
+      {
+        "round": "Grand Final",
+        "score": "百万 | シッショー 3 - Munekin 1"
+      }
+    ]
+  }
+}
