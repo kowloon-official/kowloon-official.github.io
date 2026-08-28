@@ -4,22 +4,38 @@
     "runnerUp": "DPS | SHOOさん",
     "eventName": "KOWLOON_SP",
     "numEntrants": 107,
-    "topMatches": [
+    "matches": [
       {
-        "round": "Winners Final",
-        "score": "DPS | SHOOさん 3 - トミトミ 0"
+        "round": "Losers Semi-Final",
+        "label": "LSF",
+        "champScore": 3,
+        "oppScore": 0,
+        "opponent": "Khaku(けーはく)",
+        "won": true
       },
       {
         "round": "Losers Final",
-        "score": "トミトミ 0 - ロッキー 3"
+        "label": "LF",
+        "champScore": 3,
+        "oppScore": 0,
+        "opponent": "トミトミ",
+        "won": true
       },
       {
         "round": "Grand Final",
-        "score": "DPS | SHOOさん 2 - ロッキー 3"
+        "label": "GF",
+        "champScore": 3,
+        "oppScore": 2,
+        "opponent": "DPS | SHOOさん",
+        "won": true
       },
       {
         "round": "Grand Final Reset",
-        "score": "ロッキー 3 - DPS | SHOOさん 0"
+        "label": "TF",
+        "champScore": 3,
+        "oppScore": 0,
+        "opponent": "DPS | SHOOさん",
+        "won": true
       }
     ]
   },
@@ -28,18 +44,38 @@
     "runnerUp": "UOG | マロロン",
     "eventName": "LIMIT BREAK",
     "numEntrants": 91,
-    "topMatches": [
+    "matches": [
       {
-        "round": "Winners Final",
-        "score": "KG | kanochina 0 - イチまる 2"
+        "round": "Winners Semi-Final",
+        "label": "WSF",
+        "champScore": 2,
+        "oppScore": 0,
+        "opponent": "kosyo",
+        "won": true
       },
       {
-        "round": "Losers Final",
-        "score": "KG | kanochina 2 - BeryL 0"
+        "round": "Winners Final",
+        "label": "WF",
+        "champScore": 2,
+        "oppScore": 0,
+        "opponent": "のぎへん",
+        "won": true
       },
       {
         "round": "Grand Final",
-        "score": "イチまる 2 - KG | kanochina 0"
+        "label": "GF",
+        "champScore": 0,
+        "oppScore": 3,
+        "opponent": "UOG | マロロン",
+        "won": false
+      },
+      {
+        "round": "Grand Final Reset",
+        "label": "TF",
+        "champScore": 3,
+        "oppScore": 2,
+        "opponent": "UOG | マロロン",
+        "won": true
       }
     ]
   },
@@ -48,18 +84,30 @@
     "runnerUp": "E36 | Hurt",
     "eventName": "KOWLOON_SP",
     "numEntrants": 388,
-    "topMatches": [
+    "matches": [
       {
-        "round": "Winners Final",
-        "score": "AREA310 | ドラ右 1 - FENNEL | Miya 3"
+        "round": "Winners Semi-Final",
+        "label": "WSF",
+        "champScore": 3,
+        "oppScore": 2,
+        "opponent": "E36 | Hurt",
+        "won": true
       },
       {
-        "round": "Losers Final",
-        "score": "AREA310 | ドラ右 2 - E36 | Hurt 3"
+        "round": "Winners Final",
+        "label": "WF",
+        "champScore": 3,
+        "oppScore": 1,
+        "opponent": "AREA310 | ドラ右",
+        "won": true
       },
       {
         "round": "Grand Final",
-        "score": "FENNEL | Miya 3 - E36 | Hurt 1"
+        "label": "GF",
+        "champScore": 3,
+        "oppScore": 1,
+        "opponent": "E36 | Hurt",
+        "won": true
       }
     ]
   },
@@ -68,22 +116,38 @@
     "runnerUp": "PYL | マイルドなH.O/Mild na H.O",
     "eventName": "KOWLOON_SP",
     "numEntrants": 248,
-    "topMatches": [
+    "matches": [
       {
-        "round": "Winners Final",
-        "score": "PYL | マイルドなH.O/Mild na H.O 3 - 黒船 1"
+        "round": "Losers Semi-Final",
+        "label": "LSF",
+        "champScore": 3,
+        "oppScore": 1,
+        "opponent": "AREA310 | TG(トリグリ)",
+        "won": true
       },
       {
         "round": "Losers Final",
-        "score": "黒船 0 - E36 | Hurt 3"
+        "label": "LF",
+        "champScore": 3,
+        "oppScore": 0,
+        "opponent": "黒船",
+        "won": true
       },
       {
         "round": "Grand Final",
-        "score": "PYL | マイルドなH.O/Mild na H.O 1 - E36 | Hurt 3"
+        "label": "GF",
+        "champScore": 3,
+        "oppScore": 1,
+        "opponent": "PYL | マイルドなH.O/Mild na H.O",
+        "won": true
       },
       {
         "round": "Grand Final Reset",
-        "score": "E36 | Hurt 3 - PYL | マイルドなH.O/Mild na H.O 2"
+        "label": "TF",
+        "champScore": 3,
+        "oppScore": 2,
+        "opponent": "PYL | マイルドなH.O/Mild na H.O",
+        "won": true
       }
     ]
   },
@@ -92,18 +156,38 @@
     "runnerUp": "ざわ",
     "eventName": "LIMIT BREAK",
     "numEntrants": 84,
-    "topMatches": [
+    "matches": [
       {
-        "round": "Winners Final",
-        "score": "DPS | NIKAtto 0 - かるの 2"
+        "round": "Losers Semi-Final",
+        "label": "LSF",
+        "champScore": 2,
+        "oppScore": 0,
+        "opponent": "うっちー",
+        "won": true
       },
       {
         "round": "Losers Final",
-        "score": "DPS | NIKAtto 2 - やぎ 1"
+        "label": "LF",
+        "champScore": 2,
+        "oppScore": 1,
+        "opponent": "DPS コロタヌキ",
+        "won": true
       },
       {
         "round": "Grand Final",
-        "score": "かるの 2 - DPS | NIKAtto 0"
+        "label": "GF",
+        "champScore": 2,
+        "oppScore": 0,
+        "opponent": "ざわ",
+        "won": true
+      },
+      {
+        "round": "Grand Final Reset",
+        "label": "TF",
+        "champScore": 2,
+        "oppScore": 0,
+        "opponent": "ざわ",
+        "won": true
       }
     ]
   },
@@ -112,18 +196,30 @@
     "runnerUp": "LG | Sonix",
     "eventName": "KOWLOON_SP",
     "numEntrants": 393,
-    "topMatches": [
+    "matches": [
       {
-        "round": "Winners Final",
-        "score": "Onin 3 - Solary | Glutonny 0"
+        "round": "Winners Semi-Final",
+        "label": "WSF",
+        "champScore": 3,
+        "oppScore": 2,
+        "opponent": "LG | Tweek",
+        "won": true
       },
       {
-        "round": "Losers Final",
-        "score": "Solary | Glutonny 1 - LG | Sonix 3"
+        "round": "Winners Final",
+        "label": "WF",
+        "champScore": 3,
+        "oppScore": 0,
+        "opponent": "Solary | Glutonny",
+        "won": true
       },
       {
         "round": "Grand Final",
-        "score": "Onin 3 - LG | Sonix 0"
+        "label": "GF",
+        "champScore": 3,
+        "oppScore": 0,
+        "opponent": "LG | Sonix",
+        "won": true
       }
     ]
   },
@@ -132,22 +228,38 @@
     "runnerUp": "SOL | らる",
     "eventName": "1on1トーナメント",
     "numEntrants": 617,
-    "topMatches": [
+    "matches": [
       {
-        "round": "Winners Final",
-        "score": "カルメロ 1 - SZ | Asimo 3"
+        "round": "Winners Semi-Final",
+        "label": "WSF",
+        "champScore": 3,
+        "oppScore": 1,
+        "opponent": "SBI | KEN",
+        "won": true
       },
       {
-        "round": "Losers Final",
-        "score": "カルメロ 0 - SOL | らる 3"
+        "round": "Winners Final",
+        "label": "WF",
+        "champScore": 3,
+        "oppScore": 1,
+        "opponent": "カルメロ",
+        "won": true
       },
       {
         "round": "Grand Final",
-        "score": "SZ | Asimo 0 - SOL | らる 3"
+        "label": "GF",
+        "champScore": 0,
+        "oppScore": 3,
+        "opponent": "SOL | らる",
+        "won": false
       },
       {
         "round": "Grand Final Reset",
-        "score": "SOL | らる 1 - SZ | Asimo 3"
+        "label": "TF",
+        "champScore": 3,
+        "oppScore": 1,
+        "opponent": "SOL | らる",
+        "won": true
       }
     ]
   },
@@ -156,22 +268,38 @@
     "runnerUp": "シオン",
     "eventName": "KOWLOON_SP",
     "numEntrants": 227,
-    "topMatches": [
+    "matches": [
       {
-        "round": "Winners Final",
-        "score": "E36 | Hurt 3 - SOL | らる 0"
+        "round": "Winners Semi-Final",
+        "label": "WSF",
+        "champScore": 3,
+        "oppScore": 1,
+        "opponent": "やまD",
+        "won": true
       },
       {
-        "round": "Losers Final",
-        "score": "SOL | らる 1 - シオン 3"
+        "round": "Winners Final",
+        "label": "WF",
+        "champScore": 3,
+        "oppScore": 0,
+        "opponent": "SOL | らる",
+        "won": true
       },
       {
         "round": "Grand Final",
-        "score": "E36 | Hurt 2 - シオン 3"
+        "label": "GF",
+        "champScore": 2,
+        "oppScore": 3,
+        "opponent": "シオン",
+        "won": false
       },
       {
         "round": "Grand Final Reset",
-        "score": "シオン 0 - E36 | Hurt 3"
+        "label": "TF",
+        "champScore": 3,
+        "oppScore": 0,
+        "opponent": "シオン",
+        "won": true
       }
     ]
   },
@@ -180,18 +308,30 @@
     "runnerUp": "なかぞの",
     "eventName": "KOWLOON_SP",
     "numEntrants": 67,
-    "topMatches": [
+    "matches": [
       {
-        "round": "Winners Final",
-        "score": "ロッキー 3 - ほーきー 0"
+        "round": "Winners Semi-Final",
+        "label": "WSF",
+        "champScore": 3,
+        "oppScore": 2,
+        "opponent": "なかぞの",
+        "won": true
       },
       {
-        "round": "Losers Final",
-        "score": "ほーきー 2 - なかぞの 3"
+        "round": "Winners Final",
+        "label": "WF",
+        "champScore": 3,
+        "oppScore": 0,
+        "opponent": "ほーきー",
+        "won": true
       },
       {
         "round": "Grand Final",
-        "score": "ロッキー 3 - なかぞの 1"
+        "label": "GF",
+        "champScore": 3,
+        "oppScore": 1,
+        "opponent": "なかぞの",
+        "won": true
       }
     ]
   },
@@ -200,18 +340,30 @@
     "runnerUp": "へんぷく",
     "eventName": "LIMIT BREAK",
     "numEntrants": 96,
-    "topMatches": [
+    "matches": [
       {
-        "round": "Winners Final",
-        "score": "へんぷく 2 - くたま 3"
+        "round": "Winners Semi-Final",
+        "label": "WSF",
+        "champScore": 2,
+        "oppScore": 0,
+        "opponent": "とんがりあご",
+        "won": true
       },
       {
-        "round": "Losers Final",
-        "score": "へんぷく 3 - ふつうくん 0"
+        "round": "Winners Final",
+        "label": "WF",
+        "champScore": 3,
+        "oppScore": 2,
+        "opponent": "へんぷく",
+        "won": true
       },
       {
         "round": "Grand Final",
-        "score": "くたま 3 - へんぷく 1"
+        "label": "GF",
+        "champScore": 3,
+        "oppScore": 1,
+        "opponent": "へんぷく",
+        "won": true
       }
     ]
   },
@@ -220,18 +372,30 @@
     "runnerUp": "にょのknb",
     "eventName": "KOWLOON_SP",
     "numEntrants": 309,
-    "topMatches": [
+    "matches": [
       {
-        "round": "Winners Final",
-        "score": "E36 | Hurt 3 - にょのknb 0"
+        "round": "Winners Semi-Final",
+        "label": "WSF",
+        "champScore": 3,
+        "oppScore": 0,
+        "opponent": "BUZZ | たいけい/Taikei",
+        "won": true
       },
       {
-        "round": "Losers Final",
-        "score": "にょのknb 3 - RAPPIT | ラリックス　　 0"
+        "round": "Winners Final",
+        "label": "WF",
+        "champScore": 3,
+        "oppScore": 0,
+        "opponent": "にょのknb",
+        "won": true
       },
       {
         "round": "Grand Final",
-        "score": "E36 | Hurt 3 - にょのknb 2"
+        "label": "GF",
+        "champScore": 3,
+        "oppScore": 2,
+        "opponent": "にょのknb",
+        "won": true
       }
     ]
   },
@@ -240,22 +404,38 @@
     "runnerUp": "ZETA | あcola",
     "eventName": "【スマブラSP】シングルス / Ultimate Singles",
     "numEntrants": 1428,
-    "topMatches": [
+    "matches": [
       {
-        "round": "Winners Final",
-        "score": "ZETA | あcola 1 - FENNEL | ミーヤー 3"
+        "round": "Winners Semi-Final",
+        "label": "WSF",
+        "champScore": 3,
+        "oppScore": 1,
+        "opponent": "HIT | Lv.1",
+        "won": true
       },
       {
-        "round": "Losers Final",
-        "score": "ZETA | あcola 3 - FaZe | Sparg0 1"
+        "round": "Winners Final",
+        "label": "WF",
+        "champScore": 3,
+        "oppScore": 1,
+        "opponent": "ZETA | あcola",
+        "won": true
       },
       {
         "round": "Grand Final",
-        "score": "FENNEL | ミーヤー 0 - ZETA | あcola 3"
+        "label": "GF",
+        "champScore": 0,
+        "oppScore": 3,
+        "opponent": "ZETA | あcola",
+        "won": false
       },
       {
         "round": "Grand Final Reset",
-        "score": "ZETA | あcola 2 - FENNEL | ミーヤー 3"
+        "label": "TF",
+        "champScore": 3,
+        "oppScore": 2,
+        "opponent": "ZETA | あcola",
+        "won": true
       }
     ]
   },
@@ -264,18 +444,30 @@
     "runnerUp": "Solary | Glutonny",
     "eventName": "KOWLOON_SP",
     "numEntrants": 278,
-    "topMatches": [
+    "matches": [
       {
-        "round": "Winners Final",
-        "score": "E36 | Hurt 3 - Solary | Glutonny 1"
+        "round": "Winners Semi-Final",
+        "label": "WSF",
+        "champScore": 3,
+        "oppScore": 0,
+        "opponent": "りゅーおー/Ryuoh",
+        "won": true
       },
       {
-        "round": "Losers Final",
-        "score": "Solary | Glutonny 3 - りゅーおー/Ryuoh 1"
+        "round": "Winners Final",
+        "label": "WF",
+        "champScore": 3,
+        "oppScore": 1,
+        "opponent": "Solary | Glutonny",
+        "won": true
       },
       {
         "round": "Grand Final",
-        "score": "E36 | Hurt 3 - Solary | Glutonny 2"
+        "label": "GF",
+        "champScore": 3,
+        "oppScore": 2,
+        "opponent": "Solary | Glutonny",
+        "won": true
       }
     ]
   },
@@ -284,18 +476,30 @@
     "runnerUp": "SZ | Asimo",
     "eventName": "KOWLOON_SP",
     "numEntrants": 312,
-    "topMatches": [
+    "matches": [
       {
-        "round": "Winners Final",
-        "score": "ZETA | あcola 3 - SZ | Asimo 2"
+        "round": "Winners Semi-Final",
+        "label": "WSF",
+        "champScore": 3,
+        "oppScore": 0,
+        "opponent": "MRG VGBC | Umeki",
+        "won": true
       },
       {
-        "round": "Losers Final",
-        "score": "SZ | Asimo 3 - MRG VGBC | Umeki 0"
+        "round": "Winners Final",
+        "label": "WF",
+        "champScore": 3,
+        "oppScore": 2,
+        "opponent": "SZ | Asimo",
+        "won": true
       },
       {
         "round": "Grand Final",
-        "score": "ZETA | あcola 3 - SZ | Asimo 1"
+        "label": "GF",
+        "champScore": 3,
+        "oppScore": 1,
+        "opponent": "SZ | Asimo",
+        "won": true
       }
     ]
   },
@@ -304,18 +508,30 @@
     "runnerUp": "らるくん",
     "eventName": "KOWLOON",
     "numEntrants": 895,
-    "topMatches": [
+    "matches": [
       {
-        "round": "Winners Final",
-        "score": "FENNEL | ミーヤー 3 - らるくん 0"
+        "round": "Winners Semi-Final",
+        "label": "WSF",
+        "champScore": 3,
+        "oppScore": 0,
+        "opponent": "iXA | Yaura",
+        "won": true
       },
       {
-        "round": "Losers Final",
-        "score": "らるくん 3 - SZ | Asimo 1"
+        "round": "Winners Final",
+        "label": "WF",
+        "champScore": 3,
+        "oppScore": 0,
+        "opponent": "らるくん",
+        "won": true
       },
       {
         "round": "Grand Final",
-        "score": "FENNEL | ミーヤー 3 - らるくん 2"
+        "label": "GF",
+        "champScore": 3,
+        "oppScore": 2,
+        "opponent": "らるくん",
+        "won": true
       }
     ]
   },
@@ -324,18 +540,30 @@
     "runnerUp": "ちょんれん",
     "eventName": "KOWLOON",
     "numEntrants": 256,
-    "topMatches": [
+    "matches": [
       {
-        "round": "Winners Final",
-        "score": "ロッキー 3 - ちょんれん 1"
+        "round": "Winners Semi-Final",
+        "label": "WSF",
+        "champScore": 3,
+        "oppScore": 2,
+        "opponent": "BUZZ | へろー",
+        "won": true
       },
       {
-        "round": "Losers Final",
-        "score": "ちょんれん 3 - APS | sssr 2"
+        "round": "Winners Final",
+        "label": "WF",
+        "champScore": 3,
+        "oppScore": 1,
+        "opponent": "ちょんれん",
+        "won": true
       },
       {
         "round": "Grand Final",
-        "score": "ロッキー 3 - ちょんれん 1"
+        "label": "GF",
+        "champScore": 3,
+        "oppScore": 1,
+        "opponent": "ちょんれん",
+        "won": true
       }
     ]
   },
@@ -344,22 +572,38 @@
     "runnerUp": "R2G | Kameme",
     "eventName": "KOWLOON",
     "numEntrants": 298,
-    "topMatches": [
+    "matches": [
       {
-        "round": "Winners Final",
-        "score": "FENNEL | ミーヤー 3 - R2G | Kameme 0"
+        "round": "Winners Semi-Final",
+        "label": "WSF",
+        "champScore": 3,
+        "oppScore": 2,
+        "opponent": "SZ | Asimo",
+        "won": true
       },
       {
-        "round": "Losers Final",
-        "score": "R2G | Kameme 3 - SZ | Asimo 2"
+        "round": "Winners Final",
+        "label": "WF",
+        "champScore": 3,
+        "oppScore": 0,
+        "opponent": "R2G | Kameme",
+        "won": true
       },
       {
         "round": "Grand Final",
-        "score": "FENNEL | ミーヤー 2 - R2G | Kameme 3"
+        "label": "GF",
+        "champScore": 2,
+        "oppScore": 3,
+        "opponent": "R2G | Kameme",
+        "won": false
       },
       {
         "round": "Grand Final Reset",
-        "score": "R2G | Kameme 1 - FENNEL | ミーヤー 3"
+        "label": "TF",
+        "champScore": 3,
+        "oppScore": 1,
+        "opponent": "R2G | Kameme",
+        "won": true
       }
     ]
   },
@@ -368,22 +612,38 @@
     "runnerUp": "iXA | Yaura",
     "eventName": "KOWLOON",
     "numEntrants": 309,
-    "topMatches": [
+    "matches": [
       {
-        "round": "Winners Final",
-        "score": "iXA | Yaura 2 - Hurt 3"
+        "round": "Winners Semi-Final",
+        "label": "WSF",
+        "champScore": 3,
+        "oppScore": 1,
+        "opponent": "Revo | Kome",
+        "won": true
       },
       {
-        "round": "Losers Final",
-        "score": "iXA | Yaura 3 - Revo | Kome 0"
+        "round": "Winners Final",
+        "label": "WF",
+        "champScore": 3,
+        "oppScore": 2,
+        "opponent": "iXA | Yaura",
+        "won": true
       },
       {
         "round": "Grand Final",
-        "score": "Hurt 0 - iXA | Yaura 3"
+        "label": "GF",
+        "champScore": 0,
+        "oppScore": 3,
+        "opponent": "iXA | Yaura",
+        "won": false
       },
       {
         "round": "Grand Final Reset",
-        "score": "iXA | Yaura 1 - Hurt 3"
+        "label": "TF",
+        "champScore": 3,
+        "oppScore": 1,
+        "opponent": "iXA | Yaura",
+        "won": true
       }
     ]
   },
@@ -392,22 +652,38 @@
     "runnerUp": "FTG | ミーヤー",
     "eventName": "KOWLOON SP",
     "numEntrants": 471,
-    "topMatches": [
+    "matches": [
       {
-        "round": "Winners Final",
-        "score": "FTG | ミーヤー 3 - SZ | Asimo 1"
+        "round": "Losers Semi-Final",
+        "label": "LSF",
+        "champScore": 3,
+        "oppScore": 0,
+        "opponent": "iXA | ヤウラ",
+        "won": true
       },
       {
         "round": "Losers Final",
-        "score": "SZ | Asimo 0 - SST | Shuton 3"
+        "label": "LF",
+        "champScore": 3,
+        "oppScore": 0,
+        "opponent": "SZ | Asimo",
+        "won": true
       },
       {
         "round": "Grand Final",
-        "score": "FTG | ミーヤー 1 - SST | Shuton 3"
+        "label": "GF",
+        "champScore": 3,
+        "oppScore": 1,
+        "opponent": "FTG | ミーヤー",
+        "won": true
       },
       {
         "round": "Grand Final Reset",
-        "score": "SST | Shuton 3 - FTG | ミーヤー 2"
+        "label": "TF",
+        "champScore": 3,
+        "oppScore": 2,
+        "opponent": "FTG | ミーヤー",
+        "won": true
       }
     ]
   },
@@ -416,18 +692,30 @@
     "runnerUp": "せんら",
     "eventName": "KOWLOON SP",
     "numEntrants": 244,
-    "topMatches": [
+    "matches": [
       {
-        "round": "Winners Final",
-        "score": "FTG | ミーヤー 3 - せんら 2"
+        "round": "Winners Semi-Final",
+        "label": "WSF",
+        "champScore": 3,
+        "oppScore": 0,
+        "opponent": "SNB | takera",
+        "won": true
       },
       {
-        "round": "Losers Final",
-        "score": "せんら 3 - SNB | takera 2"
+        "round": "Winners Final",
+        "label": "WF",
+        "champScore": 3,
+        "oppScore": 2,
+        "opponent": "せんら",
+        "won": true
       },
       {
         "round": "Grand Final",
-        "score": "FTG | ミーヤー 3 - せんら 0"
+        "label": "GF",
+        "champScore": 3,
+        "oppScore": 0,
+        "opponent": "せんら",
+        "won": true
       }
     ]
   },
@@ -436,22 +724,38 @@
     "runnerUp": "R2G | Kameme",
     "eventName": "KOWLOON",
     "numEntrants": 362,
-    "topMatches": [
+    "matches": [
       {
         "round": "Winners Final",
-        "score": "FTG | ミーヤー 0 - R2G | Kameme 3"
+        "label": "WF",
+        "champScore": 0,
+        "oppScore": 3,
+        "opponent": "R2G | Kameme",
+        "won": false
       },
       {
         "round": "Losers Final",
-        "score": "FTG | ミーヤー 3 - Revo | Kome 1"
+        "label": "LF",
+        "champScore": 3,
+        "oppScore": 1,
+        "opponent": "Revo | Kome",
+        "won": true
       },
       {
         "round": "Grand Final",
-        "score": "R2G | Kameme 2 - FTG | ミーヤー 3"
+        "label": "GF",
+        "champScore": 3,
+        "oppScore": 2,
+        "opponent": "R2G | Kameme",
+        "won": true
       },
       {
         "round": "Grand Final Reset",
-        "score": "FTG | ミーヤー 3 - R2G | Kameme 2"
+        "label": "TF",
+        "champScore": 3,
+        "oppScore": 2,
+        "opponent": "R2G | Kameme",
+        "won": true
       }
     ]
   },
@@ -460,22 +764,38 @@
     "runnerUp": "百万 | シッショー",
     "eventName": "KOWLOON",
     "numEntrants": 292,
-    "topMatches": [
+    "matches": [
       {
-        "round": "Winners Final",
-        "score": "R2G | 満足 2 - 百万 | シッショー 3"
+        "round": "Losers Semi-Final",
+        "label": "LSF",
+        "champScore": 3,
+        "oppScore": 2,
+        "opponent": "SPG | ヤウラ",
+        "won": true
       },
       {
         "round": "Losers Final",
-        "score": "R2G | 満足 1 - 8LX | HIKARU 3"
+        "label": "LF",
+        "champScore": 3,
+        "oppScore": 1,
+        "opponent": "R2G | 満足",
+        "won": true
       },
       {
         "round": "Grand Final",
-        "score": "百万 | シッショー 1 - 8LX | HIKARU 3"
+        "label": "GF",
+        "champScore": 3,
+        "oppScore": 1,
+        "opponent": "百万 | シッショー",
+        "won": true
       },
       {
         "round": "Grand Final Reset",
-        "score": "8LX | HIKARU 3 - 百万 | シッショー 0"
+        "label": "TF",
+        "champScore": 3,
+        "oppScore": 0,
+        "opponent": "百万 | シッショー",
+        "won": true
       }
     ]
   },
@@ -484,18 +804,30 @@
     "runnerUp": "Munekin",
     "eventName": "KOWLOON",
     "numEntrants": 256,
-    "topMatches": [
+    "matches": [
       {
-        "round": "Winners Final",
-        "score": "Paseriman 2 - 百万 | シッショー 3"
+        "round": "Winners Semi-Final",
+        "label": "WSF",
+        "champScore": 2,
+        "oppScore": 0,
+        "opponent": "ひで",
+        "won": true
       },
       {
-        "round": "Losers Final",
-        "score": "Paseriman 2 - Munekin 3"
+        "round": "Winners Final",
+        "label": "WF",
+        "champScore": 3,
+        "oppScore": 2,
+        "opponent": "Paseriman",
+        "won": true
       },
       {
         "round": "Grand Final",
-        "score": "百万 | シッショー 3 - Munekin 1"
+        "label": "GF",
+        "champScore": 3,
+        "oppScore": 1,
+        "opponent": "Munekin",
+        "won": true
       }
     ]
   }

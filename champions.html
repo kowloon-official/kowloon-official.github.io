@@ -50,13 +50,6 @@
     return;
   }
 
-  const roundLabel = {
-    "Winners Final": "WF",
-    "Losers Final": "LF",
-    "Grand Final": "GF",
-    "Grand Final Reset": "GF(リセット)"
-  };
-
   const rows = tournaments
     .map(t => ({ t, c: champions[t.slug] }))
     .filter(({ c }) => c && c.champion);
@@ -76,12 +69,13 @@
         <div class="champion-row-winner">🏆 ${c.champion}</div>
       </button>
       <div class="champion-detail" id="champion-detail-${i}">
-        ${c.topMatches && c.topMatches.length > 0 ? `
+        ${c.matches && c.matches.length > 0 ? `
           <div class="champion-matches">
-            ${c.topMatches.map(m => `
+            ${c.matches.map(m => `
               <div class="champion-match">
-                <span class="champion-match-round">${roundLabel[m.round] || m.round}</span>
-                <span class="champion-match-score">${m.score}</span>
+                <span class="champion-match-round">${m.label}</span>
+                <span class="champion-match-score ${m.won ? "win" : "lose"}">${m.champScore}-${m.oppScore}</span>
+                <span class="champion-match-opponent">${m.opponent}</span>
               </div>
             `).join("")}
           </div>

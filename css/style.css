@@ -459,19 +459,34 @@ img { max-width: 100%; display: block; }
 .champion-match {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   font-size: 0.85rem;
 }
 
 .champion-match-round {
   flex: 0 0 auto;
-  min-width: 60px;
+  min-width: 32px;
   font-weight: 700;
   color: var(--muted);
   font-size: 0.75rem;
 }
 
 .champion-match-score {
+  flex: 0 0 auto;
+  min-width: 40px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.champion-match-score.win {
+  color: #16a34a;
+}
+
+.champion-match-score.lose {
+  color: #c0392b;
+}
+
+.champion-match-opponent {
   color: var(--text);
 }
 
