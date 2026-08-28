@@ -71,7 +71,7 @@
       <div class="champion-detail" id="champion-detail-${i}">
         ${c.matches && c.matches.length > 0 ? `
           <div class="champion-matches">
-            ${c.matches.map(m => `
+            ${[...c.matches].reverse().map(m => `
               <div class="champion-match">
                 <span class="champion-match-round">${m.label}</span>
                 <span class="champion-match-score ${m.won ? "win" : "lose"}">${m.champScore}-${m.oppScore}</span>
