@@ -308,7 +308,8 @@
         "won": true
       }
     ],
-    "photo": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-14/%E5%90%84%E5%8B%99%E5%8E%9F/full/146-250208_kowloon%2314_s-303.jpg"
+    "photo": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-14/%E5%90%84%E5%8B%99%E5%8E%9F/full/146-250208_kowloon%2314_s-303.jpg",
+    "photoPosition": "center 20%"
   },
   "kowloon-13-5": {
     "champion": "ロッキー",
@@ -479,7 +480,8 @@
         "won": true
       }
     ],
-    "photo": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-11/%E3%81%B5%E3%81%8F/full/119-DSC_0975.jpg"
+    "photo": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/kowloon-11/%E3%81%B5%E3%81%8F/full/119-DSC_0975.jpg",
+    "photoPosition": "center 30%"
   },
   "kowloon-10": {
     "champion": "ZETA | あcola",
@@ -545,7 +547,8 @@
         "won": true
       }
     ],
-    "photo": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/9with/%E3%81%86%E3%81%A3%E3%81%A6%E3%81%83%E3%83%BC/full/391-YAS_0523.jpg"
+    "photo": "https://pub-7e99411def204e63a9d4bff53a7efada.r2.dev/events/9with/%E3%81%86%E3%81%A3%E3%81%A6%E3%81%83%E3%83%BC/full/391-YAS_0523.jpg",
+    "photoPosition": "center 15%"
   },
   "kowloon-8": {
     "champion": "ロッキー",
