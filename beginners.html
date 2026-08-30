@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>はじめての方へ ｜ 九龍-KOWLOON-</title>
+<meta name="description" content="九龍-KOWLOON-に初めて参加する方向けのご案内。参加方法・当日の流れ・持ち物などをまとめています。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="はじめての方へ ｜ 九龍-KOWLOON-">
+<meta property="og:description" content="九龍-KOWLOON-に初めて参加する方向けのご案内。参加方法・当日の流れ・持ち物などをまとめています。">
+<meta property="og:image" content="https://kowloon-official.github.io/assets/og-image.png">
+<meta property="og:url" content="https://kowloon-official.github.io/beginners.html">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header id="site-header" class="site-header"></header>
+
+<main class="container">
+  <a href="index.html" class="back-link">« ホームに戻る</a>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>はじめての方へ</h2>
+    </div>
+    <p class="thanks-note">九龍への参加を考えている方、まだ大会に出たことがない方向けのご案内です。分からないことがあっても大丈夫、気になる項目をタップして確認してみてください。</p>
+
+    <div id="guide-list">
+      <div class="guide-row">
+        <button type="button" class="guide-row-header" data-index="0">
+          <span class="guide-row-title">九龍ってどんな空気感?</span>
+        </button>
+        <div class="guide-detail" id="guide-detail-0">
+          <p>九龍は、初心者から上級者まで気軽に参加できる非公式コミュニティ大会です。真剣勝負はもちろんありますが、それ以上に「みんなでスマブラを楽しむ場」という空気感を大事にしています。一人での参加も大歓迎です。分からないことがあっても大丈夫、まわりのスタッフや参加者に気軽に聞いてください。</p>
+        </div>
+      </div>
+
+      <div class="guide-row">
+        <button type="button" class="guide-row-header" data-index="1">
+          <span class="guide-row-title">参加するには</span>
+        </button>
+        <div class="guide-detail" id="guide-detail-1">
+          <p>エントリーはstart.ggから行います。参加費やエントリー方法は大会ごとにstart.ggのページに記載されているので、そちらをご確認ください(トップページの「次回大会予定」からもリンクできます)。start.ggのアカウントだけ先に作っておくと当日の手続きがスムーズです。</p>
+        </div>
+      </div>
+
+      <div class="guide-row">
+        <button type="button" class="guide-row-header" data-index="2">
+          <span class="guide-row-title">当日の流れ</span>
+        </button>
+        <div class="guide-detail" id="guide-detail-2">
+          <p>受付 → 予選ラウンド → 本戦(トーナメント)、というのが基本の流れです。詳しいタイムスケジュールは大会ごとに異なるため、当日の受付やDiscordのアナウンスをご確認ください。</p>
+        </div>
+      </div>
+
+      <div class="guide-row">
+        <button type="button" class="guide-row-header" data-index="3">
+          <span class="guide-row-title">持ち物</span>
+        </button>
+        <div class="guide-detail" id="guide-detail-3">
+          <p>基本的には使い慣れたコントローラー(GameCube用コントローラー・アダプターなど)をご持参ください。忘れてしまった場合も運営に相談すれば対応できることがあるので、まずは気軽に声をかけてください。</p>
+        </div>
+      </div>
+
+      <div class="guide-row">
+        <button type="button" class="guide-row-header" data-index="4">
+          <span class="guide-row-title">ルールについて</span>
+        </button>
+        <div class="guide-detail" id="guide-detail-4">
+          <p>大会ごとの詳しいルールは、各大会のstart.ggページに掲載しています。当日はそちらのルールが優先されるので、エントリー前に一度目を通しておくと安心です。</p>
+        </div>
+      </div>
+
+      <div class="guide-row">
+        <button type="button" class="guide-row-header" data-index="5">
+          <span class="guide-row-title">困ったときは</span>
+        </button>
+        <div class="guide-detail" id="guide-detail-5">
+          <p>分からないことや不安なことがあれば、当日は近くのスタッフに気軽に声をかけてください。事前の質問はDiscordサーバーでも受け付けています。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script src="js/config.js"></script>
+<script src="js/favorites.js"></script>
+<script src="js/nav.js"></script>
+<script>
+renderHeader("");
+renderFooter();
+
+document.querySelectorAll(".guide-row-header").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const detail = document.getElementById(`guide-detail-${btn.dataset.index}`);
+    detail.classList.toggle("open");
+    btn.classList.toggle("open");
+  });
+});
+</script>
+</body>
+</html>
