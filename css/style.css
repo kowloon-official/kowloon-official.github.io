@@ -299,6 +299,22 @@ img { max-width: 100%; display: block; }
   line-height: 1.6;
 }
 
+/* --- 次回大会(未発表・伏せ字演出) --- */
+.classified-value {
+  color: var(--muted);
+}
+
+.classified-banner {
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #f0f0f2,
+      #f0f0f2 10px,
+      #e4e4e8 10px,
+      #e4e4e8 20px
+    );
+}
+
 .prev-event-thumb {
   margin-top: 14px;
   aspect-ratio: 16 / 9;

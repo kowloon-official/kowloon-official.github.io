@@ -224,7 +224,7 @@
     const res = await fetch("data/next-event.json");
     const data = await res.json();
     const events = (Array.isArray(data) ? data : [data])
-      .filter((e) => e.scheduled && e.name)
+      .filter((e) => e.scheduled && (e.name || e.classified))
       .sort((a, b) => {
         // 両方に日程がある場合のみ日付順に並べ、片方でも未定ならdata/next-event.json内の並び順を維持する
         if (a.date && b.date) return new Date(a.date) - new Date(b.date);
@@ -235,6 +235,20 @@
       nextEventList.innerHTML = emptyNextEventHtml;
     } else {
       nextEventList.innerHTML = events.map((next) => {
+        if (next.classified) {
+          const classifiedRows = ["日程", "会場", "規模"];
+          return `
+            <div class="section-card next-event-card classified-card">
+              <div class="next-event-main">
+                <div class="next-event-name classified-name">Classified</div>
+                <p class="next-event-note classified-note">
+                  ${classifiedRows.map((label) => `${label}：<span class="classified-value">Classified</span>`).join("<br>")}
+                </p>
+              </div>
+              <div class="next-event-banner classified-banner"></div>
+            </div>
+          `;
+        }
         const dateText = next.dateLabel || (next.date ? formatDate(next.date) : "");
         const rows = [
           ["日程", dateText],
