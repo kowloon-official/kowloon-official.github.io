@@ -1,7 +1,14 @@
 [
   {
     "scheduled": true,
-    "classified": true
+    "name": "九龍-KOWLOON-#19",
+    "date": "2026-11-28",
+    "dateLabel": "2026年11月28日",
+    "venue": "南近代ビル",
+    "scale": "256人",
+    "registrationUrl": "",
+    "note": "",
+    "banner": "assets/banners/kowloon-19.jpg"
   },
   {
     "scheduled": true,
