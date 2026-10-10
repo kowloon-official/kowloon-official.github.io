@@ -50,6 +50,15 @@
   const condFont = (s) => `900 ${s}px 'NotoSansCond75'`; // 日付・KOWLOON・#19
   const subFont = (s) => `700 ${s}px 'Noto Sans JP'`;    // 会場・チーム名・photo by
 
+  // canvas の filter（写真のモノクロ化）が使えるか。iPhoneのSafariは使えない（指定しても無視される）
+  const FILTER_OK = (() => {
+    try {
+      const c = document.createElement("canvas"); c.width = c.height = 1;
+      const g = c.getContext("2d"); g.filter = "grayscale(1)"; g.fillStyle = "#f00"; g.fillRect(0, 0, 1, 1);
+      const d = g.getImageData(0, 0, 1, 1).data; return d[0] === d[1];
+    } catch (e) { return false; }
+  })();
+
   /* ===== レイアウトの共通ルール =====
     b = 短辺の1%。余白・文字の大きさは b の倍数で決める（縦横で見た目の比率がそろう）
     上の配置（左上・右上）は 大会名グループ→名前→順位、下の配置（左下・右下）は 名前→順位→大会名グループ */
@@ -67,8 +76,16 @@
       const s = Math.max(W / ph.width, H / ph.height) * S.zoom, iw = ph.width * s, ih = ph.height * s;
       let px = (W - iw) / 2 + S.ox * W, py = (H - ih) / 2 + S.oy * H;
       px = Math.min(0, Math.max(W - iw, px)); py = Math.min(0, Math.max(H - ih, py));
-      x.filter = S.tone === "mono" ? "grayscale(1) contrast(1.1) brightness(.8)" : "none";
+      const mono = S.tone === "mono";
+      if (mono && FILTER_OK) x.filter = "grayscale(1) contrast(1.1) brightness(.8)";
       x.drawImage(ph, px, py, iw, ih); x.filter = "none";
+      if (mono && !FILTER_OK) {
+        // iPhone（Safari）は filter が効かないので、合成モードで白黒にして少し暗くする
+        x.save();
+        x.globalCompositeOperation = "saturation"; x.fillStyle = "#808080"; x.fillRect(0, 0, W, H);
+        x.globalCompositeOperation = "multiply"; x.fillStyle = "#c4c4c4"; x.fillRect(0, 0, W, H);
+        x.restore();
+      }
     }
     // 文字側の角を暗くする
     { const cx = layout[1] === "l" ? 0 : W, cy = layout[0] === "t" ? 0 : H, r = Math.hypot(W, H) * 0.75;
