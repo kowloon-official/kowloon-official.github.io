@@ -53,9 +53,12 @@
   // canvas の filter（写真のモノクロ化）が使えるか。iPhoneのSafariは使えない（指定しても無視される）
   const FILTER_OK = (() => {
     try {
-      const c = document.createElement("canvas"); c.width = c.height = 1;
-      const g = c.getContext("2d"); g.filter = "grayscale(1)"; g.fillStyle = "#f00"; g.fillRect(0, 0, 1, 1);
-      const d = g.getImageData(0, 0, 1, 1).data; return d[0] === d[1];
+      // 写真と同じ drawImage で試す（塗りつぶしだけ効いて画像に効かない環境があるため）
+      const src = document.createElement("canvas"); src.width = src.height = 2;
+      const sg = src.getContext("2d"); sg.fillStyle = "#f00"; sg.fillRect(0, 0, 2, 2);
+      const c = document.createElement("canvas"); c.width = c.height = 2;
+      const g = c.getContext("2d"); g.filter = "grayscale(1)"; g.drawImage(src, 0, 0);
+      const d = g.getImageData(0, 0, 1, 1).data; return g.filter === "grayscale(1)" && Math.abs(d[0] - d[1]) < 8;
     } catch (e) { return false; }
   })();
 
