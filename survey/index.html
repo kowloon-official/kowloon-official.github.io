@@ -36,10 +36,6 @@
   main{max-width:420px;width:100%;}
   .brand{margin:0 0 20px;font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--blue);}
   h1{margin:0;font-size:24px;font-weight:900;letter-spacing:.04em;line-height:1.4;}
-  .when{margin:18px 0 0;font-size:16px;font-weight:700;color:var(--navy);}
-  #openDate{color:var(--blue);}
-  .note{margin:10px 0 0;font-size:14px;line-height:1.8;color:#5a6470;}
-  .wrap{word-break:keep-all;overflow-wrap:anywhere;}
   .btn{
     display:inline-block;margin-top:32px;padding:13px 36px;border-radius:999px;
     background:var(--blue);color:#fff;font-size:15px;font-weight:700;text-decoration:none;
@@ -53,20 +49,13 @@
 <main>
   <p class="brand">九龍-KOWLOON-</p>
   <h1>アンケートは準備中です</h1>
-  <p class="when wrap"><span id="openDate"></span>から<wbr>回答できます</p>
-  <p class="note wrap">当日、もう一度<wbr>このQRを読み取ってください。</p>
   <a class="btn" href="/">公式サイトへ</a>
   <p class="go" id="go">開かない場合は<a href="#" id="goLink">こちら</a></p>
 </main>
 <script>
-  var d = new Date(OPEN_AT);
-  // 日本時間で表示する（端末の時刻設定に左右されないように）
-  var jst = new Date(d.getTime() + 9 * 3600 * 1000);
-  document.getElementById("openDate").textContent =
-    (jst.getUTCMonth() + 1) + "月" + jst.getUTCDate() + "日（" + "日月火水木金土"[jst.getUTCDay()] + "）";
   document.getElementById("goLink").href = SURVEY_URL;
   // 転送中なのにページが残っている場合（転送がブロックされた時など）は手動のリンクを出す
-  if (Date.now() >= d.getTime()) document.getElementById("go").style.display = "block";
+  if (Date.now() >= new Date(OPEN_AT).getTime()) document.getElementById("go").style.display = "block";
 </script>
 </body>
 </html>
