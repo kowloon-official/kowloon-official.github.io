@@ -365,18 +365,48 @@ img { max-width: 100%; display: block; }
   object-fit: cover;
 }
 
-/* --- はじめての方へ(ホームの案内カード) --- */
+/* --- はじめての方へ(ホームの案内カード) ---
+   カード全体がリンク。ホバーで下辺に青いラインが伸びる */
 .beginners-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 28px 32px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.beginners-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--cyan), var(--blue));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+
+.beginners-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.beginners-card:hover::after {
+  transform: scaleX(1);
 }
 
 .beginners-card-title {
   font-weight: 700;
-  font-size: 1.05rem;
+  font-size: 1.35rem;
+  letter-spacing: 0.04em;
   margin-bottom: 6px;
+  transition: color 0.2s;
+}
+
+.beginners-card:hover .beginners-card-title {
+  color: var(--blue);
 }
 
 .beginners-card-note {
@@ -388,12 +418,7 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 640px) {
   .beginners-card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .beginners-card .btn-primary {
-    align-self: stretch;
-    justify-content: center;
+    padding: 22px 20px;
   }
 }
 
