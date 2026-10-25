@@ -258,15 +258,22 @@
         const bannerInner = next.banner
           ? `<img src="${next.banner}" alt="${next.name}">`
           : `画像準備中`;
+        // エントリーリンクは大会名の横に小さく並べ、カードの縦幅を増やさない
+        const entries = next.entries || (next.registrationUrl ? [{ label: "エントリー", url: next.registrationUrl }] : []);
+        const entryLinks = entries.map((entry) =>
+          `<a class="next-event-entry" href="${entry.url}" target="_blank" rel="noopener">${entry.label} ↗</a>`
+        ).join("");
         return `
           <div class="section-card next-event-card">
             <div class="next-event-main">
-              <div class="next-event-name">${next.name}</div>
+              <div class="next-event-head">
+                <div class="next-event-name">${next.name}</div>
+                ${entryLinks}
+              </div>
               <p class="next-event-note">
                 ${rows.map(([label, value]) => `${label}：${value}`).join("<br>")}
               </p>
               ${next.note ? `<p class="next-event-note">${next.note}</p>` : ""}
-              ${next.registrationUrl ? `<a class="btn btn-primary" href="${next.registrationUrl}" target="_blank" rel="noopener">エントリー情報を見る</a>` : ""}
             </div>
             <div class="next-event-banner">${bannerInner}</div>
           </div>

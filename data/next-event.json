@@ -4,11 +4,20 @@
     "name": "九龍withうめき",
     "date": "2026-11-14",
     "dateLabel": "2026年11月14日〜15日",
-    "venue": "旧添田小学校（福岡県田川郡添田町）",
-    "scale": "1750以下の部 96人（11/14）<br>　　　一般の部 128人（11/15）",
-    "registrationUrl": "",
-    "note": "<a class=\"btn btn-primary\" style=\"margin:6px 6px 0 0\" href=\"https://www.start.gg/tournament/with-1750\" target=\"_blank\" rel=\"noopener\">1750以下の部 エントリー</a><a class=\"btn btn-primary\" style=\"margin:6px 6px 0 0\" href=\"https://www.start.gg/tournament/with-6\" target=\"_blank\" rel=\"noopener\">一般の部 エントリー</a>",
-    "banner": "assets/banners/kowloon-with-umeki.jpg"
+    "venue": "旧添田小学校",
+    "scale": "<span class=\"no-break\">1750以下の部 96人（11/14）</span>／<span class=\"no-break\">一般の部 128人（11/15）</span>",
+    "note": "",
+    "banner": "assets/banners/kowloon-with-umeki.jpg",
+    "entries": [
+      {
+        "label": "1750以下の部",
+        "url": "https://www.start.gg/tournament/with-1750"
+      },
+      {
+        "label": "一般の部",
+        "url": "https://www.start.gg/tournament/with-6"
+      }
+    ]
   },
   {
     "scheduled": true,
@@ -17,7 +26,7 @@
     "dateLabel": "2026年11月28日",
     "venue": "南近代ビル",
     "scale": "256人",
-    "registrationUrl": "",
+    "registrationUrl": "https://www.start.gg/tournament/kowloon-19",
     "note": "",
     "banner": "assets/banners/kowloon-19.jpg"
   },

@@ -292,6 +292,37 @@ img { max-width: 100%; display: block; }
   font-size: 1.5rem;
 }
 
+.next-event-head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+}
+
+.next-event-head .next-event-name {
+  margin-right: 4px;
+}
+
+/* 大会名の横に並べる小さなエントリーリンク(start.gg) */
+.next-event-entry {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 12px;
+  border: 1px solid var(--blue);
+  border-radius: 999px;
+  color: var(--blue);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.5;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+}
+
+.next-event-entry:hover {
+  background: var(--blue);
+  color: #ffffff;
+}
+
 .next-event-note {
   color: var(--muted);
   font-size: 0.85rem;
