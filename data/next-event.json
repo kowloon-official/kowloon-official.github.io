@@ -7,17 +7,7 @@
     "venue": "旧添田小学校",
     "scale": "<span class=\"no-break\">1750以下の部 96人（11/14）</span>／<span class=\"no-break\">一般の部 128人（11/15）</span>",
     "note": "",
-    "banner": "assets/banners/kowloon-with-umeki.jpg",
-    "entries": [
-      {
-        "label": "1750以下の部",
-        "url": "https://www.start.gg/tournament/with-1750"
-      },
-      {
-        "label": "一般の部",
-        "url": "https://www.start.gg/tournament/with-6"
-      }
-    ]
+    "banner": "assets/banners/kowloon-with-umeki.jpg"
   },
   {
     "scheduled": true,
