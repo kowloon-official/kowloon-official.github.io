@@ -32,6 +32,17 @@
   },
   {
     "scheduled": true,
+    "name": "九龍withスマバトFinal",
+    "date": "2027-02-20",
+    "dateLabel": "2027年2月20日〜21日",
+    "venue": "泉佐野オチアリーナ",
+    "scale": "1024人",
+    "registrationUrl": "",
+    "note": "",
+    "banner": "assets/banners/kowloon-with-sumabato-final.jpg"
+  },
+  {
+    "scheduled": true,
     "name": "九龍 vs GRAND SLUM",
     "date": "2027-04-24",
     "dateLabel": "2027年4月24日〜25日",
